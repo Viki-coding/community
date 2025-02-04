@@ -1,0 +1,628 @@
+(.venv) vikimulhall@Viki community % heroku logs --tail --app community-centre-notic
+eboard
+ ›   Error: Couldn't find that app.
+ ›
+ ›   Error ID: not_found
+(.venv) vikimulhall@Viki community % heroku logs --tail --app community-noticeboard-app
+2025-02-04T13:03:04.093605+00:00 app[web.1]: File "/app/community_centre/wsgi.py", line 16, in <module>
+2025-02-04T13:03:04.093605+00:00 app[web.1]: application = get_wsgi_application()
+2025-02-04T13:03:04.093605+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+2025-02-04T13:03:04.093605+00:00 app[web.1]: django.setup(set_prefix=False)
+2025-02-04T13:03:04.093605+00:00 app[web.1]: ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+2025-02-04T13:03:04.093606+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/__init__.py", line 24, in setup
+2025-02-04T13:03:04.093606+00:00 app[web.1]: apps.populate(settings.INSTALLED_APPS)
+2025-02-04T13:03:04.093606+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:03:04.093606+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/apps/registry.py", line 116, in populate
+2025-02-04T13:03:04.093606+00:00 app[web.1]: app_config.import_models()
+2025-02-04T13:03:04.093606+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:03:04.093606+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/apps/config.py", line 269, in import_models
+2025-02-04T13:03:04.093607+00:00 app[web.1]: self.models_module = import_module(models_module_name)
+2025-02-04T13:03:04.093607+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:03:04.093607+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:03:04.093607+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:03:04.093607+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:03:04.093607+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2025-02-04T13:03:04.093607+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2025-02-04T13:03:04.093607+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2025-02-04T13:03:04.093609+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2025-02-04T13:03:04.093609+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+2025-02-04T13:03:04.093609+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2025-02-04T13:03:04.093609+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/contrib/auth/models.py", line 3, in <module>
+2025-02-04T13:03:04.093610+00:00 app[web.1]: from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+2025-02-04T13:03:04.093610+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/contrib/auth/base_user.py", line 57, in <module>
+2025-02-04T13:03:04.093610+00:00 app[web.1]: class AbstractBaseUser(models.Model):
+2025-02-04T13:03:04.093610+00:00 app[web.1]: ...<109 lines>...
+2025-02-04T13:03:04.093610+00:00 app[web.1]: )
+2025-02-04T13:03:04.093610+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/base.py", line 143, in __new__
+2025-02-04T13:03:04.093611+00:00 app[web.1]: new_class.add_to_class("_meta", Options(meta, app_label))
+2025-02-04T13:03:04.093611+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:03:04.093611+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/base.py", line 371, in add_to_class
+2025-02-04T13:03:04.093611+00:00 app[web.1]: value.contribute_to_class(cls, name)
+2025-02-04T13:03:04.093611+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+2025-02-04T13:03:04.093611+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/options.py", line 243, in contribute_to_class
+2025-02-04T13:03:04.093611+00:00 app[web.1]: self.db_table, connection.ops.max_name_length()
+2025-02-04T13:03:04.093612+00:00 app[web.1]: ^^^^^^^^^^^^^^
+2025-02-04T13:03:04.093612+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/utils/connection.py", line 15, in __getattr__
+2025-02-04T13:03:04.093612+00:00 app[web.1]: return getattr(self._connections[self._alias], item)
+2025-02-04T13:03:04.093612+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-02-04T13:03:04.093612+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/utils/connection.py", line 62, in __getitem__
+2025-02-04T13:03:04.093612+00:00 app[web.1]: conn = self.create_connection(alias)
+2025-02-04T13:03:04.093612+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/utils.py", line 193, in create_connection
+2025-02-04T13:03:04.093612+00:00 app[web.1]: backend = load_backend(db["ENGINE"])
+2025-02-04T13:03:04.093612+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/utils.py", line 113, in load_backend
+2025-02-04T13:03:04.093613+00:00 app[web.1]: return import_module("%s.base" % backend_name)
+2025-02-04T13:03:04.093613+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:03:04.093613+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:03:04.093613+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:03:04.093613+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 29, in <module>
+2025-02-04T13:03:04.093613+00:00 app[web.1]: raise ImproperlyConfigured("Error loading psycopg2 or psycopg module")
+2025-02-04T13:03:04.093613+00:00 app[web.1]: django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module
+2025-02-04T13:03:04.093614+00:00 app[web.1]: [2025-02-04 13:03:04 +0000] [10] [INFO] Worker exiting (pid: 10)
+2025-02-04T13:03:04.093706+00:00 app[web.1]: [2025-02-04 13:03:04 +0000] [9] [INFO] Worker exiting (pid: 9)
+2025-02-04T13:03:04.153801+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:03:04.154490+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 209, in run
+2025-02-04T13:03:04.154491+00:00 app[web.1]: self.sleep()
+2025-02-04T13:03:04.154491+00:00 app[web.1]: ~~~~~~~~~~^^
+2025-02-04T13:03:04.154492+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 357, in sleep
+2025-02-04T13:03:04.154492+00:00 app[web.1]: ready = select.select([self.PIPE[0]], [], [], 1.0)
+2025-02-04T13:03:04.154495+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2025-02-04T13:03:04.154495+00:00 app[web.1]: self.reap_workers()
+2025-02-04T13:03:04.154496+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:03:04.154496+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2025-02-04T13:03:04.154496+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2025-02-04T13:03:04.154516+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2025-02-04T13:03:04.154601+00:00 app[web.1]: 
+2025-02-04T13:03:04.154601+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:03:04.154601+00:00 app[web.1]: 
+2025-02-04T13:03:04.154602+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:03:04.155211+00:00 app[web.1]: File "/app/.heroku/python/bin/gunicorn", line 8, in <module>
+2025-02-04T13:03:04.155212+00:00 app[web.1]: sys.exit(run())
+2025-02-04T13:03:04.155212+00:00 app[web.1]: ~~~^^
+2025-02-04T13:03:04.155212+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+2025-02-04T13:03:04.155212+00:00 app[web.1]: WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2025-02-04T13:03:04.155213+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:03:04.155215+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/base.py", line 231, in run
+2025-02-04T13:03:04.155215+00:00 app[web.1]: super().run()
+2025-02-04T13:03:04.155215+00:00 app[web.1]: ~~~~~~~~~~~^^
+2025-02-04T13:03:04.155215+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/base.py", line 72, in run
+2025-02-04T13:03:04.155216+00:00 app[web.1]: Arbiter(self).run()
+2025-02-04T13:03:04.155216+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:03:04.155217+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 229, in run
+2025-02-04T13:03:04.155217+00:00 app[web.1]: self.halt(reason=inst.reason, exit_status=inst.exit_status)
+2025-02-04T13:03:04.155218+00:00 app[web.1]: ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:03:04.155230+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 342, in halt
+2025-02-04T13:03:04.155230+00:00 app[web.1]: self.stop()
+2025-02-04T13:03:04.155231+00:00 app[web.1]: ~~~~~~~~~^^
+2025-02-04T13:03:04.155231+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 393, in stop
+2025-02-04T13:03:04.155231+00:00 app[web.1]: time.sleep(0.1)
+2025-02-04T13:03:04.155231+00:00 app[web.1]: ~~~~~~~~~~^^^^^
+2025-02-04T13:03:04.155232+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2025-02-04T13:03:04.155233+00:00 app[web.1]: self.reap_workers()
+2025-02-04T13:03:04.155233+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:03:04.155243+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2025-02-04T13:03:04.155243+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2025-02-04T13:03:04.155252+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2025-02-04T13:03:04.226321+00:00 heroku[web.1]: Process exited with status 1
+2025-02-04T13:03:04.247941+00:00 heroku[web.1]: State changed from up to crashed
+2025-02-04T13:15:08.012333+00:00 heroku[web.1]: State changed from crashed to starting
+2025-02-04T13:15:11.637607+00:00 heroku[web.1]: Starting process with command `gunicorn community_centre.wsgi --log-file -`
+2025-02-04T13:15:12.161052+00:00 app[web.1]: Python buildpack: Detected 512 MB available memory and 8 CPU cores.
+2025-02-04T13:15:12.161145+00:00 app[web.1]: Python buildpack: Defaulting WEB_CONCURRENCY to 2 based on the available memory.
+2025-02-04T13:15:12.443279+00:00 app[web.1]: [2025-02-04 13:15:12 +0000] [2] [INFO] Starting gunicorn 20.1.0
+2025-02-04T13:15:12.443554+00:00 app[web.1]: [2025-02-04 13:15:12 +0000] [2] [INFO] Listening at: http://0.0.0.0:51430 (2)
+2025-02-04T13:15:12.443579+00:00 app[web.1]: [2025-02-04 13:15:12 +0000] [2] [INFO] Using worker: sync
+2025-02-04T13:15:12.445660+00:00 app[web.1]: [2025-02-04 13:15:12 +0000] [9] [INFO] Booting worker with pid: 9
+2025-02-04T13:15:12.458967+00:00 app[web.1]: [2025-02-04 13:15:12 +0000] [10] [INFO] Booting worker with pid: 10
+2025-02-04T13:15:12.729477+00:00 heroku[web.1]: State changed from starting to up
+2025-02-04T13:15:13.221164+00:00 heroku[web.1]: Process exited with status 1
+2025-02-04T13:15:13.089857+00:00 app[web.1]: [2025-02-04 13:15:13 +0000] [10] [ERROR] Exception in worker process
+2025-02-04T13:15:13.089867+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:15:13.089868+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 25, in <module>
+2025-02-04T13:15:13.089868+00:00 app[web.1]: import psycopg as Database
+2025-02-04T13:15:13.089868+00:00 app[web.1]: ModuleNotFoundError: No module named 'psycopg'
+2025-02-04T13:15:13.089869+00:00 app[web.1]: 
+2025-02-04T13:15:13.089869+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:15:13.089869+00:00 app[web.1]: 
+2025-02-04T13:15:13.089870+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:15:13.089870+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 27, in <module>
+2025-02-04T13:15:13.089870+00:00 app[web.1]: import psycopg2 as Database
+2025-02-04T13:15:13.089871+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/psycopg2/__init__.py", line 51, in <module>
+2025-02-04T13:15:13.089871+00:00 app[web.1]: from psycopg2._psycopg import (                     # noqa
+2025-02-04T13:15:13.089871+00:00 app[web.1]: ...<10 lines>...
+2025-02-04T13:15:13.089872+00:00 app[web.1]: )
+2025-02-04T13:15:13.089872+00:00 app[web.1]: ImportError: /app/.heroku/python/lib/python3.13/site-packages/psycopg2/_psycopg.cpython-313-x86_64-linux-gnu.so: undefined symbol: _PyInterpreterState_Get
+2025-02-04T13:15:13.089872+00:00 app[web.1]: 
+2025-02-04T13:15:13.089872+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:15:13.089873+00:00 app[web.1]: 
+2025-02-04T13:15:13.089873+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:15:13.089873+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+2025-02-04T13:15:13.089873+00:00 app[web.1]: worker.init_process()
+2025-02-04T13:15:13.089873+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.089874+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2025-02-04T13:15:13.089874+00:00 app[web.1]: self.load_wsgi()
+2025-02-04T13:15:13.089874+00:00 app[web.1]: ~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.089874+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2025-02-04T13:15:13.089874+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2025-02-04T13:15:13.089875+00:00 app[web.1]: ~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.089875+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2025-02-04T13:15:13.089875+00:00 app[web.1]: self.callable = self.load()
+2025-02-04T13:15:13.089875+00:00 app[web.1]: ~~~~~~~~~^^
+2025-02-04T13:15:13.089876+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2025-02-04T13:15:13.089876+00:00 app[web.1]: return self.load_wsgiapp()
+2025-02-04T13:15:13.089876+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.089876+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2025-02-04T13:15:13.089876+00:00 app[web.1]: return util.import_app(self.app_uri)
+2025-02-04T13:15:13.089876+00:00 app[web.1]: ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089877+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/util.py", line 359, in import_app
+2025-02-04T13:15:13.089877+00:00 app[web.1]: mod = importlib.import_module(module)
+2025-02-04T13:15:13.089877+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:15:13.089877+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:15:13.089877+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089878+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2025-02-04T13:15:13.089878+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2025-02-04T13:15:13.089878+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2025-02-04T13:15:13.089879+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2025-02-04T13:15:13.089879+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+2025-02-04T13:15:13.089879+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2025-02-04T13:15:13.089879+00:00 app[web.1]: File "/app/community_centre/wsgi.py", line 16, in <module>
+2025-02-04T13:15:13.089879+00:00 app[web.1]: application = get_wsgi_application()
+2025-02-04T13:15:13.089880+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+2025-02-04T13:15:13.089880+00:00 app[web.1]: django.setup(set_prefix=False)
+2025-02-04T13:15:13.089880+00:00 app[web.1]: ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089880+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/__init__.py", line 24, in setup
+2025-02-04T13:15:13.089880+00:00 app[web.1]: apps.populate(settings.INSTALLED_APPS)
+2025-02-04T13:15:13.089880+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089881+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/apps/registry.py", line 116, in populate
+2025-02-04T13:15:13.089881+00:00 app[web.1]: app_config.import_models()
+2025-02-04T13:15:13.089881+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.089881+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/apps/config.py", line 269, in import_models
+2025-02-04T13:15:13.089881+00:00 app[web.1]: self.models_module = import_module(models_module_name)
+2025-02-04T13:15:13.089881+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089881+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:15:13.089882+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:15:13.089882+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089882+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2025-02-04T13:15:13.089882+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2025-02-04T13:15:13.089882+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2025-02-04T13:15:13.089884+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2025-02-04T13:15:13.089885+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+2025-02-04T13:15:13.089885+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2025-02-04T13:15:13.089885+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/contrib/auth/models.py", line 3, in <module>
+2025-02-04T13:15:13.089885+00:00 app[web.1]: from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+2025-02-04T13:15:13.089885+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/contrib/auth/base_user.py", line 57, in <module>
+2025-02-04T13:15:13.089885+00:00 app[web.1]: class AbstractBaseUser(models.Model):
+2025-02-04T13:15:13.089886+00:00 app[web.1]: ...<109 lines>...
+2025-02-04T13:15:13.089886+00:00 app[web.1]: )
+2025-02-04T13:15:13.089886+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/base.py", line 143, in __new__
+2025-02-04T13:15:13.089886+00:00 app[web.1]: new_class.add_to_class("_meta", Options(meta, app_label))
+2025-02-04T13:15:13.089886+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089886+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/base.py", line 371, in add_to_class
+2025-02-04T13:15:13.089886+00:00 app[web.1]: value.contribute_to_class(cls, name)
+2025-02-04T13:15:13.089887+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+2025-02-04T13:15:13.089887+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/options.py", line 243, in contribute_to_class
+2025-02-04T13:15:13.089887+00:00 app[web.1]: self.db_table, connection.ops.max_name_length()
+2025-02-04T13:15:13.089887+00:00 app[web.1]: ^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089890+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/utils/connection.py", line 15, in __getattr__
+2025-02-04T13:15:13.089890+00:00 app[web.1]: return getattr(self._connections[self._alias], item)
+2025-02-04T13:15:13.089890+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-02-04T13:15:13.089890+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/utils/connection.py", line 62, in __getitem__
+2025-02-04T13:15:13.089891+00:00 app[web.1]: conn = self.create_connection(alias)
+2025-02-04T13:15:13.089891+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/utils.py", line 193, in create_connection
+2025-02-04T13:15:13.089891+00:00 app[web.1]: backend = load_backend(db["ENGINE"])
+2025-02-04T13:15:13.089891+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/utils.py", line 113, in load_backend
+2025-02-04T13:15:13.089894+00:00 app[web.1]: return import_module("%s.base" % backend_name)
+2025-02-04T13:15:13.089894+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:15:13.089895+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:15:13.089895+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089895+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 29, in <module>
+2025-02-04T13:15:13.089895+00:00 app[web.1]: raise ImproperlyConfigured("Error loading psycopg2 or psycopg module")
+2025-02-04T13:15:13.089895+00:00 app[web.1]: django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module
+2025-02-04T13:15:13.089896+00:00 app[web.1]: [2025-02-04 13:15:13 +0000] [9] [ERROR] Exception in worker process
+2025-02-04T13:15:13.089896+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:15:13.089896+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 25, in <module>
+2025-02-04T13:15:13.089896+00:00 app[web.1]: import psycopg as Database
+2025-02-04T13:15:13.089896+00:00 app[web.1]: ModuleNotFoundError: No module named 'psycopg'
+2025-02-04T13:15:13.089896+00:00 app[web.1]: 
+2025-02-04T13:15:13.089896+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:15:13.089897+00:00 app[web.1]: 
+2025-02-04T13:15:13.089897+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:15:13.089897+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 27, in <module>
+2025-02-04T13:15:13.089897+00:00 app[web.1]: import psycopg2 as Database
+2025-02-04T13:15:13.089898+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/psycopg2/__init__.py", line 51, in <module>
+2025-02-04T13:15:13.089898+00:00 app[web.1]: from psycopg2._psycopg import (                     # noqa
+2025-02-04T13:15:13.089898+00:00 app[web.1]: ...<10 lines>...
+2025-02-04T13:15:13.089898+00:00 app[web.1]: )
+2025-02-04T13:15:13.089898+00:00 app[web.1]: ImportError: /app/.heroku/python/lib/python3.13/site-packages/psycopg2/_psycopg.cpython-313-x86_64-linux-gnu.so: undefined symbol: _PyInterpreterState_Get
+2025-02-04T13:15:13.089898+00:00 app[web.1]: 
+2025-02-04T13:15:13.089898+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:15:13.089899+00:00 app[web.1]: 
+2025-02-04T13:15:13.089899+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:15:13.089899+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+2025-02-04T13:15:13.089899+00:00 app[web.1]: worker.init_process()
+2025-02-04T13:15:13.089899+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.089899+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2025-02-04T13:15:13.089899+00:00 app[web.1]: self.load_wsgi()
+2025-02-04T13:15:13.089900+00:00 app[web.1]: ~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.089900+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2025-02-04T13:15:13.089900+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2025-02-04T13:15:13.089900+00:00 app[web.1]: ~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.089900+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2025-02-04T13:15:13.089900+00:00 app[web.1]: self.callable = self.load()
+2025-02-04T13:15:13.089900+00:00 app[web.1]: ~~~~~~~~~^^
+2025-02-04T13:15:13.089903+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2025-02-04T13:15:13.089903+00:00 app[web.1]: return self.load_wsgiapp()
+2025-02-04T13:15:13.089903+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.089903+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2025-02-04T13:15:13.089903+00:00 app[web.1]: return util.import_app(self.app_uri)
+2025-02-04T13:15:13.089903+00:00 app[web.1]: ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089904+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/util.py", line 359, in import_app
+2025-02-04T13:15:13.089904+00:00 app[web.1]: mod = importlib.import_module(module)
+2025-02-04T13:15:13.089904+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:15:13.089904+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:15:13.089904+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089904+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2025-02-04T13:15:13.089904+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2025-02-04T13:15:13.089905+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2025-02-04T13:15:13.089905+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2025-02-04T13:15:13.089905+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+2025-02-04T13:15:13.089905+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2025-02-04T13:15:13.089905+00:00 app[web.1]: File "/app/community_centre/wsgi.py", line 16, in <module>
+2025-02-04T13:15:13.089905+00:00 app[web.1]: application = get_wsgi_application()
+2025-02-04T13:15:13.089906+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+2025-02-04T13:15:13.089906+00:00 app[web.1]: django.setup(set_prefix=False)
+2025-02-04T13:15:13.089906+00:00 app[web.1]: ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089906+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/__init__.py", line 24, in setup
+2025-02-04T13:15:13.089906+00:00 app[web.1]: apps.populate(settings.INSTALLED_APPS)
+2025-02-04T13:15:13.089906+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089907+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/apps/registry.py", line 116, in populate
+2025-02-04T13:15:13.089907+00:00 app[web.1]: app_config.import_models()
+2025-02-04T13:15:13.089907+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.089907+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/apps/config.py", line 269, in import_models
+2025-02-04T13:15:13.089907+00:00 app[web.1]: self.models_module = import_module(models_module_name)
+2025-02-04T13:15:13.089907+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089907+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:15:13.089908+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:15:13.089908+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089908+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2025-02-04T13:15:13.089908+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2025-02-04T13:15:13.089908+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2025-02-04T13:15:13.089908+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2025-02-04T13:15:13.089909+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+2025-02-04T13:15:13.089909+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2025-02-04T13:15:13.089909+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/contrib/auth/models.py", line 3, in <module>
+2025-02-04T13:15:13.089909+00:00 app[web.1]: from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+2025-02-04T13:15:13.089909+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/contrib/auth/base_user.py", line 57, in <module>
+2025-02-04T13:15:13.089909+00:00 app[web.1]: class AbstractBaseUser(models.Model):
+2025-02-04T13:15:13.089910+00:00 app[web.1]: ...<109 lines>...
+2025-02-04T13:15:13.089910+00:00 app[web.1]: )
+2025-02-04T13:15:13.089910+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/base.py", line 143, in __new__
+2025-02-04T13:15:13.089910+00:00 app[web.1]: new_class.add_to_class("_meta", Options(meta, app_label))
+2025-02-04T13:15:13.089910+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089910+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/base.py", line 371, in add_to_class
+2025-02-04T13:15:13.089910+00:00 app[web.1]: value.contribute_to_class(cls, name)
+2025-02-04T13:15:13.089910+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+2025-02-04T13:15:13.089911+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/options.py", line 243, in contribute_to_class
+2025-02-04T13:15:13.089911+00:00 app[web.1]: self.db_table, connection.ops.max_name_length()
+2025-02-04T13:15:13.089911+00:00 app[web.1]: ^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089911+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/utils/connection.py", line 15, in __getattr__
+2025-02-04T13:15:13.089911+00:00 app[web.1]: return getattr(self._connections[self._alias], item)
+2025-02-04T13:15:13.089911+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-02-04T13:15:13.089911+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/utils/connection.py", line 62, in __getitem__
+2025-02-04T13:15:13.089911+00:00 app[web.1]: conn = self.create_connection(alias)
+2025-02-04T13:15:13.089912+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/utils.py", line 193, in create_connection
+2025-02-04T13:15:13.089913+00:00 app[web.1]: backend = load_backend(db["ENGINE"])
+2025-02-04T13:15:13.089913+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/utils.py", line 113, in load_backend
+2025-02-04T13:15:13.089913+00:00 app[web.1]: return import_module("%s.base" % backend_name)
+2025-02-04T13:15:13.089913+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:15:13.089913+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:15:13.089913+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.089913+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 29, in <module>
+2025-02-04T13:15:13.089914+00:00 app[web.1]: raise ImproperlyConfigured("Error loading psycopg2 or psycopg module")
+2025-02-04T13:15:13.089914+00:00 app[web.1]: django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module
+2025-02-04T13:15:13.089972+00:00 app[web.1]: [2025-02-04 13:15:13 +0000] [9] [INFO] Worker exiting (pid: 9)
+2025-02-04T13:15:13.089972+00:00 app[web.1]: [2025-02-04 13:15:13 +0000] [10] [INFO] Worker exiting (pid: 10)
+2025-02-04T13:15:13.149682+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:15:13.150337+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 209, in run
+2025-02-04T13:15:13.150337+00:00 app[web.1]: self.sleep()
+2025-02-04T13:15:13.150338+00:00 app[web.1]: ~~~~~~~~~~^^
+2025-02-04T13:15:13.150339+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 357, in sleep
+2025-02-04T13:15:13.150339+00:00 app[web.1]: ready = select.select([self.PIPE[0]], [], [], 1.0)
+2025-02-04T13:15:13.150340+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2025-02-04T13:15:13.150340+00:00 app[web.1]: self.reap_workers()
+2025-02-04T13:15:13.150341+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.150349+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2025-02-04T13:15:13.150349+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2025-02-04T13:15:13.150366+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2025-02-04T13:15:13.150444+00:00 app[web.1]: 
+2025-02-04T13:15:13.150445+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:15:13.150445+00:00 app[web.1]: 
+2025-02-04T13:15:13.150446+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:15:13.151083+00:00 app[web.1]: File "/app/.heroku/python/bin/gunicorn", line 8, in <module>
+2025-02-04T13:15:13.151083+00:00 app[web.1]: sys.exit(run())
+2025-02-04T13:15:13.151083+00:00 app[web.1]: ~~~^^
+2025-02-04T13:15:13.151083+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+2025-02-04T13:15:13.151084+00:00 app[web.1]: WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2025-02-04T13:15:13.151084+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.151085+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/base.py", line 231, in run
+2025-02-04T13:15:13.151085+00:00 app[web.1]: super().run()
+2025-02-04T13:15:13.151085+00:00 app[web.1]: ~~~~~~~~~~~^^
+2025-02-04T13:15:13.151086+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/base.py", line 72, in run
+2025-02-04T13:15:13.151086+00:00 app[web.1]: Arbiter(self).run()
+2025-02-04T13:15:13.151086+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.151096+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 229, in run
+2025-02-04T13:15:13.151096+00:00 app[web.1]: self.halt(reason=inst.reason, exit_status=inst.exit_status)
+2025-02-04T13:15:13.151096+00:00 app[web.1]: ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:15:13.151097+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 342, in halt
+2025-02-04T13:15:13.151097+00:00 app[web.1]: self.stop()
+2025-02-04T13:15:13.151097+00:00 app[web.1]: ~~~~~~~~~^^
+2025-02-04T13:15:13.151097+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 393, in stop
+2025-02-04T13:15:13.151097+00:00 app[web.1]: time.sleep(0.1)
+2025-02-04T13:15:13.151098+00:00 app[web.1]: ~~~~~~~~~~^^^^^
+2025-02-04T13:15:13.151098+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2025-02-04T13:15:13.151099+00:00 app[web.1]: self.reap_workers()
+2025-02-04T13:15:13.151099+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:15:13.151108+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2025-02-04T13:15:13.151108+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2025-02-04T13:15:13.151117+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2025-02-04T13:15:13.244482+00:00 heroku[web.1]: State changed from up to crashed
+2025-02-04T13:26:08.815773+00:00 heroku[web.1]: State changed from crashed to starting
+2025-02-04T13:26:12.538803+00:00 heroku[web.1]: Starting process with command `gunicorn community_centre.wsgi --log-file -`
+2025-02-04T13:26:13.031489+00:00 app[web.1]: Python buildpack: Detected 512 MB available memory and 8 CPU cores.
+2025-02-04T13:26:13.031583+00:00 app[web.1]: Python buildpack: Defaulting WEB_CONCURRENCY to 2 based on the available memory.
+2025-02-04T13:26:13.336499+00:00 app[web.1]: [2025-02-04 13:26:13 +0000] [2] [INFO] Starting gunicorn 20.1.0
+2025-02-04T13:26:13.336792+00:00 app[web.1]: [2025-02-04 13:26:13 +0000] [2] [INFO] Listening at: http://0.0.0.0:52529 (2)
+2025-02-04T13:26:13.336832+00:00 app[web.1]: [2025-02-04 13:26:13 +0000] [2] [INFO] Using worker: sync
+2025-02-04T13:26:13.339016+00:00 app[web.1]: [2025-02-04 13:26:13 +0000] [9] [INFO] Booting worker with pid: 9
+2025-02-04T13:26:13.394211+00:00 app[web.1]: [2025-02-04 13:26:13 +0000] [10] [INFO] Booting worker with pid: 10
+2025-02-04T13:26:13.638435+00:00 heroku[web.1]: State changed from starting to up
+2025-02-04T13:26:13.957159+00:00 app[web.1]: [2025-02-04 13:26:13 +0000] [10] [ERROR] Exception in worker process
+2025-02-04T13:26:13.957169+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:26:13.957171+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 25, in <module>
+2025-02-04T13:26:13.957171+00:00 app[web.1]: import psycopg as Database
+2025-02-04T13:26:13.957171+00:00 app[web.1]: ModuleNotFoundError: No module named 'psycopg'
+2025-02-04T13:26:13.957172+00:00 app[web.1]: 
+2025-02-04T13:26:13.957172+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:26:13.957173+00:00 app[web.1]: 
+2025-02-04T13:26:13.957173+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:26:13.957173+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 27, in <module>
+2025-02-04T13:26:13.957173+00:00 app[web.1]: import psycopg2 as Database
+2025-02-04T13:26:13.957184+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/psycopg2/__init__.py", line 51, in <module>
+2025-02-04T13:26:13.957185+00:00 app[web.1]: from psycopg2._psycopg import (                     # noqa
+2025-02-04T13:26:13.957185+00:00 app[web.1]: ...<10 lines>...
+2025-02-04T13:26:13.957185+00:00 app[web.1]: )
+2025-02-04T13:26:13.957186+00:00 app[web.1]: ImportError: /app/.heroku/python/lib/python3.13/site-packages/psycopg2/_psycopg.cpython-313-x86_64-linux-gnu.so: undefined symbol: _PyInterpreterState_Get
+2025-02-04T13:26:13.957187+00:00 app[web.1]: 
+2025-02-04T13:26:13.957187+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:26:13.957187+00:00 app[web.1]: 
+2025-02-04T13:26:13.957187+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:26:13.957187+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+2025-02-04T13:26:13.957188+00:00 app[web.1]: worker.init_process()
+2025-02-04T13:26:13.957188+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:26:13.957188+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2025-02-04T13:26:13.957188+00:00 app[web.1]: self.load_wsgi()
+2025-02-04T13:26:13.957188+00:00 app[web.1]: ~~~~~~~~~~~~~~^^
+2025-02-04T13:26:13.957189+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2025-02-04T13:26:13.957189+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2025-02-04T13:26:13.957189+00:00 app[web.1]: ~~~~~~~~~~~~~^^
+2025-02-04T13:26:13.957189+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2025-02-04T13:26:13.957189+00:00 app[web.1]: self.callable = self.load()
+2025-02-04T13:26:13.957189+00:00 app[web.1]: ~~~~~~~~~^^
+2025-02-04T13:26:13.957189+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2025-02-04T13:26:13.957190+00:00 app[web.1]: return self.load_wsgiapp()
+2025-02-04T13:26:13.957190+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:26:13.957190+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2025-02-04T13:26:13.957190+00:00 app[web.1]: return util.import_app(self.app_uri)
+2025-02-04T13:26:13.957190+00:00 app[web.1]: ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957190+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/util.py", line 359, in import_app
+2025-02-04T13:26:13.957190+00:00 app[web.1]: mod = importlib.import_module(module)
+2025-02-04T13:26:13.957191+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:26:13.957191+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:26:13.957191+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957191+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2025-02-04T13:26:13.957191+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2025-02-04T13:26:13.957192+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2025-02-04T13:26:13.957192+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2025-02-04T13:26:13.957192+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+2025-02-04T13:26:13.957192+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2025-02-04T13:26:13.957192+00:00 app[web.1]: File "/app/community_centre/wsgi.py", line 16, in <module>
+2025-02-04T13:26:13.957193+00:00 app[web.1]: application = get_wsgi_application()
+2025-02-04T13:26:13.957193+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+2025-02-04T13:26:13.957193+00:00 app[web.1]: django.setup(set_prefix=False)
+2025-02-04T13:26:13.957193+00:00 app[web.1]: ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957193+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/__init__.py", line 24, in setup
+2025-02-04T13:26:13.957193+00:00 app[web.1]: apps.populate(settings.INSTALLED_APPS)
+2025-02-04T13:26:13.957193+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957194+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/apps/registry.py", line 116, in populate
+2025-02-04T13:26:13.957194+00:00 app[web.1]: app_config.import_models()
+2025-02-04T13:26:13.957194+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:26:13.957194+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/apps/config.py", line 269, in import_models
+2025-02-04T13:26:13.957194+00:00 app[web.1]: self.models_module = import_module(models_module_name)
+2025-02-04T13:26:13.957194+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957194+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:26:13.957195+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:26:13.957195+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957195+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2025-02-04T13:26:13.957195+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2025-02-04T13:26:13.957195+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2025-02-04T13:26:13.957200+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2025-02-04T13:26:13.957200+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+2025-02-04T13:26:13.957200+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2025-02-04T13:26:13.957200+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/contrib/auth/models.py", line 3, in <module>
+2025-02-04T13:26:13.957200+00:00 app[web.1]: from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+2025-02-04T13:26:13.957200+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/contrib/auth/base_user.py", line 57, in <module>
+2025-02-04T13:26:13.957201+00:00 app[web.1]: class AbstractBaseUser(models.Model):
+2025-02-04T13:26:13.957201+00:00 app[web.1]: ...<109 lines>...
+2025-02-04T13:26:13.957201+00:00 app[web.1]: )
+2025-02-04T13:26:13.957201+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/base.py", line 143, in __new__
+2025-02-04T13:26:13.957201+00:00 app[web.1]: new_class.add_to_class("_meta", Options(meta, app_label))
+2025-02-04T13:26:13.957201+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957202+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/base.py", line 371, in add_to_class
+2025-02-04T13:26:13.957202+00:00 app[web.1]: value.contribute_to_class(cls, name)
+2025-02-04T13:26:13.957202+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+2025-02-04T13:26:13.957202+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/options.py", line 243, in contribute_to_class
+2025-02-04T13:26:13.957203+00:00 app[web.1]: self.db_table, connection.ops.max_name_length()
+2025-02-04T13:26:13.957203+00:00 app[web.1]: ^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957203+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/utils/connection.py", line 15, in __getattr__
+2025-02-04T13:26:13.957203+00:00 app[web.1]: return getattr(self._connections[self._alias], item)
+2025-02-04T13:26:13.957203+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-02-04T13:26:13.957203+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/utils/connection.py", line 62, in __getitem__
+2025-02-04T13:26:13.957204+00:00 app[web.1]: conn = self.create_connection(alias)
+2025-02-04T13:26:13.957204+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/utils.py", line 193, in create_connection
+2025-02-04T13:26:13.957204+00:00 app[web.1]: backend = load_backend(db["ENGINE"])
+2025-02-04T13:26:13.957204+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/utils.py", line 113, in load_backend
+2025-02-04T13:26:13.957204+00:00 app[web.1]: return import_module("%s.base" % backend_name)
+2025-02-04T13:26:13.957204+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:26:13.957205+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:26:13.957205+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957205+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 29, in <module>
+2025-02-04T13:26:13.957205+00:00 app[web.1]: raise ImproperlyConfigured("Error loading psycopg2 or psycopg module")
+2025-02-04T13:26:13.957205+00:00 app[web.1]: django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module
+2025-02-04T13:26:13.957205+00:00 app[web.1]: [2025-02-04 13:26:13 +0000] [9] [ERROR] Exception in worker process
+2025-02-04T13:26:13.957206+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:26:13.957206+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 25, in <module>
+2025-02-04T13:26:13.957206+00:00 app[web.1]: import psycopg as Database
+2025-02-04T13:26:13.957206+00:00 app[web.1]: ModuleNotFoundError: No module named 'psycopg'
+2025-02-04T13:26:13.957207+00:00 app[web.1]: 
+2025-02-04T13:26:13.957207+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:26:13.957207+00:00 app[web.1]: 
+2025-02-04T13:26:13.957207+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:26:13.957207+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 27, in <module>
+2025-02-04T13:26:13.957207+00:00 app[web.1]: import psycopg2 as Database
+2025-02-04T13:26:13.957207+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/psycopg2/__init__.py", line 51, in <module>
+2025-02-04T13:26:13.957207+00:00 app[web.1]: from psycopg2._psycopg import (                     # noqa
+2025-02-04T13:26:13.957208+00:00 app[web.1]: ...<10 lines>...
+2025-02-04T13:26:13.957208+00:00 app[web.1]: )
+2025-02-04T13:26:13.957208+00:00 app[web.1]: ImportError: /app/.heroku/python/lib/python3.13/site-packages/psycopg2/_psycopg.cpython-313-x86_64-linux-gnu.so: undefined symbol: _PyInterpreterState_Get
+2025-02-04T13:26:13.957208+00:00 app[web.1]: 
+2025-02-04T13:26:13.957208+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:26:13.957209+00:00 app[web.1]: 
+2025-02-04T13:26:13.957209+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:26:13.957209+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+2025-02-04T13:26:13.957209+00:00 app[web.1]: worker.init_process()
+2025-02-04T13:26:13.957209+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:26:13.957209+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2025-02-04T13:26:13.957209+00:00 app[web.1]: self.load_wsgi()
+2025-02-04T13:26:13.957209+00:00 app[web.1]: ~~~~~~~~~~~~~~^^
+2025-02-04T13:26:13.957210+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2025-02-04T13:26:13.957210+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2025-02-04T13:26:13.957210+00:00 app[web.1]: ~~~~~~~~~~~~~^^
+2025-02-04T13:26:13.957210+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2025-02-04T13:26:13.957210+00:00 app[web.1]: self.callable = self.load()
+2025-02-04T13:26:13.957210+00:00 app[web.1]: ~~~~~~~~~^^
+2025-02-04T13:26:13.957212+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2025-02-04T13:26:13.957212+00:00 app[web.1]: return self.load_wsgiapp()
+2025-02-04T13:26:13.957212+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:26:13.957212+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2025-02-04T13:26:13.957212+00:00 app[web.1]: return util.import_app(self.app_uri)
+2025-02-04T13:26:13.957212+00:00 app[web.1]: ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957212+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/util.py", line 359, in import_app
+2025-02-04T13:26:13.957213+00:00 app[web.1]: mod = importlib.import_module(module)
+2025-02-04T13:26:13.957213+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:26:13.957213+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:26:13.957213+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957213+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2025-02-04T13:26:13.957213+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2025-02-04T13:26:13.957213+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2025-02-04T13:26:13.957214+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2025-02-04T13:26:13.957214+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+2025-02-04T13:26:13.957214+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2025-02-04T13:26:13.957214+00:00 app[web.1]: File "/app/community_centre/wsgi.py", line 16, in <module>
+2025-02-04T13:26:13.957214+00:00 app[web.1]: application = get_wsgi_application()
+2025-02-04T13:26:13.957214+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+2025-02-04T13:26:13.957214+00:00 app[web.1]: django.setup(set_prefix=False)
+2025-02-04T13:26:13.957214+00:00 app[web.1]: ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957214+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/__init__.py", line 24, in setup
+2025-02-04T13:26:13.957215+00:00 app[web.1]: apps.populate(settings.INSTALLED_APPS)
+2025-02-04T13:26:13.957215+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957215+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/apps/registry.py", line 116, in populate
+2025-02-04T13:26:13.957215+00:00 app[web.1]: app_config.import_models()
+2025-02-04T13:26:13.957215+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:26:13.957215+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/apps/config.py", line 269, in import_models
+2025-02-04T13:26:13.957215+00:00 app[web.1]: self.models_module = import_module(models_module_name)
+2025-02-04T13:26:13.957215+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957216+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:26:13.957216+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:26:13.957216+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957216+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+2025-02-04T13:26:13.957216+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2025-02-04T13:26:13.957216+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2025-02-04T13:26:13.957216+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+2025-02-04T13:26:13.957216+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+2025-02-04T13:26:13.957217+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+2025-02-04T13:26:13.957217+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/contrib/auth/models.py", line 3, in <module>
+2025-02-04T13:26:13.957217+00:00 app[web.1]: from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+2025-02-04T13:26:13.957217+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/contrib/auth/base_user.py", line 57, in <module>
+2025-02-04T13:26:13.957217+00:00 app[web.1]: class AbstractBaseUser(models.Model):
+2025-02-04T13:26:13.957218+00:00 app[web.1]: ...<109 lines>...
+2025-02-04T13:26:13.957218+00:00 app[web.1]: )
+2025-02-04T13:26:13.957218+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/base.py", line 143, in __new__
+2025-02-04T13:26:13.957218+00:00 app[web.1]: new_class.add_to_class("_meta", Options(meta, app_label))
+2025-02-04T13:26:13.957218+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957219+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/base.py", line 371, in add_to_class
+2025-02-04T13:26:13.957219+00:00 app[web.1]: value.contribute_to_class(cls, name)
+2025-02-04T13:26:13.957219+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+2025-02-04T13:26:13.957219+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/models/options.py", line 243, in contribute_to_class
+2025-02-04T13:26:13.957219+00:00 app[web.1]: self.db_table, connection.ops.max_name_length()
+2025-02-04T13:26:13.957219+00:00 app[web.1]: ^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957219+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/utils/connection.py", line 15, in __getattr__
+2025-02-04T13:26:13.957219+00:00 app[web.1]: return getattr(self._connections[self._alias], item)
+2025-02-04T13:26:13.957219+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+2025-02-04T13:26:13.957220+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/utils/connection.py", line 62, in __getitem__
+2025-02-04T13:26:13.957220+00:00 app[web.1]: conn = self.create_connection(alias)
+2025-02-04T13:26:13.957221+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/utils.py", line 193, in create_connection
+2025-02-04T13:26:13.957221+00:00 app[web.1]: backend = load_backend(db["ENGINE"])
+2025-02-04T13:26:13.957221+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/utils.py", line 113, in load_backend
+2025-02-04T13:26:13.957221+00:00 app[web.1]: return import_module("%s.base" % backend_name)
+2025-02-04T13:26:13.957221+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/importlib/__init__.py", line 88, in import_module
+2025-02-04T13:26:13.957221+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2025-02-04T13:26:13.957221+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:13.957221+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/django/db/backends/postgresql/base.py", line 29, in <module>
+2025-02-04T13:26:13.957222+00:00 app[web.1]: raise ImproperlyConfigured("Error loading psycopg2 or psycopg module")
+2025-02-04T13:26:13.957222+00:00 app[web.1]: django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module
+2025-02-04T13:26:13.957255+00:00 app[web.1]: [2025-02-04 13:26:13 +0000] [9] [INFO] Worker exiting (pid: 9)
+2025-02-04T13:26:13.957255+00:00 app[web.1]: [2025-02-04 13:26:13 +0000] [10] [INFO] Worker exiting (pid: 10)
+2025-02-04T13:26:14.023505+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:26:14.024232+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 209, in run
+2025-02-04T13:26:14.024232+00:00 app[web.1]: self.sleep()
+2025-02-04T13:26:14.024232+00:00 app[web.1]: ~~~~~~~~~~^^
+2025-02-04T13:26:14.024239+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 357, in sleep
+2025-02-04T13:26:14.024240+00:00 app[web.1]: ready = select.select([self.PIPE[0]], [], [], 1.0)
+2025-02-04T13:26:14.024241+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2025-02-04T13:26:14.024241+00:00 app[web.1]: self.reap_workers()
+2025-02-04T13:26:14.024241+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:26:14.024250+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2025-02-04T13:26:14.024250+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2025-02-04T13:26:14.024271+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2025-02-04T13:26:14.024355+00:00 app[web.1]: 
+2025-02-04T13:26:14.024355+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2025-02-04T13:26:14.024355+00:00 app[web.1]: 
+2025-02-04T13:26:14.024356+00:00 app[web.1]: Traceback (most recent call last):
+2025-02-04T13:26:14.025021+00:00 app[web.1]: File "/app/.heroku/python/bin/gunicorn", line 8, in <module>
+2025-02-04T13:26:14.025021+00:00 app[web.1]: sys.exit(run())
+2025-02-04T13:26:14.025021+00:00 app[web.1]: ~~~^^
+2025-02-04T13:26:14.025023+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+2025-02-04T13:26:14.025023+00:00 app[web.1]: WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2025-02-04T13:26:14.025023+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:26:14.025024+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/base.py", line 231, in run
+2025-02-04T13:26:14.025024+00:00 app[web.1]: super().run()
+2025-02-04T13:26:14.025024+00:00 app[web.1]: ~~~~~~~~~~~^^
+2025-02-04T13:26:14.025035+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/app/base.py", line 72, in run
+2025-02-04T13:26:14.025035+00:00 app[web.1]: Arbiter(self).run()
+2025-02-04T13:26:14.025035+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:26:14.025036+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 229, in run
+2025-02-04T13:26:14.025037+00:00 app[web.1]: self.halt(reason=inst.reason, exit_status=inst.exit_status)
+2025-02-04T13:26:14.025037+00:00 app[web.1]: ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-02-04T13:26:14.025047+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 342, in halt
+2025-02-04T13:26:14.025047+00:00 app[web.1]: self.stop()
+2025-02-04T13:26:14.025048+00:00 app[web.1]: ~~~~~~~~~^^
+2025-02-04T13:26:14.025048+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 393, in stop
+2025-02-04T13:26:14.025048+00:00 app[web.1]: time.sleep(0.1)
+2025-02-04T13:26:14.025048+00:00 app[web.1]: ~~~~~~~~~~^^^^^
+2025-02-04T13:26:14.025056+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2025-02-04T13:26:14.025056+00:00 app[web.1]: self.reap_workers()
+2025-02-04T13:26:14.025056+00:00 app[web.1]: ~~~~~~~~~~~~~~~~~^^
+2025-02-04T13:26:14.025057+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2025-02-04T13:26:14.025057+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2025-02-04T13:26:14.025072+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2025-02-04T13:26:14.103405+00:00 heroku[web.1]: Process exited with status 1
+2025-02-04T13:26:14.127101+00:00 heroku[web.1]: State changed from up to crashed
