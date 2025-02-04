@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('facilitator.urls')),  # Ensure this line is present
+    path('', include('facilitator.urls')),  # Include facilitator URLs
 ]
