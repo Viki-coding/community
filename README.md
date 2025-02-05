@@ -69,7 +69,7 @@ HTML -  CSS -  JS
 
 * Balsamiq Wireframes - used to create wireframes
 * Git - version control
-* Git Pod
+* Visual Studio Code 
 * Git Hub - To save and store the files for the website
 * Google Fonts - to import fonts onto the website
 * Font Awesome for iconography on website
@@ -81,6 +81,8 @@ HTML -  CSS -  JS
 * Responsive tool - https://responsivetesttool.com/
 * JSHint to check JS code
 * Spell Check
+* Heroku
+* Django 
 
   
 <h2>Manual Testing</h2>
@@ -115,6 +117,7 @@ As shown in the evaluation sheet below we navigated around our site and tested a
 I came across many bugs while testing the quiz, from missing semi-colons to the reset button not being contained within the centre of the quiz box due to styling errors that were fixed and rectified. I put the HTML and CSS code through W3CValidator and fixed all warnings that were shown.  Having chrome development tool open while creating code and inspect console log was very helping with some aspects of the bug finding.  It was also helpful breaking down the problem and  thinking logically - what’s working, what’s not to be able to focus in on the issue. 
 
 One challenging bug was
+After following the step by step guide to migrating from gitpod to visual studio code, I found it difficult, lost my project kanban board, so I decided to start again rather than make the migration. Deploying to heroku also took 1 full day to sort of, with many errors and google, stack overflow and slack to assist.  It was very frustrating at the time, loosing valuable coding hours trying to fix errors but each is a learning curve where you learn something new and get braver at writing commands to see if things get fixed.  In the end I had to resort to Oisin in student support who finally got me sorted! 
 
 <h2>User Experience Assurance</h2>
 <h2>Deployment Steps</h2>
@@ -187,9 +190,9 @@ CONTEXT
 <b>General good videos and links to teaching of JS:<b>
 
 
-<b>Videos & Websites that we gained visual clues of how to create the Quiz:</b>
+<b>Videos & Websites that we gained visual clues of how to create the community centre website:</b>
 
-We gained inspiration with the READ.me by watching the video 'Creating your first README with Kera Cudmore' on CI Chanel Lead Library on YouTube and also the video with Lane-Sawyer Thompson on CI Channel on YouTube. Thanks to the on-line tutor, Tom and Sean for their expertise and ability to explain some of the 'challenges' I encountered. Thanks to our very supportive and positive facilitator Laura Maycock and our new facilitator Kay and my Kiwi mentor Dick Vlaanderen. Also found the webinar 'Community Q&A: How to Troubleshoot with Lane-Sawyer Thompson' very helpful approach to how to view looking at the site for bugs and methodically identifying issues.
+We gained inspiration with the READ.me by watching the video 'Creating your first README with Kera Cudmore' on CI Chanel Lead Library on YouTube and also the video with Lane-Sawyer Thompson on CI Channel on YouTube. Thanks to the on-line tutor, Oisin and Rebecca for their expertise and ability to explain some of the 'challenges' I encountered. Thanks to our very supportive and positive facilitator Kay and my Kiwi mentor Dick Vlaanderen. Also found the webinar 'Community Q&A: How to Troubleshoot with Lane-Sawyer Thompson' very helpful approach to how to view looking at the site for bugs and methodically identifying issues.
 
 <h2>Media/Images</h2>
 Image by of Green Globes in background by Clicker-Free-Vector-Images from Pixabay
@@ -197,7 +200,7 @@ Flag images from Britannica website.
 Image of logo created in Canva using canva template. 
 
 <h2>CONTENT</h2>
-The content text for Flags of the World quiz is written by Viki Mulhall. 
+The content text for website  is written by Viki Mulhall. 
 
 <h2>Legal & Ethical Compliance</h2>
 This project is for educational purposes only.
