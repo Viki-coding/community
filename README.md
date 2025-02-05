@@ -1,1 +1,197 @@
-# community
+Community Centre
+
+
+Live link: 
+
+
+<h1> INTRODUCTION </h1>
+This website aims to keep everyone in the community informed of events, matches, social gatherings, meetings and sporting opportunities available in their area.  The community of Ballinameela based in West Waterford are a strongly knitted community who have worked very hard over the years fundraising and running events to create a community centre as the central point for families, individuals and sporting groups to have a meeting area to keep healthy, meet and gather in state of the art facilitiies.  To utilise the centre to its higest purpose it is important to highlight to the community themselves of what is going on on a weekly basis.  
+
+<h2>Description - Project Purpose</h2>
+The website will show the latest events that are taking part in the centre, by event name, time, date, location and description.  The purpose is to allow anyone in the community the ability to look up the site to see what's on and feel welcome to join in taking part in that event.  The users of the site will be all age demographics living in the community who may want to check the time and location of a match, to a new parent to the area wondering if there is a parent and toddler group. 
+
+We will have an number of facilitators who will be authorised to post events to the community notice board.  They may be coaches, community centre members, parent and toddler facilitator etc. 
+
+Please see attached some user personas. 
+
+	
+-	The project aims to accomplish keeping all members informed of what's going on, by having a central platform to higlight and encourage people to events.  That could be the time of the U10's hurling match v's Ballygunner that their grandparents would love to attend and watch, or a new mother in the area wondering if there is a local yoga group she could take part in.  The community centre was built using the dedication and money over many years from people within the community, this website will highlight everything that is taking place so the communtiy members themselves can enjoy it.
+
+Decreases of women in sport, childhood obesity and lonliness are all major problems in our society today.  The community centre has faciliites such as basket ball, indoor soccer, after school children support, retirement film night, astroturf and flood lights, long jump, meeting rooms and a full size pitch.  If we can make it easy for people to view whats on in their local community they may make a postitive health or life decision that can help them get healthier, meet others, get support etc that is a very positive experience and result. This will benefit all members of the community. 
+
+
+
+<h2>User Demographics - Target audience</h2>
+
+<h2>UX</h2>
+
+<h2>USER STORIES</h2>
+
+<h2>Design Choices</h2>
+Colour Scheme
+Using a colour contrast checked we checked which font colours stood out best against our base colours.  All receiving good ratings. Graphic illustrated below:
+
+<h2>Typography</h2>
+
+<h2>Wireframes</h2>
+<h2>Flow Chart</h2>
+
+<h3>FEATURES</h3>
+	(example: nav bars, footer, contact forms, social media icons. )
+	Functional Overview 
+-	Core functionalities
+-	Elements of the project
+-	Sets expectations
+Navigation and Interaction Points 
+-	Offers preview of key elements which are crucial for user interaction.
+Assessor wants to see:
+Feature Title / Screenshot / Value to the User
+<h2>Interaction Points</h2>
+
+<h2>Future Implementation Section</h2>
+
+<h2>Accessibility</h2>
+
+<h2>Technologies Used</h2>
+HTML -  CSS -  JS
+
+
+<h2>Frameworks, Libraries and Programs Used: </h2>
+
+* Balsamiq Wireframes - used to create wireframes
+* Git - version control
+* Git Pod
+* Git Hub - To save and store the files for the website
+* Google Fonts - to import fonts onto the website
+* Font Awesome for iconography on website
+* Favicon.io - to create favicon
+* Coolors - checking colour pallets and their contrast abilities with fonts.
+* Berme.net - to reduce image sizes and convert to .webp
+* Canva - to create logo image
+* Am I Responsive - quick tool to check how responsiveness on various devices and creates display
+* Responsive tool - https://responsivetesttool.com/
+* JSHint to check JS code
+* Spell Check
+
+  
+<h2>Manual Testing</h2>
+(Does the site work as intended?)
+FEATURES TESING
+LIGHTHOUSE PERFORMANCE
+VALIDATOR TESTING
+BROWSER COMPATIBILITY
+SCREEN SIZE RESPONSIVENESS
+BUGS RESOLVED AND NOTE SOLUTIONS AND UNRESOLVED
+	
+We performed manual testing on the deployed site and also ran our html, css and js codes through validators.
+<h3>W3C Validator</h3>
+<h3> CSS (Jigsaw) validator</h3>
+<h2>JavaScript Code Validator</h2>
+<h2> JSON formatter and Validator</h2>
+
+<h2>Quality Assurance</h2>
+ (Steps taken to manually test the project
+-	Ensures it functions correctly
+-	Identifies potential bugs
+User Experience Assurance
+-	Ensures that the end-users have a smooth experience by addressing potential issues. 
+We took a systematic and structural approach to manually test each page to ensure it functions correctly and to help identify potential bugs. We created a specific testing template to ensure and re-check all aspects of the quiz were working correctly as specified with expected and actual outcomes using a methodical approach. We did final testing on the deployed site. 
+
+<h3>Test Evaluation Sheet:</h3>
+As shown in the evaluation sheet below we navigated around our site and tested all available features to ensure they were working as intended.
+
+<h2>Lighthouse Testing</h2>
+<h2>BUGS</h2>
+<u>Solved Bugs</u>
+I came across many bugs while testing the quiz, from missing semi-colons to the reset button not being contained within the centre of the quiz box due to styling errors that were fixed and rectified. I put the HTML and CSS code through W3CValidator and fixed all warnings that were shown.  Having chrome development tool open while creating code and inspect console log was very helping with some aspects of the bug finding.  It was also helpful breaking down the problem and  thinking logically - what’s working, what’s not to be able to focus in on the issue. 
+
+One challenging bug was
+
+<h2>User Experience Assurance</h2>
+<h2>Deployment Steps</h2>
+
+* The site is Deployed using GitHub Pages
+* Login to GitHub
+* Go to the projects repository (https://viki-coding.github.io/Guess-the-Flag-Quiz/)
+* Click on Settings
+* Select pages in the left navigation bar
+* From SOURCE dropdown select Deploy from a Branch
+* Under BRANCH from dropdown select Main Branch and SAVE
+* The site is now deployed but may take a few minutes to go live.
+* Return to CODE tab of Github repo and wait a few minutes for build to finish, refresh page. This will show on GitHub-pages to see active deployments.
+
+<h2>How to Fork</h2>
+
+* Login to Github
+* Go to Project repository
+* Click the FORK button top right corner
+
+<h2>How to Clone</h2>
+
+* Log into Github
+* Go to project repository
+* Click on the code button, select what want to clone HTTPS, SSH or GitHub CLI and copy the link.
+* Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory
+* Copy 'git clone' into the terminal and paste the link you copied in step 3. Press enter.
+
+Heruko Deployment
+
+Log on to Heruko
+https://dashboard.heroku.com/apps
+ 
+Select “Create new app”
+Name the app something unique
+Choose Europe from the dropdown
+Click ‘Create App’
+Go to the SETTINGS  tab first
+In the ‘Config Vars’ section aka environment variables 
+In the KEY section type in PORT and the value section type in 8000 – add
+
+IF you build a landmark project that doesn’t use a cred.json file you don’t need to set up config vars otherwise: 
+In the KEY section type CREDS (all capital letters) – 
+Go to workspace and copy the entire creds.json file and paste it into the value field and add.
+
+ To add other dependencies:
+ADD BUILDPACK
+Select Python – choose add
+Select Node.js – choose add 
+(Should be in this order, python first then node.js)
+ 
+DEPLOY SECTION
+Click on the DEPLOY Tab
+Choose the Githb deployment method
+Confirm that you want to connect to GitHub, gitbub will request your password to connect. 
+Click in repo name  and Search for your repository name and select connect. 
+Select Enable Automatic Deploys 
+Check Choose a branch to deploy is defaulted is MAIN
+Click on Display Branch 
+ 
+App will build
+Wait until the message ‘App was successfully deployed’ is displayed, click on the view button
+
+
+<h2>Acknowledging Contributions & Credits</h2>
+TITLE OR DESCRIPTION
+SOURCE OF LINK
+CONTEXT
+
+<b>General good videos and links to teaching of JS:<b>
+
+
+<b>Videos & Websites that we gained visual clues of how to create the Quiz:</b>
+
+We gained inspiration with the READ.me by watching the video 'Creating your first README with Kera Cudmore' on CI Chanel Lead Library on YouTube and also the video with Lane-Sawyer Thompson on CI Channel on YouTube. Thanks to the on-line tutor, Tom and Sean for their expertise and ability to explain some of the 'challenges' I encountered. Thanks to our very supportive and positive facilitator Laura Maycock and our new facilitator Kay and my Kiwi mentor Dick Vlaanderen. Also found the webinar 'Community Q&A: How to Troubleshoot with Lane-Sawyer Thompson' very helpful approach to how to view looking at the site for bugs and methodically identifying issues.
+
+<h2>Media/Images</h2>
+Image by of Green Globes in background by Clicker-Free-Vector-Images from Pixabay
+Flag images from Britannica website. 
+Image of logo created in Canva using canva template. 
+
+<h2>CONTENT</h2>
+The content text for Flags of the World quiz is written by Viki Mulhall. 
+
+<h2>Legal & Ethical Compliance</h2>
+This project is for educational purposes only.
+
+
+
