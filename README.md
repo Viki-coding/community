@@ -26,6 +26,15 @@ Decreases of women in sport, childhood obesity and lonliness are all major probl
 <h2>UX</h2>
 
 <h2>USER STORIES</h2>
+As a facilitator, I want to log in to the app so that I can manage my events.
+As a Facilitator, I want to create a new event so that I can inform the community about upcoming activities.
+As a Facilitator, I want to edit an existing event so that I can update the event details.
+As a Facilitator, I want to delete an event so that I can remove outdated or canceled events from the notice board.
+As a Community Member, I want to view the notice board so that I can see the upcoming events.
+As a Community Member, I want to search for events by category so that I can find events happening in specific category.
+As a community user, I can view a paginated list of posts so that I can select which post I want to view.
+As a community User, I can click on a post so that I can read the full event details.
+As a facilitator I can create a login in with approval from the super user.
 
 <h2>Design Choices</h2>
 Colour Scheme
