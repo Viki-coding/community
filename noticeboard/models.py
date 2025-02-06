@@ -27,5 +27,27 @@ class Event(models.Model):
     facilitator = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = models.SlugField(unique=True)
 
+#orders the events by date
+    class Meta:
+            ordering = ["-created"]
+
+#returns the title of the event and the facilitator
     def __str__(self):
-        return self.title
+        return f"{self.title} | written by {self.facilitator}"
+
+
+#Create a locations model that respresent the locations of the event within the community centre
+class Location(models.Model):
+    LOCATION_CHOICES = [
+        ('Main Hall', 'Main Hall'),
+        ('Astroturf', 'Astroturf'),
+        ('Kitchen', 'Kitchen'),
+        ('Meeting Room', 'Meeting Room'),
+        ('Pitch', 'Pitch'),
+        ('Mezzanine', 'Mezzanine'),
+    ]
+
+    name = models.CharField(max_length=50, choices=LOCATION_CHOICES, unique=True)
+
+    def __str__(self):
+        return self.name
