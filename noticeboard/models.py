@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-#Create a locations model that respresent the locations of the event within the community centre
 class Location(models.Model):
     LOCATION_CHOICES = [
         ('Main Hall', 'Main Hall'),
@@ -16,8 +15,7 @@ class Location(models.Model):
 
     def __str__(self):
         return self.name
-    
-# Create your models here.
+
 class Event(models.Model):
     CATEGORY_CHOICES = [
         ('5-Aside Soccer', '5-Aside Soccer'),
@@ -43,12 +41,8 @@ class Event(models.Model):
     facilitator = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = models.SlugField(unique=True)
 
-#orders the events by date
     class Meta:
-            ordering = ["-created"]
+        ordering = ["-created"]
 
-#returns the title of the event and the facilitator
     def __str__(self):
         return f"{self.title} | written by {self.facilitator}"
-
-
