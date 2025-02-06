@@ -10,7 +10,7 @@ def event_list(request):
 
 class EventList(generic.ListView):
     model = Event
-    queryset = Event.objects.order_by('-created')
+    queryset = Event.objects.order_by('-created') #order in descending order from the most recent to the oldest
     template_name = 'noticeboard/event.html'
     paginate_by = 3
 
