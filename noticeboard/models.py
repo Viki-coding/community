@@ -17,10 +17,11 @@ class Event(models.Model):
 
     title = models.CharField(max_length=200)
     date = models.DateField()
-    time = models.TimeField()
+    starttime = models.TimeField()
     endtime = models.TimeField()
     location = models.CharField(max_length=200)
     category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, default='Other')
+    excerpt = models.TextField(blank=True)
     description = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     facilitator = models.ForeignKey(User, on_delete=models.CASCADE)
