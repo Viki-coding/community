@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'facilitator/home.html')
+    return render(request, 'noticeboard/home.html')
 
 
 
