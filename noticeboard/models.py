@@ -19,9 +19,12 @@ class Event(models.Model):
     date = models.DateField()
     time = models.TimeField()
     endtime = models.TimeField()
-    location = models.CharField('Location', on_delete=models.CASCADE)
+    location = models.CharField(max_length=200)
     category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, default='Other')
     description = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
-    facilitator = models.ForeignKey('Facilitator', on_delete=models.CASCADE)
+    facilitator = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = models.SlugField(unique=True)
+
+    def __str__(self):
+        return self.title
