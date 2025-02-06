@@ -1,10 +1,18 @@
 from django.db import models
 from django.contrib.auth.models import User
-from path.to.location.model import Location 
 
+#Create a locations model that respresent the locations of the event within the community centre
 class Location(models.Model):
-    name = models.CharField(max_length=200)
-    address = models.TextField()
+    LOCATION_CHOICES = [
+        ('Main Hall', 'Main Hall'),
+        ('Astroturf', 'Astroturf'),
+        ('Kitchen', 'Kitchen'),
+        ('Meeting Room', 'Meeting Room'),
+        ('Pitch', 'Pitch'),
+        ('Mezzanine', 'Mezzanine'),
+    ]
+
+    name = models.CharField(max_length=50, choices=LOCATION_CHOICES, unique=True)
 
     def __str__(self):
         return self.name
@@ -44,18 +52,3 @@ class Event(models.Model):
         return f"{self.title} | written by {self.facilitator}"
 
 
-#Create a locations model that respresent the locations of the event within the community centre
-class Location(models.Model):
-    LOCATION_CHOICES = [
-        ('Main Hall', 'Main Hall'),
-        ('Astroturf', 'Astroturf'),
-        ('Kitchen', 'Kitchen'),
-        ('Meeting Room', 'Meeting Room'),
-        ('Pitch', 'Pitch'),
-        ('Mezzanine', 'Mezzanine'),
-    ]
-
-    name = models.CharField(max_length=50, choices=LOCATION_CHOICES, unique=True)
-
-    def __str__(self):
-        return self.name
