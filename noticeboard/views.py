@@ -14,7 +14,11 @@ class EventList(generic.ListView):
     template_name = 'noticeboard/index.html'
     paginate_by = 3
 
-def home(request):
-    return render(request, 'noticeboard/index.html')
+# filepath: /Users/vikimulhall/Documents/community/noticeboard/views.py
+from django.shortcuts import render
+from .models import Event
 
+def home(request):
+    events = Event.objects.all()
+    return render(request, 'index.html', {'events': events})
 

@@ -1,11 +1,11 @@
-{% extends "noticeboard/base.html" %}
+<!-- filepath: /Users/vikimulhall/Documents/community/noticeboard/templates/noticeboard/index.html -->
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
 
 {% block content %}
-
-<!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
-
         <!-- Events Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -21,7 +21,6 @@
                             <a href="#" class="post-link">
                                 <h2 class="card-title">{{ event.title }}</h2>
                             </a>
-
                             <hr />
                             <p class="card-text text-muted h6">{{ event.date }} at {{ event.starttime }}</p>
                         </div>
@@ -32,7 +31,6 @@
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
@@ -49,6 +47,4 @@
     </nav>
     {% endif %}
 </div>
-
-<!-- index.html content ends here -->
 {% endblock %}
