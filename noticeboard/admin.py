@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import Event
+from .models import Location, Event
 from django_summernote.admin import SummernoteModelAdmin
+
+admin.site.register(Location) 
 
 @admin.register(Event)
 class EventAdmin(SummernoteModelAdmin):
