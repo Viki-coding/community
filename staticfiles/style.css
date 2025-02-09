@@ -15,6 +15,7 @@
     padding: 0;
 }
 
+/* Hero section styles*/
 .hero {
     position: relative;
     background-size: cover;
@@ -48,6 +49,7 @@
     max-width: 200px;
 }
 
+/*Card styles*/
 .card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -81,4 +83,21 @@
 
 .btn-primary:hover {
     background-color: #0056b3;
+}
+
+/* Socials styles*/
+.social-icons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }
