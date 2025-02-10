@@ -66,6 +66,13 @@
     align-items: center;
 }
 
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .navbar .login-form input {
     margin-right: 10px;
     display: flex;
@@ -235,6 +242,22 @@
 
     .navbar .logo {
         max-width: 100px;
+    }
+
+    /* Hide the navigation links */
+    .navbar ul {
+        display: none; 
+    }
+
+    /* Show the burger menu */
+    .burger-menu {
+        display: block; 
+    }
+
+    .show {
+        display: flex !important; /* Ensure the navigation links are displayed */
+        flex-direction: column;
+        width: 100%;
     }
 
     .navbar ul li a {

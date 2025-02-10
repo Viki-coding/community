@@ -19,7 +19,8 @@
     <header>
       <div class="navbar">
         <img src="{% static 'images/logo.png' %}" alt="Community Centre Logo" class="logo">
-        
+        <div class="burger-menu" id="burger-menu">
+          <i class="fas fa-bars"></i>
         <ul>
           <li><a href="{% url 'home' %}">HOME</a></li>
           <li><a href="{% url 'event_list' %}">EVENTS</a></li>
