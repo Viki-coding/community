@@ -1,17 +1,29 @@
 body {
-    background-color: #F9FAFC;
+    font-family: "Roboto", sans-serif;
+    background-color: #878937; 
+    margin: 0;
+    padding: 0;
 }
 
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
+/* Canva hero image" */
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.red-o {
-    color: #E84610;
+.hero-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
 }
+
 
 .thin {
     font-weight: 300;
