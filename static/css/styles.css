@@ -41,14 +41,23 @@ body {
 }
 
 /* Noticeboard section */
-
+.events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
 .card {
     background-color: #fff8ed; 
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    width: 300px; /* Fixed width for square cards */
+    height: 300px; /* Fixed height for square cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-body {
