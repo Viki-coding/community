@@ -5,7 +5,7 @@ from .models import Event
 from django.shortcuts import render, get_object_or_404, redirect
 
 # Create your views here.
-def event_list(request):
+def index(request):
     events = Event.objects.all()
     return render(request, 'noticeboard/index.html', {'events': events})  
 
