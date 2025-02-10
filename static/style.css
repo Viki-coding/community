@@ -24,27 +24,27 @@ body {
     border-radius: 5px;
 }
 
-
-.thin {
-    font-weight: 300;
+/* Logo section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.light-bg {
-    background-color: #fff;
+.logo-section {
+    text-align: center;
+    margin: 20px 0;
 }
 
-.dark-bg {
-    background-color: #445261;
+.logo {
+    max-width: 200px;
 }
 
-.main-bg {
-    background-color: #F9FAFC;
-}
+/* Noticeboard section */
 
-.card {
-    border: none;
-    background-color: transparent;
-}
+
+
+
 
 .image-container {
     position: relative;
