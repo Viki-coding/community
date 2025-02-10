@@ -57,13 +57,14 @@
 }
 
 .navbar .logo {
-    max-width: 110px;
+    max-width: 150px;
 }
 
 /* Navbar Login Section*/
 .navbar .login-form {
     display: flex;
     align-items: center;
+    margin-left: auto;
 }
 
 /* Burger Menu */
@@ -71,6 +72,7 @@
     display: none;
     font-size: 24px;
     cursor: pointer;
+    color: #2ad495;
 }
 
 .navbar .login-form input {
@@ -206,37 +208,6 @@
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar ul li {
-        margin: 5px 0;
-    }
-
-    .navbar .login-form {
-        width: 100%;
-        justify-content: flex-end;
-    }
-
-    .hero {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .card {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
     .navbar {
         padding: 10px;
     }
