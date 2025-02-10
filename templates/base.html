@@ -21,8 +21,8 @@
         <img src="{% static 'images/logo.png' %}" alt="Community Centre Logo" class="logo">
         
         <ul>
-          <li><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'event_list' %}">Events</a></li>
+          <li><a href="{% url 'home' %}">HOME</a></li>
+          <li><a href="{% url 'event_list' %}">EVENTS</a></li>
         </ul>
         <form method="post" action="{% url 'login' %}" class="login-form">
           {% csrf_token %}
@@ -32,9 +32,11 @@
         </form>
       </div>
     </header>
+    <div class="main-container">
     <main>{% block content %} {% endblock %}</main>
+    </div>
     <footer>
-      <p>&copy; 2025 Ballinameela Community Centre</p>
+      <p class="footer-text">&copy; 2025 Ballinameela Community Centre</p>
     
     <div class="social-icons">
         <a href="https://www.facebook.com/BallinameelaCommunityCentre/" target="_blank"><i class="fab fa-facebook"></i></a>

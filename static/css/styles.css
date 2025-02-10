@@ -9,12 +9,21 @@
     box-sizing: border-box;
   }
 
-body {
+  html, body {
+    height: 100%; 
     font-family: "Roboto", sans-serif;
     background-color: #878937; 
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+/* Main container to hold the content */
+.main-container {
+    flex: 1; 
+}
+
 
 /* Navbar Section" */
 .navbar {
@@ -112,7 +121,7 @@ body {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 150px%;
 }
 
 /* Noticeboard section */
@@ -180,4 +189,9 @@ body {
 
 .social-icons a:hover {
     color: #007bff;
+}
+
+.footer-text {
+    text-align: center;
+    padding: 20px;
 }
