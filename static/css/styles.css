@@ -216,3 +216,14 @@
         width: 100%;
         justify-content: flex-end;
     }
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+}
