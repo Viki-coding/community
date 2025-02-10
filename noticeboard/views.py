@@ -15,12 +15,8 @@ class EventList(generic.ListView):
     template_name = 'noticeboard/index.html'
     paginate_by = 3
 
-def home(request):
-    events = Event.objects.all()
-    return render(request, 'noticeboard/index.html', {'events': events})
-
 # Create a view to handle login form using djangos built in authentication.
-def home(request):
+def login_view(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
