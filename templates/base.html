@@ -23,7 +23,6 @@
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'event_list' %}">Events</a></li>
-          <li><a href="{% url 'contact' %}">Contact Us</a></li>
         </ul>
         <form method="post" action="{% url 'login' %}" class="login-form">
           {% csrf_token %}
