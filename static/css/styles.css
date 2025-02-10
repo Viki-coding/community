@@ -10,7 +10,7 @@ body {
     position: relative;
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 300px;
     color: white;
     text-align: center;
     display: flex;
@@ -37,7 +37,7 @@ body {
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 100px;
 }
 
 /* Noticeboard section */
