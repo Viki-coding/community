@@ -32,3 +32,8 @@ def home(request):
             return render(request, 'noticeboard/index.html', {'error': 'Invalid credentials'})
     events = Event.objects.all()
     return render(request, 'noticeboard/index.html', {'events': events})
+
+# create a view to display the event details and description in full 
+def event_detail(request, event_id):
+    event = get_object_or_404(Event, id=event_id)
+    return render(request, 'noticeboard/event_detail.html', {'event': event})

@@ -121,7 +121,10 @@ After following the step by step guide to migrating from gitpod to visual studio
 
 I followed the steps to install summernote. After running my server and apending /admin at the end I found it had not updated. I checked again to see if summernote was installed. I checked to see if it was in my installed apps. I checked to see it was in my projects urls.py file. I then checked the EventAdmin class was registered in my admin.py file. All was ok. I made migrations again and still did not make any changes. Then I right clicked to inspect and checked the console for javascript errors and found errors for the static files. Then I googled how to resolve this error and followed the steps which got it resolved. 
 
-I applied styling to the page, but when I ran the server it was not applying the changes. I corrected by static files in settings.py as I had inserted staticfile_dirs twice. I checked my file paths, my style.css sheet was not in its own css folder under static so I ameneded it. I ran the python manage.py collect static command again and ran the server. Still didn't work. Then I saw it, in my file directory - I had style.css rather than styles.css 
+I applied styling to the page, but when I ran the server it was not applying the changes. I corrected by static files in settings.py as I had inserted staticfile_dirs twice. I checked my file paths, my style.css sheet was not in its own css folder under static so I ameneded it. I ran the python manage.py collect static command again and ran the server. Still didn't work. Then I saw it, in my file directory - I had style.css rather than styles.css
+
+Made a lot of styling changes to the page, deployed to Heroku and the following was displayed.  Realised I had forgotten to collectstatic, went back into the terminal ran the command again and deployed successfully. 
+
 
 <h2>User Experience Assurance</h2>
 <h2>Deployment Steps</h2>
@@ -190,6 +193,9 @@ Wait until the message ‘App was successfully deployed’ is displayed, click o
 TITLE OR DESCRIPTION
 SOURCE OF LINK
 CONTEXT
+
+Improving the look of my hero image and using css and flex
+https://cloudinary.com/guides/front-end-development
 
 <b>General good videos and links to teaching of JS:<b>
 
