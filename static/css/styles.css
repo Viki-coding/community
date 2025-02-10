@@ -227,3 +227,51 @@
         height: auto;
     }
 }
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        max-width: 100px;
+    }
+
+    .navbar ul li a {
+        padding: 5px;
+    }
+
+    .navbar .login-form input {
+        padding: 5px;
+    }
+
+    .navbar .login-form button {
+        padding: 5px;
+    }
+
+    .hero {
+        height: 200px;
+    }
+
+    .hero-text {
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .btn-primary {
+        padding: 5px 10px;
+    }
+}
