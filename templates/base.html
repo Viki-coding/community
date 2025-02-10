@@ -17,22 +17,31 @@
   </head>
   <body>
     <header>
-      <h1>Ballinameela Community Centre</h1>
-      <nav>
+      <div class="navbar">
+        <img src="{% static 'images/logo.png' %}" alt="Community Centre Logo" class="logo">
+        
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'event_list' %}">Events</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
         </ul>
-      </nav>
+        <form method="post" action="{% url 'login' %}" class="login-form">
+          {% csrf_token %}
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </header>
     <main>{% block content %} {% endblock %}</main>
     <footer>
       <p>&copy; 2025 Ballinameela Community Centre</p>
-    </footer>
+    
     <div class="social-icons">
         <a href="https://www.facebook.com/BallinameelaCommunityCentre/" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://www.instagram.com/ballinameelacommunitycentre/" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
+  </footer>
     <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>
