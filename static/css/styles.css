@@ -1,3 +1,14 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Asterisk wildcard selector to override default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
 body {
     font-family: "Roboto", sans-serif;
     background-color: #878937; 
@@ -11,6 +22,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #878937;
+    padding: 10px 20px;
 }
 
 .navbar ul {
@@ -47,6 +59,8 @@ body {
 
 .navbar .login-form input {
     margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
     padding: 5px;
     border: none;
     border-radius: 4px;
@@ -67,10 +81,12 @@ body {
 /* Canva hero image" */
 .hero {
     position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
-    height: 200px;
-    width: 100%;
-    color: white;
+    height: 300px;
+    width: 80%;
+    max-width: 8000px;
     text-align: center;
     display: flex;
     align-items: center;
