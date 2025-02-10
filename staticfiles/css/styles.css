@@ -1,0 +1,272 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Asterisk wildcard selector to override default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%; 
+    font-family: "Roboto", sans-serif;
+    background-color: #878937; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main container to hold the content */
+.main-container {
+    flex: 1; 
+}
+
+
+/* Navbar Section" */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #878937;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: #ffc100;
+    border-radius: 4px;
+}
+
+.navbar .logo {
+    max-width: 150px;
+}
+
+/* Navbar Login Section*/
+.navbar .login-form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2ad495;
+}
+
+.navbar .login-form input {
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+.navbar .login-form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2ad495;
+    color: white;
+}
+
+.navbar .login-form button:hover {
+    background-color: #ff042f;
+}
+
+/* Hero Section */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+/* Canva hero image communitycentre.png */
+.hero {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+/* Noticeboard section */
+.events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff8ed; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Fixed width for square cards */
+    height: 300px; /* Fixed height for square cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #7d502; 
+}
+
+.card-text {
+    margin-bottom: 10px;
+    color: #7d502; 
+}
+
+/* Buttons section */
+.btn-primary {
+    background-color: #ffc100;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Socials section */
+.social-icons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* Footer section */
+.footer-text {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        max-width: 100px;
+    }
+
+    /* Hide the navigation links */
+    .navbar ul {
+        display: none; 
+    }
+
+    /* Show the burger menu */
+    .burger-menu {
+        display: block; 
+    }
+
+    .show {
+        display: flex !important; /* Ensure the navigation links are displayed */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar ul li a {
+        padding: 5px;
+    }
+
+    .navbar .login-form input {
+        padding: 5px;
+    }
+
+    .navbar .login-form button {
+        padding: 5px;
+    }
+
+    .hero {
+        height: 200px;
+    }
+
+    .hero-text {
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .btn-primary {
+        padding: 5px 10px;
+    }
+}
