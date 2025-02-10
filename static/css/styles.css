@@ -10,8 +10,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px;
+    background-color: #878937;
 }
 
 .navbar ul {
@@ -32,24 +31,45 @@ body {
 }
 
 .navbar ul li a:hover {
-    background-color: #575757;
+    background-color: #ffc100;
     border-radius: 4px;
 }
 
 .navbar .logo {
-    max-width: 50px;
+    max-width: 110px;
 }
 
 /* Navbar Login Section*/
+.navbar .login-form {
+    display: flex;
+    align-items: center;
+}
 
+.navbar .login-form input {
+    margin-right: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
 
+.navbar .login-form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2ad495;
+    color: white;
+}
+
+.navbar .login-form button:hover {
+    background-color: #ff042f;
+}
 
 /* Canva hero image" */
 .hero {
     position: relative;
-    background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 200px;
+    width: 100%;
     color: white;
     text-align: center;
     display: flex;
