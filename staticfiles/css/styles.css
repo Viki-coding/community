@@ -3,12 +3,6 @@
 
 
 /* Asterisk wildcard selector to override default styles */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
   html, body {
     height: 100%; 
     font-family: "Roboto", sans-serif;
@@ -186,29 +180,41 @@
 
 /* Full description section when you click on read more */
 
-.description-container {
-    max-width: 600px;
+.test {
+    color: #ff042f;
+    size: 200px;
 }
 
-.event-detail description-card {
+.description-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.event-detail {
     background-color: #fff8ed;
-    color: #878937
+    color: #878937;
     border-radius: 10px;
     margin: 20px auto;
     padding: 40px;
-    box-shadow: 0 2px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
-    overflow: hidden;
 }
 
 .event-title {
-   margin-bottom: 20px;
+   margin-bottom: 25px;
    font-size: 24px;
+   font-weight: bold;
+}
+
+.description-card {
+    border: none;
 }
 
 p {
-    font-size: 100px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin: 15px 0;
 }
 
 .btn-back {
@@ -218,17 +224,16 @@ p {
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    margin-top: 20px
+    margin-top: 20px;
     cursor: pointer;
     padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.btn-back:hover {
     background-color: #ffc100;
+    color: #2ad495;
 }
-
-
 
 /* Socials section */
 .social-icons {
