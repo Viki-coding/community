@@ -193,7 +193,7 @@ Wait until the message ‘App was successfully deployed’ is displayed, click o
 TITLE OR DESCRIPTION
 SOURCE OF LINK
 CONTEXT
-
+[Django Tutorial #24 - Requiring Login - Net Ninja @6.15](https://www.youtube.com/watch?v=fqDTZA5P1EE)
 Improving the look of my hero image and using css and flex
 https://cloudinary.com/guides/front-end-development
 

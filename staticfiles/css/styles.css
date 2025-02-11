@@ -1,324 +1,326 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Asterisk wildcard selector to override default styles */
-  html, body {
-    height: 100%; 
-    font-family: "Roboto", sans-serif;
-    background-color: #878937; 
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #878937;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Main container to hold the content */
 .main-container {
-    flex: 1; 
-    background-color: #878937;
+  flex: 1;
 }
-
 
 /* Navbar Section" */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #878937;
-    padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #878937;
+  padding: 10px 20px;
 }
 
 .navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar ul li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .navbar ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
 }
 
 .navbar ul li a:hover {
-    background-color: #ffc100;
-    border-radius: 4px;
+  background-color: #ffc100;
+  border-radius: 4px;
 }
 
 .navbar .logo {
-    max-width: 150px;
+  max-width: 150px;
 }
 
 /* Navbar Login Section*/
 .navbar .login-form {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 /* Burger Menu */
 .burger-menu {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #2ad495;
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #2ad495;
 }
 
 .navbar .login-form input {
-    margin-right: 10px;
-    display: flex;
-    justify-content: flex-end;
-    padding: 5px;
-    border: none;
-    border-radius: 4px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
 }
 
 .navbar .login-form button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #2ad495;
-    color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2ad495;
+  color: white;
 }
 
 .navbar .login-form button:hover {
-    background-color: #ff042f;
+  background-color: #ff042f;
 }
 
 /* Hero Section */
 .hero-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
+
 /* Canva hero image communitycentre.png */
 .hero {
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 300px;
-    width: 80%;
-    max-width: 800px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Logo section */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .logo-section {
-    text-align: center;
-    margin: 20px 0;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .logo {
-    max-width: 150px;
+  max-width: 150px;
 }
 
 /* Noticeboard section */
 .events-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .card {
-    background-color: #fff8ed; 
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Fixed width for square cards */
-    height: 300px; /* Fixed height for square cards */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: #fff8ed;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  /* Fixed width for square cards */
+  height: 300px;
+  /* Fixed height for square cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-body {
-    padding: 20px;
+  padding: 20px;
 }
 
 .card-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #7d502; 
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #7d502;
 }
 
 .card-text {
-    margin-bottom: 10px;
-    color: #7d502; 
+  margin-bottom: 10px;
+  color: #7d502;
 }
 
 /* Buttons section */
 .btn-primary {
-    background-color: #ffc100;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px;
-    display: inline-block;
+  background-color: #ffc100;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Full description section when you click on read more */
 
-.test {
-    color: #ff042f;
-    size: 200px;
-}
-
 .description-container {
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .event-detail {
-    background-color: #fff8ed;
-    color: #878937;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 40px;
-    box-shadow: 0 2px 4px 12px rgba(0, 0, 0, 0.2);
-    text-align: center;
+  background-color: #fff8ed;
+  color: #878937;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 40px;
+  box-shadow: 0 2px 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .event-title {
-   margin-bottom: 25px;
-   font-size: 24px;
-   font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .description-card {
-    border: none;
+  border: none;
 }
 
 p {
-    font-size: 18px;
-    margin: 15px 0;
+  font-size: 18px;
+  margin: 15px 0;
 }
 
 .btn-back {
-    background-color: #2ad495;
-    color: #fff8ed;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    cursor: pointer;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
+  background-color: #2ad495;
+  color: #fff8ed;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-back:hover {
-    background-color: #ffc100;
-    color: #2ad495;
+  background-color: #ffc100;
+  color: #2ad495;
 }
 
 /* Socials section */
 .social-icons {
-    text-align: center;
-    margin: 20px 0;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .social-icons a {
-    color: #333;
-    margin: 0 10px;
-    font-size: 24px;
-    text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 .social-icons a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 /* Footer section */
 .footer-text {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 10px;
-    }
+  .navbar {
+    padding: 10px;
+  }
 
-    .navbar .logo {
-        max-width: 100px;
-    }
+  .navbar .logo {
+    max-width: 100px;
+  }
 
-    /* Hide the navigation links */
-    .navbar ul {
-        display: none; 
-    }
+  /* Hide the navigation links */
+  .navbar ul {
+    display: none;
+  }
 
-    /* Show the burger menu */
-    .burger-menu {
-        display: block; 
-    }
+  /* Show the burger menu */
+  .burger-menu {
+    display: block;
+  }
 
-    .show {
-        display: flex !important; /* Ensure the navigation links are displayed */
-        flex-direction: column;
-        width: 100%;
-    }
+  .show {
+    display: flex !important;
+    /* Ensure the navigation links are displayed */
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .navbar ul li a {
-        padding: 5px;
-    }
+  .navbar ul li a {
+    padding: 5px;
+  }
 
-    .navbar .login-form input {
-        padding: 5px;
-    }
+  .navbar .login-form input {
+    padding: 5px;
+  }
 
-    .navbar .login-form button {
-        padding: 5px;
-    }
+  .navbar .login-form button {
+    padding: 5px;
+  }
 
-    .hero {
-        height: 200px;
-    }
+  .hero {
+    height: 200px;
+  }
 
-    .hero-text {
-        padding: 10px;
-    }
+  .hero-text {
+    padding: 10px;
+  }
 
-    .card {
-        width: 100%;
-        height: auto;
-    }
+  .card {
+    width: 100%;
+    height: auto;
+  }
 
+  .card-body {
+    padding: 10px;
+  }
 
-    .card-body {
-        padding: 10px;
-    }
+  .card-title {
+    font-size: 1.2em;
+  }
 
-    .card-title {
-        font-size: 1.2em;
-    }
-
-    .btn-primary {
-        padding: 5px 10px;
-    }
+  .btn-primary {
+    padding: 5px 10px;
+  }
 }

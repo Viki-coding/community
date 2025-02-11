@@ -2,7 +2,13 @@
 from django.views import generic
 from django.contrib.auth import authenticate, login
 from .models import Event
+from .forms import EventForm
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required, user_passes_test
+
+# Check if the user is in the facilitator group
+def is_facilitator(user):
+    return user.groups.filter(name='Facilitators').exists()
 
 # Create your views here.
 def index(request):
@@ -25,7 +31,7 @@ def login_view(request):
             login(request, user)
             return redirect('index')
         else:
-            return render(request, 'noticeboard/index.html', {'error': 'Invalid credentials'})
+            return render(request, 'noticeboard/index.html', {'error': 'Invalid usermame or password'}) 
     events = Event.objects.all()
     return render(request, 'noticeboard/index.html', {'events': events})
 
@@ -33,3 +39,22 @@ def login_view(request):
 def event_detail(request, event_id):
     event = get_object_or_404(Event, id=event_id)
     return render(request, 'noticeboard/event_detail.html', {'event': event})
+
+# Create a view to handle event creation
+@login_required
+@user_passes_test(is_facilitator)
+def create_event(request):
+    """
+    View to handle event creation by facilitators.
+    Only logged-in users who are facilitators can access this view.
+    """
+    if request.method == 'POST':
+        form = EventForm(request.POST)
+        if form.is_valid():
+            event = form.save(commit=False)
+            event.user = request.user
+            event.save()
+            return redirect('index')
+    else:
+        form = EventForm()
+    return render(request, 'noticeboard/create_event.html', {'form': form})

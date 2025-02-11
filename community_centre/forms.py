@@ -17,3 +17,4 @@ class EventForm(forms.ModelForm):
             'excerpt',
             'description',
         ]
+
