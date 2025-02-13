@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Facilitator Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2>My Events</h2>
+    <div class="events-list">
+        {% for event in events %}
+        <div class="event-item">
+            <h3>{{ event.title }}</h3>
+            <p><strong>Date:</strong> {{ event.date }}</p>
+            <p><strong>Time:</strong> {{ event.starttime }} - {{ event.endtime }}</p>
+            <p><strong>Location:</strong> {{ event.location.name }}</p>
+            <p><strong>Category:</strong> {{ event.category }}</p>
+            <p>{{ event.description }}</p>
+            <a href="{% url 'edit_event' event.id %}" class="btn btn-secondary">Edit</a>
+            <a href="{% url 'delete_event' event.id %}" class="btn btn-danger">Delete</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

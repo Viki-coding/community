@@ -237,6 +237,28 @@ p {
   color: #2ad495;
 }
 
+/* Login and Create Event section */
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2ad495;
+  ;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 /* Socials section */
 .social-icons {
   text-align: center;
