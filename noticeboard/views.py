@@ -21,6 +21,7 @@ class EventList(generic.ListView):
     paginate_by = 3
 
 # Create a view to handle login form using djangos built in authentication.
+# If user is facilitator redirect to facilitator_dashboard
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -29,7 +30,7 @@ def login_view(request):
         if user is not None:
             login(request, user)
             if is_facilitator(user):
-                return redirect('create_event')
+                return redirect('facilitator_dashboard')
             return redirect('index')
         else:
             return render(request, 'noticeboard/login.html', {'error': 'Invalid usermame or password'})

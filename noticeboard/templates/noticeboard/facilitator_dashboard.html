@@ -14,7 +14,7 @@
             <p><strong>Time:</strong> {{ event.starttime }} - {{ event.endtime }}</p>
             <p><strong>Location:</strong> {{ event.location.name }}</p>
             <p><strong>Category:</strong> {{ event.category }}</p>
-            <p><strong>Excerpt:</strong> {{ <event.excerpt }}</p>
+            <p><strong>Excerpt:</strong> {{ event.excerpt }}</p>
             <p>{{ event.description }}</p>
             <a href="{% url 'edit_event' event.id %}" class="btn btn-secondary">Edit</a>
             <a href="{% url 'delete_event' event.id %}" class="btn btn-danger">Delete</a>
