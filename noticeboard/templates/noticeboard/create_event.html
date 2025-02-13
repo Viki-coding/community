@@ -3,10 +3,8 @@ content %}
 <div class="container">
   <h2>Create Event</h2>
   <form method="post">
-    {% csrf_token %} 
-    <div class="form-group">
-    {{ form.as_p }}
-    </div>
+    {% csrf_token %}
+    <div class="form-group">{{ form.as_p }}</div>
     <button type="submit" class="btn btn-primary">Create Event</button>
   </form>
 </div>
