@@ -81,9 +81,10 @@ def edit_event(request, event_id):
 @user_passes_test(is_facilitator)
 def delete_event(request, event_id):
     event = get_object_or_404(Event, id=event_id, user=request.user)
-    event.delete()
-    return redirect('facilitator_dashboard')
-return render(request, 'noticeboard/delete_event.html', {'event': event})
+    if request.method == 'POST':
+        event.delete()
+        return redirect('facilitator_dashboard')
+    return render(request, 'noticeboard/delete_event.html', {'event': event})
 
 # Create a view to for the facilitator dashboard
 @login_required
