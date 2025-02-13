@@ -43,12 +43,11 @@ def event_detail(request, event_id):
 # Create a view to handle event creation
 @login_required
 @user_passes_test(is_facilitator)
-
-    """
-    View to handle event creation by facilitators.
-    Only logged-in users who are facilitators can access this view.
-    """
 def create_event(request):
+    """
+View to handle event creation by facilitators.
+Only logged-in users who are facilitators can access this view.
+"""
     if request.method == 'POST':
         form = EventForm(request.POST)
         if form.is_valid():

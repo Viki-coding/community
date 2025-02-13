@@ -125,7 +125,9 @@ I applied styling to the page, but when I ran the server it was not applying the
 
 Made a lot of styling changes to the page, deployed to Heroku and the following was displayed.  Realised I had forgotten to collectstatic, went back into the terminal ran the command again and deployed successfully. 
 
-Faciliator log in bug, faciliator user not being redirected when username and password entered. When running server, got error module error not found in forms. Realised I had not created a forms.py for the noticeboard app. 
+Faciliator log in bug, faciliator user not being redirected when username and password entered. When running server, got error module error not found in forms. Realised I had created the forms.py in the incorrect file path under community centre rather than under noticeboard app. Deleted forms.py under community centre. Bug still existed, so decided to create a separate login.html page for facilitators to log in to, corrected the views.py links. Checked that the users set up in Django were authorised. 
+
+javascript error - while dev tools was open noticed I had a js error, checked the filepath in base.html to realise that I should of had script.js in its own js folder. Corrected it and it ran fine. 
 
 
 <h2>User Experience Assurance</h2>
