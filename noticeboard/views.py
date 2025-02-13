@@ -41,7 +41,7 @@ def event_detail(request, event_id):
     event = get_object_or_404(Event, id=event_id)
     return render(request, 'noticeboard/event_detail.html', {'event': event})
 
-# Create a view to handle event creation
+# Create a view to handle event creation, on dashboard page
 @login_required
 @user_passes_test(is_facilitator)
 def create_event(request):
@@ -55,7 +55,30 @@ def create_event(request):
             event = form.save(commit=False)
             event.user = request.user
             event.save()
-            return redirect('index')
+            return redirect('facilitator_dashboard')
     else:
         form = EventForm()
     return render(request, 'noticeboard/create_event.html', {'form': form})
+
+# Create a view to handle editing of events by facilitators
+@login_required
+@user_passes_test(is_facilitator)
+def edit_event(request, event_id):
+    event = get_object_or_404(Event, id=event_id, user=request.user)
+    if request.method == 'POST':
+        form = EventForm(request.POST, instance=event)
+        if form.is_valid():
+            event = form.save(commit=False)
+            event.user = request.user
+            event.save()
+            return redirect('facilitator_dashboard')
+    else:
+        form = EventForm(instance=event)
+    return render(request, 'noticeboard/edit_event.html', {'form': form})
+
+# Create a view to for the facilitator dashboard
+@login_required
+@user_passes_test(is_facilitator)
+def facilitator_dashboard(request):
+    events = Event.objects.filter(user=request.user)
+    return render(request, 'noticeboard/facilitator_dashboard.html', {'events': events})
