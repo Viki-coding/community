@@ -33,17 +33,7 @@
           <li><a href="{% url 'index' %}">HOME</a></li>
           <li><a href="{% url 'event_list' %}">EVENTS</a></li>
         </ul>
-        <form method="post" action="{% url 'login' %}" class="login-form">
-          {% csrf_token %}
-          <input type="text" name="username" placeholder="Username" required />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-          <button type="submit">Login</button>
-        </form>
+        <a href="{% url 'login' %}" class="btn btn-primary">Facilitator Login</a>
       </div>
     </header>
     <div class="main-container">
