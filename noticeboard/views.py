@@ -31,9 +31,9 @@ def login_view(request):
             login(request, user)
             return redirect('index')
         else:
-            return render(request, 'noticeboard/index.html', {'error': 'Invalid usermame or password'}) 
+            return render(request, 'noticeboard/login.html', {'error': 'Invalid usermame or password'}) 
     events = Event.objects.all()
-    return render(request, 'noticeboard/index.html', {'events': events})
+    return render(request, 'noticeboard/login.html', {'events': events})
 
 # create a view to display the event details and description in full 
 def event_detail(request, event_id):
@@ -43,11 +43,12 @@ def event_detail(request, event_id):
 # Create a view to handle event creation
 @login_required
 @user_passes_test(is_facilitator)
-def create_event(request):
+
     """
     View to handle event creation by facilitators.
     Only logged-in users who are facilitators can access this view.
     """
+def create_event(request):
     if request.method == 'POST':
         form = EventForm(request.POST)
         if form.is_valid():
