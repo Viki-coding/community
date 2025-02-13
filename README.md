@@ -125,6 +125,8 @@ I applied styling to the page, but when I ran the server it was not applying the
 
 Made a lot of styling changes to the page, deployed to Heroku and the following was displayed.  Realised I had forgotten to collectstatic, went back into the terminal ran the command again and deployed successfully. 
 
+Faciliator log in bug, faciliator user not being redirected when username and password entered. When running server, got error module error not found in forms. Realised I had not created a forms.py for the noticeboard app. 
+
 
 <h2>User Experience Assurance</h2>
 <h2>Deployment Steps</h2>
