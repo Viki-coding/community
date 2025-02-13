@@ -125,7 +125,7 @@ I applied styling to the page, but when I ran the server it was not applying the
 
 Made a lot of styling changes to the page, deployed to Heroku and the following was displayed.  Realised I had forgotten to collectstatic, went back into the terminal ran the command again and deployed successfully. 
 
-Faciliator log in bug, faciliator user not being redirected when username and password entered. When running server, got error module error not found in forms. Realised I had created the forms.py in the incorrect file path under community centre rather than under noticeboard app. Deleted forms.py under community centre. Bug still existed, so decided to create a separate login.html page for facilitators to log in to, corrected the views.py links. Checked that the users set up in Django were authorised as faciliators, created a new user called facilitator, ensured they had full permissions and facilitator status. Still unable to log on.  With tutor support, checked login_view function to realise  that after authentication is successful I should of re-directed them to create_event. After half a day of pulling my hair out - finally worked, good lesson learnt. 
+Faciliator log in bug, faciliator user not being redirected when username and password entered. When running server, got error module error not found in forms. Realised I had created the forms.py in the incorrect file path under community centre rather than under noticeboard app. Deleted forms.py under community centre. Bug still existed, so decided to create a separate login.html page for facilitators to log in to, corrected the views.py links. Checked that the users set up in Django were authorised as faciliators, created a new user called facilitator, ensured they had full permissions and facilitator status. Still unable to log on.  With tutor support, checked login_view function to realise  that after authentication is successful I should of re-directed them to create_event. After half a day of pulling my hair out - finally worked, good lesson learnt check django documentation for tips! 
 
 javascript error - while dev tools was open noticed I had a js error, checked the filepath in base.html to realise that I should of had script.js in its own js folder. Corrected it and it ran fine. 
 
@@ -201,10 +201,17 @@ CONTEXT
 Improving the look of my hero image and using css and flex
 https://cloudinary.com/guides/front-end-development
 
-<b>General good videos and links to teaching of JS:<b>
+Creating view to handle djangos login form: ([Django Documentatin](https://docs.djangoproject.com/en/5.1/topics/auth/default/#:~:text=groups.%20set%28%5Bgroup_list%5D%29))
 
+
+
+<b>General good videos and links to teaching of Python:<b>
+I signed up to a phone app called MIMO which I found great for teaching me python and to help me do something productive rather than doom scrolling when I'm in the car waiting on my kids or having breakfast in the morning. Would highly recommend. 
+
+Lucimeri Andretta - PP4 - MVP & Community Walkthrough.pdf was great or refer to for the entire projects including common errors, testing, readme. 
 
 <b>Videos & Websites that we gained visual clues of how to create the community centre website:</b>
+
 
 We gained inspiration with the READ.me by watching the video 'Creating your first README with Kera Cudmore' on CI Chanel Lead Library on YouTube and also the video with Lane-Sawyer Thompson on CI Channel on YouTube. Thanks to the on-line tutor, Oisin and Rebecca for their expertise and ability to explain some of the 'challenges' I encountered. Thanks to our very supportive and positive facilitator Kay and my Kiwi mentor Dick Vlaanderen. Also found the webinar 'Community Q&A: How to Troubleshoot with Lane-Sawyer Thompson' very helpful approach to how to view looking at the site for bugs and methodically identifying issues.
 
