@@ -135,6 +135,9 @@ Focused in on the logical step that my view.py for dashboard was incorrect, yell
 Integrity Error 
 After I log in as a facilitator, it takes me to my dashboard, I choose to create an event, I enter the field details and when I click on submit I get Integrity Error. ![geeksforgeeks](https://www.geeksforgeeks.org/integrityerror-in-django/) suggestted 3 common reasons, 1. FK Violation, 2. Unique Constraint Violation and 3. Non-Null Field Violation. My yellow error message highlighted [null value in column "facilitator_id" of relation "noticeboard_event" violates not-null,constraint]. I realised that this was consistent with the above error and changed user to facilitator as that was a valid value in my model. I changed the edit and delete views to faciliator to ensure the error didn't happen again. 
 
+IntegrityError - duplicate key value violates unique constaint (https://www.youtube.com/watch?v=D0K51GneU3g)
+
+
 
 <h2>User Experience Assurance</h2>
 <h2>Deployment Steps</h2>
@@ -209,7 +212,8 @@ https://cloudinary.com/guides/front-end-development
 
 Creating view to handle djangos login form: ([Django Documentatin](https://docs.djangoproject.com/en/5.1/topics/auth/default/#:~:text=groups.%20set%28%5Bgroup_list%5D%29))
 
-
+![Slugify](https://www.w3schools.com/django/ref_filters_slugify.php) to help fix IntegrityError with a duplicate key value for the slug field. 
+![blogizem - How to Fix UNIQUE Constraint Error in Django Model for Slug Field?] (https://www.youtube.com/watch?v=D0K51GneU3g)
 
 <b>General good videos and links to teaching of Python:<b>
 I signed up to a phone app called MIMO which I found great for teaching me python and to help me do something productive rather than doom scrolling when I'm in the car waiting on my kids or having breakfast in the morning. Would highly recommend. 
