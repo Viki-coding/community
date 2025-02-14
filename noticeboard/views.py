@@ -54,6 +54,7 @@ def create_event(request):
         if form.is_valid():
             event = form.save(commit=False)
             event.facilitator = request.user
+            event.slug = slugify(event.title) 
             event.save()
             return redirect('facilitator_dashboard')
     else:
@@ -68,6 +69,7 @@ def edit_event(request, event_id):
     if request.method == 'POST':
         form = EventForm(request.POST, instance=event)
         if form.is_valid():
+            event.slug = slugify(event.title) 
             form.save()
             return redirect('facilitator_dashboard')
     else:
