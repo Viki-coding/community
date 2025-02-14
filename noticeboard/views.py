@@ -33,7 +33,7 @@ def login_view(request):
                 return redirect('facilitator_dashboard')
             return redirect('index')
         else:
-            return render(request, 'noticeboard/login.html', {'error': 'Invalid usermame or password'})
+            return render(request, 'noticeboard/login.html', {'error': 'Invalid username or password'})
     return render(request, 'noticeboard/login.html')
 
 # create a view to display the event details and description in full 
@@ -68,13 +68,11 @@ def edit_event(request, event_id):
     if request.method == 'POST':
         form = EventForm(request.POST, instance=event)
         if form.is_valid():
-            event = form.save(commit=False)
-            event.user = request.user
-            event.save()
+            form.save()
             return redirect('facilitator_dashboard')
     else:
         form = EventForm(instance=event)
-    return render(request, 'noticeboard/edit_event.html', {'form': form})
+    return render(request, 'noticeboard/edit_event.html', {'form': form, 'event': event})
 
 # Create a view to handle event deletion by facilitators
 @login_required
