@@ -7,8 +7,9 @@
 <div class="container">
     <h2>My Events</h2>
     <div class="events-list">
-        {% for event in events %}
+        <a href="{% url 'create_event' %}" class="btn btn-primary mb-3">Create New Event</a>
         <div class="event-item">
+        {% for event in events %}
             <h3>{{ event.title }}</h3>
             <p><strong>Date:</strong> {{ event.date }}</p>
             <p><strong>Time:</strong> {{ event.starttime }} - {{ event.endtime }}</p>
