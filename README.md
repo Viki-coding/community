@@ -129,6 +129,8 @@ Faciliator log in bug, faciliator user not being redirected when username and pa
 
 javascript error - while dev tools was open noticed I had a js error, checked the filepath in base.html to realise that I should of had script.js in its own js folder. Corrected it and it ran fine. 
 
+Facilitator Dashboard not displaying when facilitator logs in. 
+Focused in on the logical step that my view.py for dashboard was incorrect, yellow error page higlighted the error, changed user to facilitator and error was resolved. 
 
 <h2>User Experience Assurance</h2>
 <h2>Deployment Steps</h2>
