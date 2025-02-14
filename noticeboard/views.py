@@ -4,6 +4,7 @@ from .models import Event
 from .forms import EventForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.utils.text import slugify
 
 # Check if the user is in the facilitator group
 def is_facilitator(user):
