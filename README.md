@@ -132,6 +132,10 @@ javascript error - while dev tools was open noticed I had a js error, checked th
 Facilitator Dashboard not displaying when facilitator logs in. 
 Focused in on the logical step that my view.py for dashboard was incorrect, yellow error page higlighted the error, changed user to facilitator and error was resolved. 
 
+Integrity Error 
+After I log in as a facilitator, it takes me to my dashboard, I choose to create an event, I enter the field details and when I click on submit I get Integrity Error. ![geeksforgeeks](https://www.geeksforgeeks.org/integrityerror-in-django/) suggestted 3 common reasons, 1. FK Violation, 2. Unique Constraint Violation and 3. Non-Null Field Violation. My yellow error message highlighted [null value in column "facilitator_id" of relation "noticeboard_event" violates not-null,constraint]. I realised that this was consistent with the above error and changed user to facilitator as that was a valid value in my model. I changed the edit and delete views to faciliator to ensure the error didn't happen again. 
+
+
 <h2>User Experience Assurance</h2>
 <h2>Deployment Steps</h2>
 

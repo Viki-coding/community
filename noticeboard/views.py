@@ -53,7 +53,7 @@ def create_event(request):
         form = EventForm(request.POST)
         if form.is_valid():
             event = form.save(commit=False)
-            event.user = request.user
+            event.facilitator = request.user
             event.save()
             return redirect('facilitator_dashboard')
     else:
@@ -64,7 +64,7 @@ def create_event(request):
 @login_required
 @user_passes_test(is_facilitator)
 def edit_event(request, event_id):
-    event = get_object_or_404(Event, id=event_id, user=request.user)
+    event = get_object_or_404(Event, id=event_id, facilitator=request.user)
     if request.method == 'POST':
         form = EventForm(request.POST, instance=event)
         if form.is_valid():
@@ -78,7 +78,7 @@ def edit_event(request, event_id):
 @login_required
 @user_passes_test(is_facilitator)
 def delete_event(request, event_id):
-    event = get_object_or_404(Event, id=event_id, user=request.user)
+    event = get_object_or_404(Event, id=event_id, facilitator=request.user)
     if request.method == 'POST':
         event.delete()
         return redirect('facilitator_dashboard')
