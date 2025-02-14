@@ -88,5 +88,5 @@ def delete_event(request, event_id):
 @login_required
 @user_passes_test(is_facilitator)
 def facilitator_dashboard(request):
-    events = Event.objects.filter(user=request.user)
+    events = Event.objects.filter(facilitator=request.user)
     return render(request, 'noticeboard/facilitator_dashboard.html', {'events': events})
