@@ -5,7 +5,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}Community Centre{% endblock %}</title>
+    
+    <!-- Meta tags for search engines -->
+    <meta name="description"
+        content="Ballinameela Community Centre, what's on in your local area, our events page lists all the matches, health and well being, community events and classes available!">
+    <meta name="keywords" content="Ballinameela, community, West Waterford, What's on, events, things to do, new to the area, welcome, local, fun, health, fitnness ">
+
+    
+    <title>{% block title %}Ballinameela Community Centre{% endblock %}</title>
+
+     <!-- Favicon files -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon_io/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon_io/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon_io/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon_io/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'images/favicon_io/site.webmanifest' %}">
+
+    <!-- Connect to CSS file -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
