@@ -24,7 +24,7 @@ body {
   flex: 1;
 }
 
-/* Navbar Section" */
+/* Navbar Section */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -71,7 +71,7 @@ body {
   display: none;
   font-size: 24px;
   cursor: pointer;
-  color: #2ad495;
+  color: #fff8ed;
 }
 
 .navbar .login-form input {
@@ -102,7 +102,7 @@ body {
   margin: 20px 0;
 }
 
-/* Canva hero image communitycentre.png */
+/* Canva hero noticeboard image communitycentre.svg */
 .hero {
   position: relative;
   background-size: cover;
@@ -171,9 +171,21 @@ body {
 }
 
 /* Buttons section */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .btn-primary {
   background-color: #ffc100;
-  border: none;
+  border: solid 1px #333;
   color: black;
   padding: 10px 20px;
   text-decoration: none;
@@ -185,6 +197,21 @@ body {
   background-color: #0056b3;
 }
 
+.btn-secondary {
+  background-color: #6c757d; /* Gray color */
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; /* Darker gray on hover */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Red color */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
 /* Full description section when you click on read more */
 
 .description-container {
