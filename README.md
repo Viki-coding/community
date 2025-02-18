@@ -137,6 +137,10 @@ After I log in as a facilitator, it takes me to my dashboard, I choose to create
 
 IntegrityError - duplicate key value violates unique constaint (https://www.youtube.com/watch?v=D0K51GneU3g)
 
+Log Out as Facilitator Error
+I added the feature that once the facilitator was logged in, the button would change to log out. But when I clicked on log out it would bring me to the django admin log out panel rather than my own customised one. 
+Stack Overflow, credid/link below in credits. helped me anmend the customised django view and urls.py to my home page. 
+
 
 
 <h2>User Experience Assurance</h2>
@@ -214,6 +218,10 @@ Creating view to handle djangos login form: ([Django Documentatin](https://docs.
 
 ![Slugify](https://www.w3schools.com/django/ref_filters_slugify.php) to help fix IntegrityError with a duplicate key value for the slug field. 
 ![blogizem - How to Fix UNIQUE Constraint Error in Django Model for Slug Field?] (https://www.youtube.com/watch?v=D0K51GneU3g)
+
+[Facilitator Logout View](https://stackoverflow.com/questions/15467831/django-logout-redirects-me-to-administration-page#:~:text=If%20you%20are%20seeing%20the,admin%20comes%20after%20your_application%20.)
+Helped to fix when a facilitator logs out, rather than seeing the django admin panel log out I wanted the facilitator to see the customised page. 
+
 
 <b>General good videos and links to teaching of Python:<b>
 I signed up to a phone app called MIMO which I found great for teaching me python and to help me do something productive rather than doom scrolling when I'm in the car waiting on my kids or having breakfast in the morning. Would highly recommend. 
