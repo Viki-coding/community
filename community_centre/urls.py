@@ -24,3 +24,6 @@ urlpatterns = [
     path('', include('noticeboard.urls')),  # Include noticeboard URLs
     path('logout/', noticeboard_views.logout_view, name='logout'),
 ]
+
+# error handlers for 404 and 500 errors
+handler404 = 'noticeboard.views.error_404_view'

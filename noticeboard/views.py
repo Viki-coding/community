@@ -102,3 +102,9 @@ def logout_view(request):
         logout(request)
         return redirect('index')
     return render(request, 'noticeboard/logout_confirm.html')
+
+def handler404(request, exception):
+    """
+    Custom 404 error view.
+    """
+    return render(request, 'noticeboard/404.html', status=404)
