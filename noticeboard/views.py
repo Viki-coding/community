@@ -41,7 +41,8 @@ def login_view(request):
 # create a view to display the event details and description in full 
 def event_detail(request, event_id):
     event = get_object_or_404(Event, id=event_id)
-    return render(request, 'noticeboard/event_detail.html', {'event': event})
+    is_facilitator = request.user == event.facilitator
+    return render(request, 'noticeboard/event_detail.html', {'event': event, 'is_facilitator': is_facilitator})
 
 # Create a view to handle event creation, on dashboard page
 @login_required
