@@ -6,6 +6,11 @@
 
 <div class="dashboard-container">
     <h2>My Events</h2>
+    {% if user.is_authenticated %}
+    <div class="alert alert-success">
+        Congratulations, {{ user.username }}! You are now logged in.
+    </div>
+    {% endif %}
     <a href="{% url 'create_event' %}" class="btn btn-primary mb-3">Create New Event</a>
     <div class="events-list">
         {% for event in events %}
@@ -15,7 +20,7 @@
             <p><strong>Time:</strong> {{ event.starttime }} - {{ event.endtime }}</p>
             <p><strong>Location:</strong> {{ event.location.name }}</p>
             <p><strong>Category:</strong> {{ event.category }}</p>
-            <p><strong>Excerpt:</strong> {{ event.excerpt|slice:":25" }}{% if event.excerpt|length > 100 %}...{% endif %}</p>
+            <p><strong>Excerpt:</strong> {{ event.excerpt|slice:":50" }}{% if event.excerpt|length > 100 %}...{% endif %}</p>
             <p>{{ event.description }}</p>
             <a href="{% url 'edit_event' event.id %}" class="btn btn-secondary">Edit</a>
             <a href="{% url 'delete_event' event.id %}" class="btn btn-danger">Delete</a>

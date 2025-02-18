@@ -354,6 +354,16 @@ p {
 }
 
 /* Login and Create Event section */
+.alert-success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 20px; 
+  border-radius: 4px; 
+}
+
 .form-group {
   margin-bottom: 15px;
 }
