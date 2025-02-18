@@ -4,6 +4,38 @@
 Live link: https://community-noticeboard-app-00b83bd93757.herokuapp.com/
 
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Description - Project Purpose](#description---project-purpose)
+- [User Demographics - Target Audience](#user-demographics---target-audience)
+- [UX](#ux)
+- [User Stories](#user-stories)
+- [Design Choices](#design-choices)
+- [Typography](#typography)
+- [Wireframes](#wireframes)
+- [Flow Chart](#flow-chart)
+- [Features](#features)
+- [Interaction Points](#interaction-points)
+- [Future Implementation Section](#future-implementation-section)
+- [Accessibility](#accessibility)
+- [Technologies Used](#technologies-used)
+- [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
+- [Testing](#testing)
+- [Manual Testing](#manual-testing)
+- [Quality Assurance](#quality-assurance)
+- [Lighthouse Testing](#lighthouse-testing)
+- [Bugs](#bugs)
+- [User Experience Assurance](#user-experience-assurance)
+- [Deployment Steps](#deployment-steps)
+- [How to Fork](#how-to-fork)
+- [How to Clone](#how-to-clone)
+- [Heroku Deployment](#heroku-deployment)
+- [Acknowledging Contributions & Credits](#acknowledging-contributions--credits)
+- [Media/Images](#mediaimages)
+- [Content](#content)
+- [Legal & Ethical Compliance](#legal--ethical-compliance)
+
+
 <h1> INTRODUCTION </h1>
 This website aims to keep everyone in the community informed of events, matches, social gatherings, meetings and sporting opportunities available in their area.  The community of Ballinameela based in West Waterford are a strongly knitted community who have worked very hard over the years fundraising and running events to create a community centre as the central point for families, individuals and sporting groups to have a meeting area to keep healthy, meet and gather in state of the art facilitiies.  To utilise the centre to its higest purpose it is important to highlight to the community themselves of what is going on on a weekly basis.  
 
@@ -84,6 +116,9 @@ HTML -  CSS -  JS
 * Heroku
 * Django 
 
+<h2>TESTING</h2>
+A sepearate testing documentation has been created. Please find link here:
+[Go to TESTING.md] (Testing.md)
   
 <h2>Manual Testing</h2>
 (Does the site work as intended?)
