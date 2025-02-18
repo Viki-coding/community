@@ -146,28 +146,61 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  /* Fixed width for square cards */
-  height: 300px;
-  /* Fixed height for square cards */
+  width: 380;
+  height: 380;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 15px;
+  flex: 1;
+  overflow: hidden; 
 }
 
 .card-title {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #7d5d02;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.card-title i {
+  margin-right: 10px;
 }
 
 .card-text {
   margin-bottom: 10px;
-  color: #7d5d02;
+  color: black;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+}
+
+/* Warning (Delete and Logout) card specific styling */
+/* Center the container */
+.warning-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.warning-card {
+  background-color: #fff8ed; 
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25h;
+}
+
+.warning-card .btn-danger {
+  margin-right: 10px;
+
 }
 
 /* Dashboard Section */
@@ -260,10 +293,12 @@ body {
   background-color: #dc3545; 
   margin: 5px;
   width:100px;
+  transition: all 0.3s ease;
 }
 
 .btn-danger:hover {
   background-color: #c82333; 
+  width: 120px;
 }
 
 /* Full description section when you click on read more */
@@ -321,14 +356,13 @@ p {
 /* Login and Create Event section */
 .form-group {
   margin-bottom: 15px;
-  margin-inline: 50px;
 }
 .form-group label {
   display: block;
   margin-bottom: 5px;
-  margin-inline: 20px;
   font-weight: bold;
-  color: black;
+  color: #2ad495;
+  ;
 }
 
 .form-group input,

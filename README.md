@@ -224,6 +224,10 @@ Helped to fix when a facilitator logs out, rather than seeing the django admin p
 
 [Expand button on hover for Delete](https://www.shecodes.io/athena/3020-how-to-use-hover-to-expand-a-button-in-css)
 
+My notice board excerpts were various lenths and then that was having an affect on my styling and pushing the text out of my notice board display cards.  I had to come up with a way of reducing down the amount of text in my excerpt. This website showed me some good filter techniques available. I used the slice method. (https://earthly.dev/blog/django-template-filters/)
+
+To help prevent overflow of the text I also made some changes to my css to prevent it.  Found this video really helpful to explain the concepts of overflow/text wrapping. (https://www.youtube.com/watch?v=6m3ZmlgfZlA)
+
 
 <b>General good videos and links to teaching of Python:<b>
 I signed up to a phone app called MIMO which I found great for teaching me python and to help me do something productive rather than doom scrolling when I'm in the car waiting on my kids or having breakfast in the morning. Would highly recommend. 
