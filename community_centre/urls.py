@@ -26,4 +26,4 @@ urlpatterns = [
 ]
 
 # error handlers for 404 and 500 errors
-handler404 = 'noticeboard.views.error_404_view'
+handler404 = 'noticeboard.views.handler404'
