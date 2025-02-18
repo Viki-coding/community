@@ -2,10 +2,10 @@ from django import forms
 from .models import Event
 
 class EventForm(forms.ModelForm):
-     date = forms.DateField(
+    date = forms.DateField(
         label='Date (dd/mm/yy)',
-        widget=forms.DateInput(format='%d/%m/%Y', attrs={'placeholder': 'dd/mm/yyyy'}),
-        input_formats=['%d/%m/%Y']
+        widget=forms.DateInput(format='%d/%m/%y', attrs={'placeholder': 'dd/mm/yyyy'}),
+        input_formats=['%d/%m/%y']
     )
     
     class Meta:
