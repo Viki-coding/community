@@ -3,8 +3,15 @@
 {% block title %}Confirm Logout{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h2>Are you sure you want to log out?</h2>
+<div class="warning-container">
+    <div class="card warning-card">
+        <div class="card-body">
+          <h2 class="card-title">
+            <i class="fas fa-exclamation-triangle" style="color: #dc3545;"></i> Log Out
+    </h2>
+    <p class="card-text">
+        Are you sure you want to log out?
+    </p>
     <form method="post">
         {% csrf_token %}
         <button type="submit" class="btn btn-danger">Log Out</button>
@@ -12,3 +19,12 @@
     </form>
 </div>
 {% endblock %}
+
+
+
+    
+   
+      
+        
+       
+      

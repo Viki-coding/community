@@ -146,10 +146,8 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  /* Fixed width for square cards */
-  height: 300px;
-  /* Fixed height for square cards */
+  width: 350px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -162,23 +160,29 @@ body {
 .card-title {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #7d502;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.card-title i {
+  margin-right: 10px;
 }
 
 .card-text {
   margin-bottom: 10px;
-  color: #7d502;
+  color: black;
 }
 
-/* Delete card specific styling */
+/* Warning (Delete and Logout) card specific styling */
 /* Center the container */
-.delete-container {
+.warning-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.delete-card {
+.warning-card {
   background-color: #fff8ed; 
   border: 1px solid black;
   display: flex;
@@ -188,7 +192,7 @@ body {
   height: 25h;
 }
 
-.delete-card .btn-danger {
+.warning-card .btn-danger {
   margin-right: 10px;
 
 }
