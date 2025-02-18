@@ -228,6 +228,7 @@ My notice board excerpts were various lenths and then that was having an affect 
 
 To help prevent overflow of the text I also made some changes to my css to prevent it.  Found this video really helpful to explain the concepts of overflow/text wrapping. (https://www.youtube.com/watch?v=6m3ZmlgfZlA)
 
+When facilitator was logged it, they could view, edit and delete their own event, but when they left their dashboard and clicked on an event they did create, it was just showing the event without allowing them to edit. to fix this I amended by event_detail.html page to include {% if is_facilitator%} and included the hrefs to edit and delete. I also had to change the event_detail view to include is_facilitator. 
 
 <b>General good videos and links to teaching of Python:<b>
 I signed up to a phone app called MIMO which I found great for teaching me python and to help me do something productive rather than doom scrolling when I'm in the car waiting on my kids or having breakfast in the morning. Would highly recommend. 
