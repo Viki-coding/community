@@ -4,8 +4,9 @@
 
 {% block content %}
 
-<div class="container">
+<div class="dashboard-container">
     <h2>My Events</h2>
+    <a href="{% url 'create_event' %}" class="btn btn-primary mb-3">Create New Event</a>
     <div class="events-list">
         {% for event in events %}
         <div class="event-item">

@@ -24,7 +24,7 @@ body {
   flex: 1;
 }
 
-/* Navbar Section" */
+/* Navbar Section */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -71,7 +71,7 @@ body {
   display: none;
   font-size: 24px;
   cursor: pointer;
-  color: #2ad495;
+  color: #fff8ed;
 }
 
 .navbar .login-form input {
@@ -102,7 +102,7 @@ body {
   margin: 20px 0;
 }
 
-/* Canva hero image communitycentre.png */
+/* Canva hero noticeboard image communitycentre.svg */
 .hero {
   position: relative;
   background-size: cover;
@@ -170,19 +170,100 @@ body {
   color: #7d502;
 }
 
+/* Dashboard Section */
+.dashboard-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #878937;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.dashboard-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.events-list {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-item {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-item h3 {
+  margin-top: 0;
+  color: black; 
+}
+
+.event-item p {
+  margin: 5px 0;
+  color: #555;
+}
+
 /* Buttons section */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .btn-primary {
   background-color: #ffc100;
-  border: none;
+  border: solid 1px #333;
   color: black;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 4px;
   display: inline-block;
+  font-weight: bold;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #2ad495;
+  color: #fff8ed;
+}
+
+.btn-secondary {
+  background-color: #6c757d; 
+  width: 100px;
+  margin: 5px;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; 
+  margin: 5px;
+}
+
+.btn-danger {
+  background-color: #dc3545; 
+  margin: 5px;
+  width:100px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333; 
 }
 
 /* Full description section when you click on read more */
@@ -201,7 +282,7 @@ body {
   margin: 20px auto;
   padding: 40px;
   box-shadow: 0 2px 4px 12px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  text-align: left;
 }
 
 .event-title {
@@ -237,6 +318,28 @@ p {
   color: #2ad495;
 }
 
+/* Login and Create Event section */
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2ad495;
+  ;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 /* Socials section */
 .social-icons {
   text-align: center;
@@ -244,14 +347,14 @@ p {
 }
 
 .social-icons a {
-  color: #333;
+  color: black;
   margin: 0 10px;
   font-size: 24px;
   text-decoration: none;
 }
 
 .social-icons a:hover {
-  color: #007bff;
+  color: whitesmoke;
 }
 
 /* Footer section */
