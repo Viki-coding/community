@@ -237,6 +237,11 @@ Lucimeri Andretta - PP4 - MVP & Community Walkthrough.pdf was great or refer to 
 
 <b>Videos & Websites that we gained visual clues of how to create the community centre website:</b>
 
+Modifying forms and using widgets. This guy had some great videos about Django, he was really good at explaing concepts.
+[Try DJANGO Tutorial - 26 - Form Widgets] (https://www.youtube.com/watch?v=-oWIyFYyNQw) I wanted to change myt date format to dd/mm/yy rather than the american format of yyyy/mm/dd. 
+Also Dajngo documentation helped out again: (https://docs.djangoproject.com/en/5.1/ref/settings/#std-setting-DATE_INPUT_FORMATS)
+
+
 
 We gained inspiration with the READ.me by watching the video 'Creating your first README with Kera Cudmore' on CI Chanel Lead Library on YouTube and also the video with Lane-Sawyer Thompson on CI Channel on YouTube. Thanks to the on-line tutor, Oisin and Rebecca for their expertise and ability to explain some of the 'challenges' I encountered. Thanks to our very supportive and positive facilitator Kay and my Kiwi mentor Dick Vlaanderen. Also found the webinar 'Community Q&A: How to Troubleshoot with Lane-Sawyer Thompson' very helpful approach to how to view looking at the site for bugs and methodically identifying issues.
 
