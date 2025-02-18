@@ -222,6 +222,8 @@ Creating view to handle djangos login form: ([Django Documentatin](https://docs.
 [Facilitator Logout View](https://stackoverflow.com/questions/15467831/django-logout-redirects-me-to-administration-page#:~:text=If%20you%20are%20seeing%20the,admin%20comes%20after%20your_application%20.)
 Helped to fix when a facilitator logs out, rather than seeing the django admin panel log out I wanted the facilitator to see the customised page. 
 
+[Expand button on hover for Delete](https://www.shecodes.io/athena/3020-how-to-use-hover-to-expand-a-button-in-css)
+
 
 <b>General good videos and links to teaching of Python:<b>
 I signed up to a phone app called MIMO which I found great for teaching me python and to help me do something productive rather than doom scrolling when I'm in the car waiting on my kids or having breakfast in the morning. Would highly recommend. 

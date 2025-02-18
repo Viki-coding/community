@@ -170,6 +170,29 @@ body {
   color: #7d502;
 }
 
+/* Delete card specific styling */
+/* Center the container */
+.delete-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-card {
+  background-color: #fff8ed; 
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25h;
+}
+
+.delete-card .btn-danger {
+  margin-right: 10px;
+
+}
+
 /* Dashboard Section */
 .dashboard-container {
   max-width: 800px;
@@ -260,10 +283,12 @@ body {
   background-color: #dc3545; 
   margin: 5px;
   width:100px;
+  transition: all 0.3s ease;
 }
 
 .btn-danger:hover {
   background-color: #c82333; 
+  width: 120px;
 }
 
 /* Full description section when you click on read more */
