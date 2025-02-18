@@ -5,6 +5,7 @@ from .forms import EventForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.text import slugify
+from django.urls import reverse_lazy
 
 # Check if the user is in the facilitator group
 def is_facilitator(user):
@@ -93,3 +94,11 @@ def delete_event(request, event_id):
 def facilitator_dashboard(request):
     events = Event.objects.filter(facilitator=request.user)
     return render(request, 'noticeboard/facilitator_dashboard.html', {'events': events})
+
+# Create a view to handle logout and confirm the facilitator wants to logout
+@login_required
+def logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        return redirect('index')
+    return render(request, 'noticeboard/logout_confirm.html')
