@@ -1,5 +1,5 @@
 from django.views import generic
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from .models import Event
 from .forms import EventForm
 from django.shortcuts import render, get_object_or_404, redirect

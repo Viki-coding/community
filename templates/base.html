@@ -69,9 +69,11 @@
           <li><a href="{% url 'index' %}">HOME</a></li>
           <li><a href="{% url 'event_list' %}">EVENTS</a></li>
         </ul>
-        <a href="{% url 'login' %}" class="btn btn-primary"
-          >Facilitator Login</a
-        >
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="btn btn-primary">Log Out</a>
+      {% else %}
+        <a href="{% url 'login' %}" class="btn btn-primary">Facilitator Login</a>
+      {% endif %}
       </div>
     </header>
     <div class="main-container">
