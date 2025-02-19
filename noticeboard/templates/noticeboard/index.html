@@ -1,16 +1,16 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% load static %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
- <div class="hero-container">
+<div class="hero-container">
     <div class="hero" style="background-image: url('{% static "images/communitycentre.svg" %}');"></div>
 </div>
 
 <!-- Filter by Category Section -->
-<div  class="container">
+<div class="container">
     <div class="category-filter">
         <form method="GET" action="{% url 'index' %}">
             <label for="category">Sort by Category:</label>
@@ -28,20 +28,25 @@
 <!-- Main Content -->
 <div class="container">
     <div class="events-grid">
+        {% if events %}
         <!-- Events Column -->
-        {% for event in events %}
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title">{{ event.title }}</h2>
-                <p class="card-text"><strong>Date:</strong> {{ event.date }}</p>
-                <p class="card-text"><strong>Time:</strong> {{ event.starttime }} - {{ event.endtime }}</p>
-                <p class="card-text"><strong>Location:</strong> {{ event.location.name }}</p>
-                <p class="card-text"><strong>Category:</strong> {{ event.category }}</p>
-                <p class="card-text">{{ event.excerpt|slice:":50" }}{% if event.excerpt|length > 100 %}...{% endif %}</p>
-                <a href="{% url 'event_detail' event.id %}" class="btn btn-primary">Read More</a>
+            {% for event in events %}
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">{{ event.title }}</h2>
+                    <p class="card-text"><strong>Date:</strong> {{ event.date }}</p>
+                    <p class="card-text"><strong>Time:</strong> {{ event.starttime }} - {{ event.endtime }}</p>
+                    <p class="card-text"><strong>Location:</strong> {{ event.location.name }}</p>
+                    <p class="card-text"><strong>Category:</strong> {{ event.category }}</p>
+                    <p class="card-text">{{ event.excerpt|slice:":50" }}{% if event.excerpt|length > 100 %}...{% endif %}
+                    </p>
+                    <a href="{% url 'event_detail' event.id %}" class="btn btn-primary">Read More</a>
+                </div>
             </div>
-        </div>
-        {% endfor %}
+            {% endfor %}
+        {% else %}
+            <p>Sorry! No events listed under this category at the moment.</p>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
