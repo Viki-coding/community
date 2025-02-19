@@ -265,6 +265,8 @@ To help prevent overflow of the text I also made some changes to my css to preve
 
 When facilitator was logged it, they could view, edit and delete their own event, but when they left their dashboard and clicked on an event they did create, it was just showing the event without allowing them to edit. to fix this I amended by event_detail.html page to include {% if is_facilitator%} and included the hrefs to edit and delete. I also had to change the event_detail view to include is_facilitator. 
 
+I wanted to creat a select events by category function, so for example if you just wanted to see what gaa matches were on you would select GAA. I found this video helpful to explain the query ge GET parameters using djangos filter. [Django QueryDict | GET parameters | django-filter] (https://www.youtube.com/watch?v=nBrkUxa5X0E)
+
 <b>General good videos and links to teaching of Python:<b>
 I signed up to a phone app called MIMO which I found great for teaching me python and to help me do something productive rather than doom scrolling when I'm in the car waiting on my kids or having breakfast in the morning. Would highly recommend. 
 

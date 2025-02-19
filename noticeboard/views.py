@@ -11,9 +11,15 @@ from django.urls import reverse_lazy
 def is_facilitator(user):
     return user.groups.filter(name='Facilitators').exists()
 
-# Create your views here.
+# Create your views to display on notice.
+# Creat a view to display if a filter is applied to the events
 def index(request):
-    events = Event.objects.all()
+    category = request.GET.get('category')
+    if category:
+        events = Event.objects.filter(category=category)
+    else:
+        events = Event.objects.all()
+    categories = Event.CATEGORY_CHOICES
     return render(request, 'noticeboard/index.html', {'events': events})  
 
 class EventList(generic.ListView):
