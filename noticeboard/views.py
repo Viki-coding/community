@@ -20,7 +20,7 @@ def index(request):
     else:
         events = Event.objects.all()
     categories = Event.CATEGORY_CHOICES
-    return render(request, 'noticeboard/index.html', {'events': events})  
+    return render(request, 'noticeboard/index.html', {'events': events, 'categories': categories})  
 
 class EventList(generic.ListView):
     model = Event
