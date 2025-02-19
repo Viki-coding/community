@@ -22,7 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('', include('noticeboard.urls')),  # Include noticeboard URLs
-    path('logout/', noticeboard_views.logout_view, name='logout'),
 ]
 
 # error handlers for 404 and 500 errors
