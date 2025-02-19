@@ -6,20 +6,21 @@
 <div class="warning-container">
     <div class="card warning-card">
         <div class="card-body">
-          <h2 class="card-title">
-            <i class="fas fa-exclamation-triangle" style="color: #dc3545;"></i> Log Out
-    </h2>
-    <p class="card-text">
-        Are you sure you want to log out?
-    </p>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-danger">Log Out</button>
-        <a href="{% url 'index' %}" class="btn btn-secondary">Cancel</a>
-    </form>
+            <h2 class="card-title">
+                <i class="fas fa-exclamation-triangle" style="color: #dc3545;"></i> Log Out
+            </h2>
+            <p class="card-text">
+                Are you sure you want to log out?
+            </p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Log Out</button>
+                <a href="{% url 'index' %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}
-
 
 
     
