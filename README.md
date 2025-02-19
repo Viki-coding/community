@@ -289,6 +289,8 @@ Also Dajngo documentation helped out again: (https://docs.djangoproject.com/en/5
 
 We gained inspiration with the READ.me by watching the video 'Creating your first README with Kera Cudmore' on CI Chanel Lead Library on YouTube and also the video with Lane-Sawyer Thompson on CI Channel on YouTube. Thanks to the on-line tutor, Oisin and Rebecca for their expertise and ability to explain some of the 'challenges' I encountered. Thanks to our very supportive and positive facilitator Kay and my Kiwi mentor Dick Vlaanderen. Also found the webinar 'Community Q&A: How to Troubleshoot with Lane-Sawyer Thompson' very helpful approach to how to view looking at the site for bugs and methodically identifying issues.
 
+[CSS TRICKS - A Grid of Squares] (https://www.youtube.com/watch?v=8bhKjoowr4c&t=12s) Which helped me to fix my events grid to make it look better. 
+
 <h2>Media/Images</h2>
 Image by of Green Globes in background by Clicker-Free-Vector-Images from Pixabay
 Flag images from Britannica website. 
