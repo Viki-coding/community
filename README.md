@@ -267,6 +267,13 @@ When facilitator was logged it, they could view, edit and delete their own event
 
 I wanted to creat a select events by category function, so for example if you just wanted to see what gaa matches were on you would select GAA. I found this video helpful to explain the query ge GET parameters using djangos filter. [Django QueryDict | GET parameters | django-filter] (https://www.youtube.com/watch?v=nBrkUxa5X0E)
 
+[W3 Schools] (https://www.w3schools.com/django/django_queryset_get.php)
+[W3 Schools onchange Event] (https://www.w3schools.com/jsref/event_onchange.asp)  Submitting the form automatically submits the forms with the new attribute. 
+
+[Fetch Data from a Database and output to a webpage] - Django ()
+
+(https://simpleisbetterthancomplex.com/tutorial/2016/11/28/how-to-filter-querysets-dynamically.html)
+
 <b>General good videos and links to teaching of Python:<b>
 I signed up to a phone app called MIMO which I found great for teaching me python and to help me do something productive rather than doom scrolling when I'm in the car waiting on my kids or having breakfast in the morning. Would highly recommend. 
 
