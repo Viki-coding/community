@@ -10,10 +10,10 @@
 </div>
 
 <!-- Filter by Category Section -->
-<div class="container">
+<div class="filter-container">
     <div class="category-filter">
         <form method="GET" action="{% url 'index' %}">
-            <label for="category">Sort by Category:</label>
+            <label class="filter-label" for="category">Sort by Category:</label>
             <select name="category" id="category" onchange="this.form.submit()">
                 <option value="">All</option>
                 {% for value, label in categories %}

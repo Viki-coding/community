@@ -133,6 +133,27 @@ body {
   max-width: 150px;
 }
 
+/* Filter / Sort Section */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filter-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.filter-label {
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: larger;
+  color: #3a322d;
+}
+
 /* Noticeboard section */
 .events-grid {
   display: grid;
