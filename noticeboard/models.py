@@ -4,15 +4,21 @@ from django.utils.text import slugify
 from django.core.exceptions import ValidationError
 from datetime import datetime
 
+
 class CommunityUser(models.Model):
+    """Model for community users with an option to identify facilitators."""
+
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     telephone = models.CharField(max_length=15)
     is_facilitator = models.BooleanField(default=False)
 
-def __str__(self):
-    return self.user.username
+    def __str__(self):
+        return self.user.username
+
 
 class Location(models.Model):
+    """Model for event locations with predefined choices."""
+
     LOCATION_CHOICES = [
         ('Main Hall', 'Main Hall'),
         ('Astroturf', 'Astroturf'),
@@ -27,7 +33,10 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
+
 class Event(models.Model):
+    """Model for events created by facilitators."""
+
     CATEGORY_CHOICES = [
         ('5-Aside Soccer', '5-Aside Soccer'),
         ('GAA', 'GAA'),
@@ -42,8 +51,8 @@ class Event(models.Model):
 
     title = models.CharField(max_length=200)
     date = models.DateField()
-    starttime = models.TimeField()
-    endtime = models.TimeField()
+    start_time = models.TimeField()
+    end_time = models.TimeField()
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, default='Other')
     excerpt = models.TextField(blank=True)
@@ -55,8 +64,11 @@ class Event(models.Model):
     capacity = models.PositiveIntegerField(default=0)
     booking_deadline = models.DateTimeField(blank=True, null=True)
 
-    # If the event is name will create a slug, that slug will be unique to avoic conflicts
+    class Meta:
+        ordering = ["-created"]
+
     def save(self, *args, **kwargs):
+        """Create a unique slug for the event based on its title."""
         if not self.slug:
             base_slug = slugify(self.title)
             unique_slug = base_slug
@@ -67,34 +79,33 @@ class Event(models.Model):
             self.slug = unique_slug
         super(Event, self).save(*args, **kwargs)
 
-    class Meta:
-        ordering = ["-created"]
-
     def __str__(self):
-        return f"{self.title} | written by {self.facilitator}"
+        return f"{self.title} | Facilitated by {self.facilitator}"
 
-    # Booking Model
+
 class Booking(models.Model):
+    """Model for booking events by community users."""
+
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     user = models.ForeignKey(CommunityUser, on_delete=models.CASCADE)
     booked_at = models.DateTimeField(auto_now_add=True)
 
-class Meta:
-    unique_together = ('event', 'user')
+    class Meta:
+        unique_together = ('event', 'user')
 
-def clean(self):
-    if self.event.booking_deadline and self.event.booking_deadline < datetime.now():
-        raise ValidationError("Booking deadline has passed.")
-    if self.event.capacity <= Booking.objects.filter(event=self.event).count():
-        raise ValidationError("Event capacity reached.")
-        
-
+    def clean(self):
+        """Ensure booking is within deadline and capacity limits."""
+        if self.event.booking_deadline and self.event.booking_deadline < datetime.now():
+            raise ValidationError("Booking deadline has passed.")
+        if self.event.capacity <= Booking.objects.filter(event=self.event).count():
+            raise ValidationError("Event capacity reached.")
 
     def __str__(self):
         return f"{self.user.user.username} booked {self.event.title}"
 
-# Assign users to groups (Facilitator or Community User)
+
 def assign_user_to_group(user, group_name):
+    """Assign users to a specific group (Facilitator or Community User)."""
     group, _ = Group.objects.get_or_create(name=group_name)
     if not user.groups.filter(name=group_name).exists():
         user.groups.add(group)
