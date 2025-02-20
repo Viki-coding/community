@@ -10,7 +10,7 @@ class EventForm(forms.ModelForm):
     
     class Meta:
         model = Event
-        fields = ['title', 'date', 'starttime', 'endtime', 'location', 'category', 'excerpt', 'description']
+        fields = ['title', 'date', 'start_time', 'end_time', 'location', 'category', 'excerpt', 'description']
         widgets = {
             'title': forms.TextInput(attrs={'placeholder': 'Event Title'}),
             'starttime': forms.TimeInput(attrs={'placeholder': 'Start Time (24hr format)'}),
