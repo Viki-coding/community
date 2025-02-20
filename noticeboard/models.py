@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.utils.text import slugify
 
 class Location(models.Model):
@@ -41,6 +41,9 @@ class Event(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     facilitator = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = models.SlugField(unique=True, blank=True)
+    bookable_event = models.BooleanField(default=False)
+    capacity = models.PositiveIntegerField(default=0)
+    booking_deadline = models.DateTimeField(blank=True, null=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -52,3 +55,12 @@ class Event(models.Model):
 
     def __str__(self):
         return f"{self.title} | written by {self.facilitator}"
+
+    # Booking Model
+class Booking(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    user = models.ForeignKey(CommunityUser, on_delete=models.CASCADE)
+    booked_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.user.username} booked {self.event.title}"
