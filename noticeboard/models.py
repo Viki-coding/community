@@ -1,6 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User, Group
 from django.utils.text import slugify
+from django.core.exceptions import ValidationError
+from datetime import datetime
+
+class CommunityUser(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    telephone = models.CharField(max_length=15)
+    is_facilitator = models.BooleanField(default=False)
+
+def __str__(self):
+    return self.user.username
 
 class Location(models.Model):
     LOCATION_CHOICES = [
@@ -45,11 +55,18 @@ class Event(models.Model):
     capacity = models.PositiveIntegerField(default=0)
     booking_deadline = models.DateTimeField(blank=True, null=True)
 
+    # If the event is name will create a slug, that slug will be unique to avoic conflicts
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title)
+            base_slug = slugify(self.title)
+            unique_slug = base_slug
+            count = 1
+            while Event.objects.filter(slug=unique_slug).exists():
+                unique_slug = f"{base_slug}-{count}"
+                count += 1
+            self.slug = unique_slug
         super(Event, self).save(*args, **kwargs)
-        
+
     class Meta:
         ordering = ["-created"]
 
@@ -62,5 +79,22 @@ class Booking(models.Model):
     user = models.ForeignKey(CommunityUser, on_delete=models.CASCADE)
     booked_at = models.DateTimeField(auto_now_add=True)
 
+class Meta:
+    unique_together = ('event', 'user')
+
+def clean(self):
+    if self.event.booking_deadline and self.event.booking_deadline < datetime.now():
+        raise ValidationError("Booking deadline has passed.")
+    if self.event.capacity <= Booking.objects.filter(event=self.event).count():
+        raise ValidationError("Event capacity reached.")
+        
+
+
     def __str__(self):
         return f"{self.user.user.username} booked {self.event.title}"
+
+# Assign users to groups (Facilitator or Community User)
+def assign_user_to_group(user, group_name):
+    group, _ = Group.objects.get_or_create(name=group_name)
+    if not user.groups.filter(name=group_name).exists():
+        user.groups.add(group)
