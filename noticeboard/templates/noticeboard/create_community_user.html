@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Create Community User{% endblock %}
+
+{% block content %}
+<h2>Create Community User</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ user_creation_form.as_p }}
+    <button type="submit">Register</button>
+</form>
+{% endblock %}
