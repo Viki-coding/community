@@ -10,11 +10,16 @@ from django.urls import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 from datetime import datetime
 
+# Check if the user is in the facilitator group
+def is_facilitator(user):
+    return user.groups.filter(name="Facilitators").exists()
+
 
 @login_required
 def book_event(request, event_id):
     """Community user can book event if conditions are met."""
     event = get_object_or_404(Event, id=event_id)
+
     # Check if the user is a community user
     try:
         community_user = request.user.communityuser
@@ -28,8 +33,9 @@ def book_event(request, event_id):
         return redirect("event_detail", event_id=event_id)
 
     # Check if the event capacity has been reached
-    if event.capacity <= Booking.objects.filter(event=event).count():
+    if Booking.objects.filter(event=event).count() <= event.capacity:
         messages.error(request, "Sorry! Event capacity has been reached.")
+        
         return redirect("event_detail", event_id=event_id)
 
     # Check if the user has already booked the event
@@ -70,14 +76,14 @@ def login_view(request):
 def create_community_user(request):
     if request.method == "POST":
         form = CommunityUserForm(request.POST)
-    userCreationForm = UserCreationForm(request.POST)
-    if form.is_valid() and UserCreationForm.is_valid():
-            user = UserCreationForm.save()
-            community_user = form.save(commit=False)
-            community_user.user = user
-            community_user.save()
-            login(request, user)
-            return redirect("index")
+        user_creation_form = UserCreationForm(request.POST)
+        if form.is_valid() and user_creation_form.is_valid():
+                user = user_creation_form.save()
+                community_user = form.save(commit=False)
+                community_user.user = user
+                community_user.save()
+                login(request, user)
+                return redirect("index")
     else:
         form = CommunityUserForm()
         user_creation_form = UserCreationForm()
@@ -86,11 +92,6 @@ def create_community_user(request):
         "noticeboard/create_community_user.html",
         {"form": form, "user_creation_form": user_creation_form},
     )
-
-
-# Check if the user is in the facilitator group
-def is_facilitator(user):
-    return user.groups.filter(name="Facilitators").exists()
 
 
 # Create your views to display on notice.
