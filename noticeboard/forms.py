@@ -1,5 +1,22 @@
 from django import forms
-from .models import Event
+from django.contrib.auth.models import UserCreationForm
+from .models import CommunityUser, Event
+
+# CommunityUser SignUp Form
+class CommunityUserForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+
+    class Meta:
+        model = User
+        fields = ['name', 'email', 'password1', 'password2']
+    
+    def save(self, commit=True):
+        user = super(CommunityUserForm, self).save(commit=False)
+        user.email = self.cleaned_data['email']
+        if commit:
+            user.save()
+            CommunityUser.objects.create(user=user)
+        return user
 
 class EventForm(forms.ModelForm):
     date = forms.DateField(
@@ -13,8 +30,8 @@ class EventForm(forms.ModelForm):
         fields = ['title', 'date', 'start_time', 'end_time', 'location', 'category', 'excerpt', 'description']
         widgets = {
             'title': forms.TextInput(attrs={'placeholder': 'Event Title'}),
-            'starttime': forms.TimeInput(attrs={'placeholder': 'Start Time (24hr format)'}),
-            'endtime': forms.TimeInput(attrs={'placeholder': 'End Time (24hr format)'}),
+            'start_time': forms.TimeInput(attrs={'placeholder': 'Start Time (24hr format)'}),
+            'end_time': forms.TimeInput(attrs={'placeholder': 'End Time (24hr format)'}),
             'location': forms.Select(attrs={'placeholder': 'Location'}),
             'category': forms.Select(attrs={'placeholder': 'Category'}),
             'excerpt': forms.Textarea(attrs={'placeholder': 'Short Description'}),
