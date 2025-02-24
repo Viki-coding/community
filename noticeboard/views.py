@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.text import slugify
 from django.urls import reverse_lazy
 from datetime import datetime
+from django.contrib.auth.forms import UserCreationForm
 
 
 @login_required
@@ -40,6 +41,25 @@ def book_event(request, event_id):
     messages.success(request, "Thank you! Event booked successfully.")
     return redirect('event_detail', event_id=event_id)
 
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            if is_facilitator(user):
+                return redirect('facilitator_dashboard')
+        try:
+            community_user = user.communityuser
+        except CommunityUser.DoesNotExist:
+            messages.error(request, "Create a User profile to book events.")
+            return redirect('create_community_user')    
+            return redirect('index')
+        else:
+            return render(request, 'noticeboard/login.html', {'error': 'Invalid username or password'})
+    return render(request, 'noticeboard/login.html')
 
 # Check if the user is in the facilitator group
 def is_facilitator(user):

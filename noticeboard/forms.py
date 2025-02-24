@@ -24,6 +24,16 @@ class EventForm(forms.ModelForm):
         widget=forms.DateInput(format='%d/%m/%y', attrs={'placeholder': 'dd/mm/yyyy'}),
         input_formats=['%d/%m/%y']
     )
+
+    start_time = forms.TimeField(
+        label='Start Time (24hr format)',
+        widget=forms.TimeInput(attrs={'placeholder': 'HH:MM', 'type': 'time'})
+    )
+
+    end_time = forms.TimeField(
+        label='End Time (24hr format)',
+        widget=forms.TimeInput(attrs={'placeholder': 'HH:MM', 'type': 'time'})
+    )
     
     class Meta:
         model = Event
