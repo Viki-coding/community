@@ -5,9 +5,9 @@
 
 {% block content %}
 <h2>Create Community User</h2>
-<form method="post">
+<form method="post" action="">
     {% csrf_token %}
-    {{ user_creation_form.as_p }}
+    {{ form.as_p }} 
     <button type="submit">Register</button>
 </form>
 {% endblock %}

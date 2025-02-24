@@ -20,7 +20,7 @@
         {% if user.is_authenticated %}
         <a href="{% url 'book_event' event.id %}" class="btn btn-primary">Book Event</a>
         {% else %}
-            <a href="{% url 'register' %}" class="btn btn-warning">Register to Book</a>
+            <a href="{% url 'create_community_user' %}" class="btn btn-warning">Register to Book</a>
         {% endif %}
         
     </div>
