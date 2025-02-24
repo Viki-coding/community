@@ -1,11 +1,25 @@
 from django.views import generic
-from django.contrib.auth import authenticate, login, logout
-from .models import Event
-from .forms import EventForm
+from django.contrib.auth import authenticate, login, logout, messages
+from .models import Event, Booking, CommunityUser
+from .forms import EventForm, CommunityUserForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.text import slugify
 from django.urls import reverse_lazy
+from datetime import datetime
+
+
+@login_required
+def book_event(request, event_id):
+    """ Community user can book event if conditions are met. """
+    event = get_object_or_404(Event, id=event_id)
+    # Check if the user is a community user
+    try:
+        community_user = request.user.communityuser
+    except CommunityUser.DoesNotExist:
+        messages.error(request, "Create a User profile to book events.")
+        return redirect('create_community_user')
+    
 
 # Check if the user is in the facilitator group
 def is_facilitator(user):
