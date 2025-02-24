@@ -51,10 +51,10 @@ class EventForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'placeholder': 'Event Title'}),
             'start_time': forms.TimeInput(attrs={'placeholder': 'Start Time (24hr format)'}),
             'end_time': forms.TimeInput(attrs={'placeholder': 'End Time (24hr format)'}),
-            'location': forms.Select(attrs={'placeholder': 'Location'}),
-            'category': forms.Select(attrs={'placeholder': 'Category'}),
-            'excerpt': forms.Textarea(attrs={'placeholder': 'Short Description'}),
+            'location': forms.Select(attrs={'placeholder': 'Select Location'}),
+            'category': forms.Select(attrs={'placeholder': 'Select Category'}),
+            'excerpt': forms.Textarea(attrs={'placeholder': 'Short Event Summary'}),
             'description': forms.Textarea(attrs={'placeholder': 'Description'}),
-            'capacity': forms.NumberInput(attrs={'placeholder': 'Maximum Capacity'}),
+            'capacity': forms.NumberInput(attrs={'placeholder': 'Maximum Participants'}),
             'booking_deadline': forms.DateTimeInput(attrs={'placeholder': 'Booking Deadline (dd/mm/yyyy hh:mm)'})   
         }
