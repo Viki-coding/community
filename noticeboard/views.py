@@ -26,7 +26,7 @@ def book_event(request, event_id):
         community_user = request.user.communityuser
     except CommunityUser.DoesNotExist:
         messages.error(request, "Create a User profile to book events.")
-        request.session['event_id'] = event_id
+        request.session["event_id"] = event_id
         return redirect("create_community_user")
 
     # Check if the date deadline has passed
@@ -52,7 +52,7 @@ def book_event(request, event_id):
 
 
 def login_view(request):
-    """ Manage user loging and redirection based on user group(facilitator/user) """
+    """Manage user loging and redirection based on user group(facilitator/user)"""
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
@@ -64,16 +64,16 @@ def login_view(request):
             # Redirect to the facilitator dashboard if the user is a facilitator
             if is_facilitator(user):
                 return redirect("facilitator_dashboard")
-            
+
             # Check if the user is a community user
             try:
                 user.communityuser
             except CommunityUser.DoesNotExist:
                 messages.error(request, "Create a User profile to book events.")
                 return redirect("create_community_user")
-            
+
             # Redirect to the event booking page if an event_id is stored in the session
-            event_id = request.session.pop('event_id', None)
+            event_id = request.session.pop("event_id", None)
             if event_id:
                 return redirect("book_event", event_id=event_id)
             return redirect("index")
@@ -92,17 +92,16 @@ def create_community_user(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Thank you for registering as a user.")
-            
-            # Redirect to the event booking page if an event_id is stored in the session
-            event_id = request.session.pop('event_id', None)  
 
+            # Redirect to the event booking page if an event_id is stored in the session
+            event_id = request.session.pop("event_id", None)
 
             if event_id:
                 return redirect("book_event", event_id=event_id)
             return redirect("index")
     else:
         form = CommunityUserForm()
-        
+
     return render(
         request,
         "noticeboard/create_community_user.html",
@@ -133,35 +132,14 @@ class EventList(generic.ListView):
     paginate_by = 3
 
 
-# Create a view to handle login form using djangos built in authentication.
-# If user is facilitator redirect to facilitator_dashboard
-def login_view(request):
-    if request.method == "POST":
-        username = request.POST.get("username")
-        password = request.POST.get("password")
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            if is_facilitator(user):
-                return redirect("facilitator_dashboard")
-            return redirect("index")
-        else:
-            return render(
-                request,
-                "noticeboard/login.html",
-                {"error": "Invalid username or password"},
-            )
-    return render(request, "noticeboard/login.html")
-
-
-# create a view to display the event details and description in full
 def event_detail(request, event_id):
+    """Create a view to display the event details and description in full"""
     event = get_object_or_404(Event, id=event_id)
-    is_facilitator = request.user == event.facilitator
+    user_is_facilitator = is_facilitator(request.user)
     return render(
         request,
         "noticeboard/event_detail.html",
-        {"event": event, "is_facilitator": is_facilitator},
+        {"event": event, "user_is_facilitator": user_is_facilitator},
     )
 
 
