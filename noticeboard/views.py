@@ -29,6 +29,16 @@ def book_event(request, event_id):
     if event.capacity <= Booking.objects.filter(event=event).count():
         messages.error(request, "Sorry! Event capacity has been reached.")
         return redirect('event_detail', event_id=event_id)
+    
+    # Check if the user has already booked the event
+    if Booking.objects.filter(event=event, user=community_user).exists():
+        messages.error(request, "You have already booked this event.")
+        return redirect('event_detail', event_id=event_id)
+    
+    # Create a booking for the user
+    booking.objects.create(event=event, user=community_user)
+    messages.success(request, "Thank you! Event booked successfully.")
+    return redirect('event_detail', event_id=event_id)
 
 
 # Check if the user is in the facilitator group
