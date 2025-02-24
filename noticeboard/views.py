@@ -9,6 +9,7 @@ from django.utils.text import slugify
 from django.urls import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 from datetime import datetime
+from django.utils import timezone
 
 
 # Check if the user is in the facilitator group
@@ -30,7 +31,7 @@ def book_event(request, event_id):
         return redirect("create_community_user")
 
     # Check if the date deadline has passed
-    if event.booking_deadline and event.booking_deadline < datetime.now():
+    if event.booking_deadline and event.booking_deadline < timezone.now():
         messages.error(request, "Sorry! Booking deadline has passed.")
         return redirect("event_detail", event_id=event_id)
 
