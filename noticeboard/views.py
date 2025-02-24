@@ -26,6 +26,7 @@ def book_event(request, event_id):
         community_user = request.user.communityuser
     except CommunityUser.DoesNotExist:
         messages.error(request, "Create a User profile to book events.")
+        request.session['event_id'] = event_id 
         return redirect("create_community_user")
 
     # Check if the date deadline has passed
@@ -84,6 +85,10 @@ def create_community_user(request):
             community_user.user = user
             community_user.save()
             login(request, user)
+            messages.success(request, "Thank you for registering as a user.")
+            event_id = request.session.get('event_id')  
+            if event_id:
+                return redirect("book_event", event_id=event_id)
             return redirect("index")
     else:
         form = CommunityUserForm()
