@@ -13,10 +13,17 @@
             <p><strong>Location:</strong> {{ event.location.name }}</p>
             <p><strong>Category:</strong> {{ event.category }}</p>
             <p>{{ event.description }}</p>
-            {% if is_facilitator %}
+        {% if is_facilitator %}
             <a href="{% url 'edit_event' event.id %}" class="btn btn-secondary">Edit</a>
             <a href="{% url 'delete_event' event.id %}" class="btn btn-danger">Delete</a>
-            {% endif %}
+        {% endif %}
+        {% if event.bookable_event %}
+            <form method="post" action="{% url 'book_event' event.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Book</button>
+            </form>
+        {% endif %}
+        
     </div>
 </div>
 {% endblock %}
