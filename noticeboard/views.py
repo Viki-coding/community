@@ -20,6 +20,16 @@ def book_event(request, event_id):
         messages.error(request, "Create a User profile to book events.")
         return redirect('create_community_user')
     
+    # Check if the date deadline has passed
+    if event.booking_deadline and event.booking_deadline < datetime.now():
+        messages.error(request, "Sorry! Booking deadline has passed.")
+        return redirect('event_detail', event_id=event_id)
+    
+    # Check if the event capacity has been reached
+    if event.capacity <= Booking.objects.filter(event=event).count():
+        messages.error(request, "Sorry! Event capacity has been reached.")
+        return redirect('event_detail', event_id=event_id)
+
 
 # Check if the user is in the facilitator group
 def is_facilitator(user):
