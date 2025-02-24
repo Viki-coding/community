@@ -26,7 +26,7 @@ def book_event(request, event_id):
         community_user = request.user.communityuser
     except CommunityUser.DoesNotExist:
         messages.error(request, "Create a User profile to book events.")
-        request.session['event_id'] = event_id 
+        request.session['event_id'] = event_id
         return redirect("create_community_user")
 
     # Check if the date deadline has passed
@@ -78,25 +78,25 @@ def login_view(request):
 def create_community_user(request):
     if request.method == "POST":
         form = CommunityUserForm(request.POST)
-        user_creation_form = UserCreationForm(request.POST)
-        if form.is_valid() and user_creation_form.is_valid():
-            user = user_creation_form.save()
-            community_user = form.save(commit=False)
-            community_user.user = user
-            community_user.save()
+        if form.is_valid():
+            user = form.save()
             login(request, user)
             messages.success(request, "Thank you for registering as a user.")
-            event_id = request.session.get('event_id')  
+            
+            # Redirect to the event booking page if an event_id is stored in the session
+            event_id = request.session.pop('event_id', None)  
+
+
             if event_id:
                 return redirect("book_event", event_id=event_id)
             return redirect("index")
     else:
         form = CommunityUserForm()
-        user_creation_form = UserCreationForm()
+        
     return render(
         request,
         "noticeboard/create_community_user.html",
-        {"form": form, "user_creation_form": user_creation_form},
+        {"form": form},
     )
 
 
