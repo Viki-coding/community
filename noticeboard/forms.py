@@ -10,14 +10,14 @@ class CommunityUserForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2']
+        fields = ['username', 'email', 'telephone', 'password1', 'password2']
     
     def save(self, commit=True):
-        user = super(CommunityUserForm, self).save(commit=False)
+        user = super.save(commit=False)
         user.email = self.cleaned_data['email']
         if commit:
             user.save()
-            CommunityUser.objects.create(user=user)
+            CommunityUser.objects.create(user=user, telephone=self.cleaned_data['telephone'])
         return user
 
 class EventForm(forms.ModelForm):
