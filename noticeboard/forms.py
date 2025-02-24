@@ -27,7 +27,7 @@ class EventForm(forms.ModelForm):
     
     class Meta:
         model = Event
-        fields = ['title', 'date', 'start_time', 'end_time', 'location', 'category', 'excerpt', 'description']
+        fields = ['title', 'date', 'start_time', 'end_time', 'location', 'category', 'excerpt', 'description', 'capacity', 'booking_deadline']  
         widgets = {
             'title': forms.TextInput(attrs={'placeholder': 'Event Title'}),
             'start_time': forms.TimeInput(attrs={'placeholder': 'Start Time (24hr format)'}),
@@ -36,4 +36,6 @@ class EventForm(forms.ModelForm):
             'category': forms.Select(attrs={'placeholder': 'Category'}),
             'excerpt': forms.Textarea(attrs={'placeholder': 'Short Description'}),
             'description': forms.Textarea(attrs={'placeholder': 'Description'}),
+            'capacity': forms.NumberInput(attrs={'placeholder': 'Maximum Capacity'}),
+            'booking_deadline': forms.DateTimeInput(attrs={'placeholder': 'Booking Deadline (dd/mm/yyyy hh:mm)'})   
         }
