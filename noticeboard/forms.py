@@ -37,6 +37,12 @@ class EventForm(forms.ModelForm):
         label='End Time (24hr format)',
         widget=forms.TimeInput(attrs={'placeholder': 'HH:MM', 'type': 'time'})
     )
+
+    booking_deadline = forms.DateTimeField(
+        label='Booking Deadline (dd/mm/yyyy hh:mm)',
+        widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}),
+        input_formats=['%d/%m/%y %H:%M']
+    )
     
     class Meta:
         model = Event
