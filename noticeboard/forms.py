@@ -7,6 +7,7 @@ from .models import CommunityUser, Event
 # CommunityUser SignUp Form
 class CommunityUserForm(UserCreationForm):
     email = forms.EmailField(required=True)
+    telephone = forms.CharField(max_length=15, required=True, help_text="Enter your phone number.")
 
     class Meta:
         model = User
