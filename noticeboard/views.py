@@ -52,26 +52,36 @@ def book_event(request, event_id):
 
 
 def login_view(request):
+    """ Manage user loging and redirection based on user group(facilitator/user) """
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
         user = authenticate(request, username=username, password=password)
+
         if user is not None:
             login(request, user)
+
+            # Redirect to the facilitator dashboard if the user is a facilitator
             if is_facilitator(user):
                 return redirect("facilitator_dashboard")
+            
+            # Check if the user is a community user
             try:
-                community_user = user.communityuser
+                user.communityuser
             except CommunityUser.DoesNotExist:
                 messages.error(request, "Create a User profile to book events.")
                 return redirect("create_community_user")
+            
+            # Redirect to the event booking page if an event_id is stored in the session
+            event_id = request.session.pop('event_id', None)
+            if event_id:
+                return redirect("book_event", event_id=event_id)
             return redirect("index")
+
         else:
-            return render(
-                request,
-                "noticeboard/login.html",
-                {"error": "Invalid username or password"},
-            )
+            messages.error(request, "Invalid username or password")
+            return render(request, "noticeboard/login.html")
+
     return render(request, "noticeboard/login.html")
 
 
