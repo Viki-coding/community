@@ -10,6 +10,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 from datetime import datetime
 
+
 # Check if the user is in the facilitator group
 def is_facilitator(user):
     return user.groups.filter(name="Facilitators").exists()
@@ -33,9 +34,9 @@ def book_event(request, event_id):
         return redirect("event_detail", event_id=event_id)
 
     # Check if the event capacity has been reached
-    if Booking.objects.filter(event=event).count() <= event.capacity:
+    if Booking.objects.filter(event=event).count() >= event.capacity:
         messages.error(request, "Sorry! Event capacity has been reached.")
-        
+
         return redirect("event_detail", event_id=event_id)
 
     # Check if the user has already booked the event
@@ -63,7 +64,7 @@ def login_view(request):
             except CommunityUser.DoesNotExist:
                 messages.error(request, "Create a User profile to book events.")
                 return redirect("create_community_user")
-                return redirect("index")
+            return redirect("index")
         else:
             return render(
                 request,
@@ -78,12 +79,12 @@ def create_community_user(request):
         form = CommunityUserForm(request.POST)
         user_creation_form = UserCreationForm(request.POST)
         if form.is_valid() and user_creation_form.is_valid():
-                user = user_creation_form.save()
-                community_user = form.save(commit=False)
-                community_user.user = user
-                community_user.save()
-                login(request, user)
-                return redirect("index")
+            user = user_creation_form.save()
+            community_user = form.save(commit=False)
+            community_user.user = user
+            community_user.save()
+            login(request, user)
+            return redirect("index")
     else:
         form = CommunityUserForm()
         user_creation_form = UserCreationForm()
@@ -95,7 +96,7 @@ def create_community_user(request):
 
 
 # Create your views to display on notice.
-# Creat a view to display if a filter is applied to the events
+# Create a view to display if a filter is applied to the events
 def index(request):
     category = request.GET.get("category")
     if category:

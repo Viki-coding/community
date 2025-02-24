@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User 
 from .models import CommunityUser, Event
+
 
 # CommunityUser SignUp Form
 class CommunityUserForm(UserCreationForm):
@@ -8,7 +10,7 @@ class CommunityUserForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['name', 'email', 'password1', 'password2']
+        fields = ['username', 'email', 'password1', 'password2']
     
     def save(self, commit=True):
         user = super(CommunityUserForm, self).save(commit=False)
