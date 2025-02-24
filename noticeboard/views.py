@@ -38,7 +38,7 @@ def book_event(request, event_id):
         return redirect("event_detail", event_id=event_id)
 
     # Create a booking for the user
-    booking.objects.create(event=event, user=community_user)
+    Booking.objects.create(event=event, user=community_user)
     messages.success(request, "Thank you! Event booked successfully.")
     return redirect("event_detail", event_id=event_id)
 
@@ -52,12 +52,12 @@ def login_view(request):
             login(request, user)
             if is_facilitator(user):
                 return redirect("facilitator_dashboard")
-        try:
-            community_user = user.communityuser
-        except CommunityUser.DoesNotExist:
-            messages.error(request, "Create a User profile to book events.")
-            return redirect("create_community_user")
-            return redirect("index")
+            try:
+                community_user = user.communityuser
+            except CommunityUser.DoesNotExist:
+                messages.error(request, "Create a User profile to book events.")
+                return redirect("create_community_user")
+                return redirect("index")
         else:
             return render(
                 request,
@@ -70,21 +70,21 @@ def login_view(request):
 def create_community_user(request):
     if request.method == "POST":
         form = CommunityUserForm(request.POST)
-        CommunityUserForm = UserCreationForm(request.POST)
-        if form.is_valid() and CommunityUserForm.is_valid():
-            user = form.save()
-            community_user = CommunityUserForm.save(commit=False)
+    userCreationForm = UserCreationForm(request.POST)
+    if form.is_valid() and UserCreationForm.is_valid():
+            user = UserCreationForm.save()
+            community_user = form.save(commit=False)
             community_user.user = user
             community_user.save()
             login(request, user)
             return redirect("index")
     else:
         form = CommunityUserForm()
-        CommunityUserForm = UserCreationForm()
+        user_creation_form = UserCreationForm()
     return render(
         request,
         "noticeboard/create_community_user.html",
-        {"form": form, "CommunityUserForm": CommunityUserForm},
+        {"form": form, "user_creation_form": user_creation_form},
     )
 
 
