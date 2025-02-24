@@ -1,13 +1,14 @@
 from django.views import generic
-from django.contrib.auth import authenticate, login, logout, messages
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 from .models import Event, Booking, CommunityUser
 from .forms import EventForm, CommunityUserForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.text import slugify
 from django.urls import reverse_lazy
-from datetime import datetime
 from django.contrib.auth.forms import UserCreationForm
+from datetime import datetime
 
 
 @login_required
