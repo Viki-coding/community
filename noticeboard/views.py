@@ -217,6 +217,7 @@ def delete_event(request, event_id):
     event = get_object_or_404(Event, id=event_id, facilitator=request.user)
     if request.method == "POST":
         event.delete()
+        messages.success(request, "Event has been deleted.")
         return redirect("facilitator_dashboard")
     return render(request, "noticeboard/delete_event.html", {"event": event})
 
