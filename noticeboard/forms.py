@@ -5,21 +5,30 @@ from .models import CommunityUser, Event
 
 
 # CommunityUser SignUp Form
-class CommunityUserForm(UserCreationForm):
+class UserForm(UserCreationForm):
     email = forms.EmailField(required=True)
-    telephone = forms.CharField(max_length=15, required=True, help_text="Enter your phone number.")
+    telephone = forms.CharField(
+        max_length=15, 
+        required=True, 
+        help_text="Enter your phone number."
+    )
 
     class Meta:
         model = User
         fields = ['username', 'email', 'telephone', 'password1', 'password2']
     
     def save(self, commit=True):
-        user = super().save(commit=False)
+        user = super(UserForm, self).save(commit=False)
         user.email = self.cleaned_data['email']
         if commit:
             user.save()
-            CommunityUser.objects.create(user=user, telephone=self.cleaned_data['telephone'])
         return user
+    
+# CommunityUser Form
+class CommunityUserForm(forms.ModelForm):
+    class Meta:
+        model = CommunityUser
+        fields = ['telephone']  
 
 class EventForm(forms.ModelForm):
     date = forms.DateField(

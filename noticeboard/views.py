@@ -23,9 +23,8 @@ def book_event(request, event_id):
     event = get_object_or_404(Event, id=event_id)
 
     # Check if the user is a community user
-    try:
-        community_user = request.user.communityuser
-    except CommunityUser.DoesNotExist:
+    community_user = getattr(request.user, "communityuser", None)
+    if not community_user:
         messages.error(request, "Create a User profile to book events.")
         request.session["event_id"] = event_id
         return redirect("create_community_user")
@@ -53,7 +52,7 @@ def book_event(request, event_id):
 
 
 def login_view(request):
-    """Manage user loging and redirection based on user group(facilitator/user)"""
+    """Manage user login and redirection based on user group (facilitator/user)"""
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
@@ -101,12 +100,13 @@ def create_community_user(request):
                 return redirect("book_event", event_id=event_id)
             return redirect("index")
     else:
-        form = CommunityUserForm()
+        user_form = UserForm()
+        community_user_form = CommunityUserForm()
 
     return render(
         request,
         "noticeboard/create_community_user.html",
-        {"form": form},
+        {"user_form": user_form, "community_user_form": community_user_form},
     )
 
 @login_required
@@ -123,7 +123,12 @@ def user_dashboard(request):
 
 @login_required
 def cancel_booking(request, booking_id):
-    """View to handle the cancellation of a booking by a community user."""
+    """ Cancellation of a booking by a community user."""
+    community_user = getattr(request.user, "communityuser", None)
+    if not community_user:
+        messages.error(request, "Create a User profile to manage bookings.")
+        return redirect("create_community_user")
+
     booking = get_object_or_404(Booking, id=booking_id, user=community_user)
     if request.method == "POST":
         booking.delete()
