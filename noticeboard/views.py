@@ -87,9 +87,9 @@ def login_view(request):
 
 def create_community_user(request):
     if request.method == "POST":
-       user_form = UserForm(request.POST)
-       community_user_form = CommunityUserForm(request.POST)
-       if user_form.is_valid() and community_user_form.is_valid():
+        user_form = UserForm(request.POST)
+        community_user_form = CommunityUserForm(request.POST)
+        if user_form.is_valid() and community_user_form.is_valid():
             user = user_form.save()
             community_user = community_user_form.save(commit=False)
             community_user.user = user
