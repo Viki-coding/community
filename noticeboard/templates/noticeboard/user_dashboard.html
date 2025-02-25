@@ -1,0 +1,27 @@
+{% block title %}Your Booked Events{% endblock %}
+
+{% block content %}
+
+{% if booking %}
+  <ul>
+    {% for booking in booking %}
+    <li>
+        <strong>{{ booking.event.title }}</strong><br>
+        📅 {{ booking.event.start_date|date:"j, F , Y" }}  
+        🕒 {{ booking.event.start_time }} - {{ booking.event.end_time }}  
+        📍 {{ booking.event.location }}<br>
+        <a href="{% url 'event_detail' booking.event.id %}" class="btn btn-info">View Event</a>
+        <form method="post" action="{% url 'cancel_booking' booking.id %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Cancel Booking</button>
+        </form>
+    </li>
+    <hr>
+    {% endfor %}
+  </ul>
+{% else %}
+    <p>You have not booked any events yet.</p>
+{% endif %}
+
+
+{% endblock %}
