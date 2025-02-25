@@ -111,20 +111,20 @@ def create_community_user(request):
 
 @login_required
 def user_dashboard(request):
-    """View to display the user dashboard where they can view their booked events."""
+    """Community Users can view their booked events."""
     community_user = getattr(request.user, "communityuser", None)
     if not community_user:
         messages.error(request, "Create a User profile to book events.")
         return redirect("create_community_user")
     
 
-    bookings = Booking.objects.filter(user=request.user).select_related("event")
+    bookings = Booking.objects.filter(user=community_user).select_related("event")
     return render(request, "noticeboard/user_dashboard.html", {"bookings": bookings})
 
 @login_required
 def cancel_booking(request, booking_id):
     """View to handle the cancellation of a booking by a community user."""
-    booking = get_object_or_404(Booking, id=booking_id, user=request.user.communityuser)
+    booking = get_object_or_404(Booking, id=booking_id, user=community_user)
     if request.method == "POST":
         booking.delete()
         messages.success(request, "Booking has been cancelled.")
