@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User 
+from django.contrib.auth.models import User
 from .models import CommunityUser, Event
 
 
@@ -28,7 +28,7 @@ class UserForm(UserCreationForm):
 class CommunityUserForm(forms.ModelForm):
     class Meta:
         model = CommunityUser
-        fields = ['telephone']  
+        fields = ['telephone']
 
 class EventForm(forms.ModelForm):
     date = forms.DateField(

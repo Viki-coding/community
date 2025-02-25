@@ -2,7 +2,7 @@ from django.views import generic
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .models import Event, Booking, CommunityUser
-from .forms import EventForm, CommunityUserForm
+from .forms import EventForm, UserForm, CommunityUserForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.text import slugify
@@ -87,15 +87,16 @@ def login_view(request):
 
 def create_community_user(request):
     if request.method == "POST":
-        form = CommunityUserForm(request.POST)
-        if form.is_valid():
-            user = form.save()
+       user_form = UserForm(request.POST)
+       community_user_form = CommunityUserForm(request.POST)
+       if user_form.is_valid() and community_user_form.is_valid():
+            user = user_form.save()
+            community_user = community_user_form.save(commit=False)
+            community_user.user = user
+            community_user.save()
             login(request, user)
             messages.success(request, "Thank you for registering as a user.")
-
-            # Redirect to the event booking page if an event_id is stored in the session
-            event_id = request.session.pop("event_id", None)
-
+            event_id = request.session.get('event_id')
             if event_id:
                 return redirect("book_event", event_id=event_id)
             return redirect("index")
