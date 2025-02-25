@@ -124,7 +124,7 @@ def user_dashboard(request):
 @login_required
 def cancel_booking(request, booking_id):
     """View to handle the cancellation of a booking by a community user."""
-    booking = get_object_or_404(Booking, id=booking_id, user=request.communtiyuser)
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user.communityuser)
     if request.method == "POST":
         booking.delete()
         messages.success(request, "Booking has been cancelled.")

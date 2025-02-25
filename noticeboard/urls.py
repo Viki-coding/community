@@ -13,6 +13,6 @@ urlpatterns = [
     path('delete_event/<int:event_id>/', views.delete_event, name='delete_event'),  # URL pattern for delete_event
     path('book_event/<int:event_id>/', views.book_event, name='book_event'),
     path('facilitator_dashboard/', views.facilitator_dashboard, name='facilitator_dashboard'), # URL pattern for facilitator_dashboard
-    path("dashboard/", views.user_dashboard, name="user_dashboard"),  # URL pattern for user_dashboard
-    path("cancel_booking/<int:booking_id>/", views.cancel_booking, name="cancel_booking"),  # URL pattern for cancel_booking
+    path('user_dashboard/', views.user_dashboard, name='user_dashboard'),  # URL pattern for user_dashboard
+    path('cancel_booking/<int:booking_id>/', views.cancel_booking, name='cancel_booking'),  # URL pattern for cancel_booking
 ]   
