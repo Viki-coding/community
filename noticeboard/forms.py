@@ -7,23 +7,18 @@ from .models import CommunityUser, Event
 # CommunityUser SignUp Form
 class UserForm(UserCreationForm):
     email = forms.EmailField(required=True)
-    telephone = forms.CharField(
-        max_length=15, 
-        required=True, 
-        help_text="Enter your phone number."
-    )
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'telephone', 'password1', 'password2']
-    
+        fields = ['username', 'email', 'password1', 'password2']
+
     def save(self, commit=True):
         user = super(UserForm, self).save(commit=False)
         user.email = self.cleaned_data['email']
         if commit:
             user.save()
         return user
-    
+
 # CommunityUser Form
 class CommunityUserForm(forms.ModelForm):
     class Meta:
@@ -55,7 +50,7 @@ class EventForm(forms.ModelForm):
     
     class Meta:
         model = Event
-        fields = ['title', 'date', 'start_time', 'end_time', 'location', 'category', 'excerpt', 'description', 'capacity', 'booking_deadline']  
+        fields = ['title', 'date', 'start_time', 'end_time', 'location', 'category', 'excerpt', 'description', 'capacity', 'booking_deadline']
         widgets = {
             'title': forms.TextInput(attrs={'placeholder': 'Event Title'}),
             'start_time': forms.TimeInput(attrs={'placeholder': 'Start Time (24hr format)'}),
@@ -65,5 +60,5 @@ class EventForm(forms.ModelForm):
             'excerpt': forms.Textarea(attrs={'placeholder': 'Short Event Summary'}),
             'description': forms.Textarea(attrs={'placeholder': 'Description'}),
             'capacity': forms.NumberInput(attrs={'placeholder': 'Maximum Participants'}),
-            'booking_deadline': forms.DateTimeInput(attrs={'placeholder': 'Booking Deadline (dd/mm/yyyy hh:mm)'})   
+            'booking_deadline': forms.DateTimeInput(attrs={'placeholder': 'Booking Deadline (dd/mm/yyyy hh:mm)'})
         }
