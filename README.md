@@ -280,6 +280,9 @@ Dates & Times in Python
 Understanding date and time to work with my bookings I found this video helpful. 
 [Learn Python DATES & TIMES in 6 minutes! - Bro Code](https://www.youtube.com/watch?v=DwBDHsdX6XQ)
 
+Django does not allow exists method in the template, I was trying to have the facilitator and user dashboard to appear in the navigation bar depending on who was logged in. When I did this it created a templateSyntaxError. To solve it I used a custom template filter and restarted my server. 
+(https://stackoverflow.com/questions/40686201/django-1-10-1-my-templatetag-is-not-a-registered-tag-library-must-be-one-of)
+
 <b>General good videos and links to teaching of Python:<b>
 
 
