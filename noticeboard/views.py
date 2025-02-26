@@ -16,6 +16,11 @@ from django.utils import timezone
 def is_facilitator(user):
     return user.groups.filter(name="Facilitators").exists()
 
+@login_required
+@user_passes_test(is_facilitator)
+def facilitator_dashboard(request):
+    events = Event.objects.filter(facilitator=request.user).prefetch_related('booking_set__user')
+    return render(request, "noticeboard/facilitator_dashboard.html", {"events": events})
 
 @login_required
 def book_event(request, event_id):
