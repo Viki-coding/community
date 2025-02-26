@@ -20,6 +20,7 @@ def is_facilitator(user):
 @login_required
 def book_event(request, event_id):
     """Community user can book event if conditions are met."""
+    print("book_event view called")  # Debugging message
     event = get_object_or_404(Event, id=event_id)
 
     # Check if the user is a community user
