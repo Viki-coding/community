@@ -22,6 +22,14 @@
             <p><strong>Category:</strong> {{ event.category }}</p>
             <p><strong>Excerpt:</strong> {{ event.excerpt|slice:":50" }}{% if event.excerpt|length > 100 %}...{% endif %}</p>
             <p>{{ event.description }}</p>
+            <p><strong>Bookings:</strong></p>
+            <ul>
+                {% for booking in bookings %}
+                    <li>{{ booking.user.username }} - {{ booking.user.email }}</li>
+                {% empty %}
+                    <li>No bookings yet.</li>
+                {% endfor %}
+            </ul>
             <a href="{% url 'edit_event' event.id %}" class="btn btn-secondary">Edit</a>
             <a href="{% url 'delete_event' event.id %}" class="btn btn-danger">Delete</a>
         </div>
