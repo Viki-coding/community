@@ -74,6 +74,7 @@ def login_view(request):
             # Check if the user is a community user
             try:
                 user.communityuser
+                return redirect("user_dashboard")
             except CommunityUser.DoesNotExist:
                 messages.error(request, "Create a User profile to book events.")
                 return redirect("create_community_user")

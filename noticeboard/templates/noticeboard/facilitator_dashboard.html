@@ -17,22 +17,24 @@
         <div class="event-item">
             <h3>{{ event.title }}</h3>
             <p><strong>Date:</strong> {{ event.date }}</p>
-            <p><strong>Time:</strong> {{ event.starttime }} - {{ event.endtime }}</p>
+            <p><strong>Time:</strong> {{ event.start_time }} - {{ event.end_time }}</p>
             <p><strong>Location:</strong> {{ event.location.name }}</p>
             <p><strong>Category:</strong> {{ event.category }}</p>
             <p><strong>Excerpt:</strong> {{ event.excerpt|slice:":50" }}{% if event.excerpt|length > 100 %}...{% endif %}</p>
             <p>{{ event.description }}</p>
             <p><strong>Bookings:</strong></p>
             <ul>
-                {% for booking in bookings %}
-                    <li>{{ booking.user.username }} - {{ booking.user.email }}</li>
+                {% for booking in event.booking_set.all %}
+                    <li>{{ booking.user.user.username }} - {{ booking.user.user.email }} - {{ booking.user.telephone }}    </li>
                 {% empty %}
                     <li>No bookings yet.</li>
                 {% endfor %}
-            </ul>
             <a href="{% url 'edit_event' event.id %}" class="btn btn-secondary">Edit</a>
             <a href="{% url 'delete_event' event.id %}" class="btn btn-danger">Delete</a>
+            </ul>
         </div>
+        {% empty %}
+            <p>No events created yet.</p>
         {% endfor %}
     </div>
 </div>
