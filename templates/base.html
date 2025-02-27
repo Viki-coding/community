@@ -68,14 +68,18 @@
         </div>
         <ul id="nav-links">
           <li><a href="{% url 'index' %}">EVENTS</a></li>
-          <li><a href="{% url 'event_list' %}">CONTACT</a></li>
           {% if user.is_authenticated %}
               {% if user|is_facilitator %}
                   <li><a href="{% url 'facilitator_dashboard' %}">Dashboard</a></li>
               {% else %}
                   <li><a href="{% url 'user_dashboard' %}">Dashboard</a></li>
               {% endif %}
-              <li><a href="{% url 'logout' %}">Logout</a></li>
+              <li>
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-link">Logout</button>
+                </form>
+            </li>
           {% else %}
               <li><a href="{% url 'login' %}">Login</a></li>
               <li><a href="{% url 'create_community_user' %}">Sign Up</a></li>

@@ -15,4 +15,4 @@ urlpatterns = [
     path('facilitator_dashboard/', views.facilitator_dashboard, name='facilitator_dashboard'), # URL pattern for facilitator_dashboard
     path('user_dashboard/', views.user_dashboard, name='user_dashboard'),  # URL pattern for user_dashboard
     path('cancel_booking/<int:booking_id>/', views.cancel_booking, name='cancel_booking'),  # URL pattern for cancel_booking
-]   
+]

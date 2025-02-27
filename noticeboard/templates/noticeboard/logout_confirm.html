@@ -12,7 +12,7 @@
             <p class="card-text">
                 Are you sure you want to log out?
             </p>
-            <form method="post">
+            <form method="post" action="{% url 'logout' %}">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger">Log Out</button>
                 <a href="{% url 'index' %}" class="btn btn-secondary">Cancel</a>
