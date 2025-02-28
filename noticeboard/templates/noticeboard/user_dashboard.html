@@ -9,7 +9,7 @@
 </div>
 
   <div class="bookings-list">
-    {% for booking in booking %}
+    {% for booking in bookings %}
     <div class="booking-item">
         <strong>{{ booking.event.title }}</strong><br>
         📅 {{ booking.event.start_date|date:"j, F , Y" }}  
