@@ -142,7 +142,7 @@ def cancel_booking(request, booking_id):
         booking.delete()
         messages.success(request, "Booking has been cancelled.")
         return redirect("user_dashboard")
-    return render(request, "noticeboard/cancel_booking.html", {"booking": booking})
+    return render(request, "noticeboard/user_dashboard.html")
 
 # Create your views to display on notice.
 # Create a view to display if a filter is applied to the events
@@ -237,7 +237,7 @@ def facilitator_dashboard(request):
     return render(request, "noticeboard/facilitator_dashboard.html", {"events": events})
 
 
-# Create a view to handle logout and confirm the facilitator wants to logout
+# Create a view to handle logout and confirm the facilitator or user wants to logout
 @login_required
 def logout_view(request):
     if request.method == "POST":
