@@ -33,7 +33,8 @@ body {
   padding: 10px 20px;
   height: 60px;
   z-index: 1000;
-  position: relative;}
+  position: relative;
+}
 
 .navbar ul {
   list-style: none;
@@ -47,15 +48,18 @@ body {
   margin: 0 10px;
 }
 
-.navbar ul li a 
+.navbar ul li a.nav-link, 
 .navbar ul li button.nav-link{
   color: #fff8ed!important;
   display: flex;
   text-decoration: none;
   padding: 5px 10px;
+  line-height: 1.5;
   background: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .navbar ul li a.nav-link:hover,

@@ -308,6 +308,8 @@ We gained inspiration with the READ.me by watching the video 'Creating your firs
 In my events detail page, once a user had booked an event, I didn't want the Book Event to display again when they went to view their booking. So I used the if no user_is_facilitator to check if the event had already been booked. These websites were helpful to explain the concept. (https://www.w3schools.com/python/gloss_python_check_if_dictionary_item_exists.asp)
 (https://www.geeksforgeeks.org/python-if-with-not-operator/)
 
+Bug: Bootstrap color over-riding the cream color I wanted in my nav bar. To fix it I first put !important beside it which failed to work, advice from stack overlflow was 'specificity', adding another class to the rule.  This worked. (https://stackoverflow.com/questions/46736264/overriding-bootstrap-default-important-color-codes)
+
 <h2>Media/Images</h2>
 Image by of Green Globes in background by Clicker-Free-Vector-Images from Pixabay
 Flag images from Britannica website. 
