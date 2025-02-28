@@ -2,7 +2,7 @@
 {% block title %}USER DASHBOARD{% endblock %}
 
 {% block content %}
-<div class="dashboard-container"></div>
+<div class="dashboard-container">
 <h2>My Booked Events</h2>
 <div class="alert alert-success">
   Congratulations, {{ user.username }}! You are now logged in.
@@ -18,10 +18,8 @@
         <p>{{ booking.event.description }}</p>
       </div>
         <a href="{% url 'event_detail' booking.event.id %}" class="btn btn-info">View Event</a>
-        <form method="post" action="{% url 'cancel_booking' booking.id %}" style="display:inline;">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-danger">Cancel Booking</button>
-        </form>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal" data-booking-id="{{ booking.id }}">Cancel Booking</button>
+        </div>
   {% empty %}
     <p>You have not booked any events yet.</p>
   {% endfor %}
