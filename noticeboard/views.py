@@ -171,10 +171,23 @@ def event_detail(request, event_id):
     """Create a view to display the event details and description in full"""
     event = get_object_or_404(Event, id=event_id)
     user_is_facilitator = is_facilitator(request.user)
+    user_has_booked = False
+
+    if not user_is_facilitator:
+        community_user = getattr(request.user, "communityuser", None)
+        if community_user:
+            user_has_booked = Booking.objects.filter(
+                event=event, user=community_user
+            ).exists()
+
     return render(
         request,
         "noticeboard/event_detail.html",
-        {"event": event, "user_is_facilitator": user_is_facilitator},
+        {
+            "event": event, 
+            "user_is_facilitator": user_is_facilitator
+            "user_has_booked": user_has_booked,
+        },
     )
 
 

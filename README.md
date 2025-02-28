@@ -283,6 +283,9 @@ Understanding date and time to work with my bookings I found this video helpful.
 Django does not allow exists method in the template, I was trying to have the facilitator and user dashboard to appear in the navigation bar depending on who was logged in. When I did this it created a templateSyntaxError. To solve it I used a custom template filter and restarted my server. 
 (https://stackoverflow.com/questions/40686201/django-1-10-1-my-templatetag-is-not-a-registered-tag-library-must-be-one-of)
 
+Bug: Logged in as a community user. Booked an event. Went to Dashboard, but no booked events displayed. 
+Resolved by looking at code and realising I had for booking in booking rather than booking in bookings to match what I had in my views. 
+
 <b>General good videos and links to teaching of Python:<b>
 
 
@@ -301,6 +304,9 @@ To prevent users from booking events that were past the date we got inspiration 
 We gained inspiration with the READ.me by watching the video 'Creating your first README with Kera Cudmore' on CI Chanel Lead Library on YouTube and also the video with Lane-Sawyer Thompson on CI Channel on YouTube. Thanks to the on-line tutor, Oisin and Rebecca for their expertise and ability to explain some of the 'challenges' I encountered. Thanks to our very supportive and positive facilitator Kay and my Kiwi mentor Dick Vlaanderen. Also found the webinar 'Community Q&A: How to Troubleshoot with Lane-Sawyer Thompson' very helpful approach to how to view looking at the site for bugs and methodically identifying issues.
 
 [CSS TRICKS - A Grid of Squares] (https://www.youtube.com/watch?v=8bhKjoowr4c&t=12s) Which helped me to fix my events grid to make it look better. 
+
+In my events detail page, once a user had booked an event, I didn't want the Book Event to display again when they went to view their booking. So I used the if no user_is_facilitator to check if the event had already been booked. These websites were helpful to explain the concept. (https://www.w3schools.com/python/gloss_python_check_if_dictionary_item_exists.asp)
+(https://www.geeksforgeeks.org/python-if-with-not-operator/)
 
 <h2>Media/Images</h2>
 Image by of Green Globes in background by Clicker-Free-Vector-Images from Pixabay
