@@ -31,23 +31,38 @@ body {
   align-items: center;
   background-color: #878937;
   padding: 10px 20px;
-}
+  height: 60px;
+  z-index: 1000;
+  position: relative;}
 
 .navbar ul {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .navbar ul li {
   margin: 0 10px;
 }
 
-.navbar ul li a {
-  color: white;
+.navbar ul li a 
+.navbar ul li button{
+  color: #fff8ed!important;
+  display: flex;
   text-decoration: none;
   padding: 5px 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#nav-links li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff8ed!important;
 }
 
 .navbar ul li a:hover {
@@ -57,6 +72,7 @@ body {
 
 .navbar .logo {
   max-width: 150px;
+  height: auto;
 }
 
 /* Navbar Login Section*/
@@ -100,6 +116,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 20px 0;
+  padding-top: 60px;
 }
 
 /* Canva hero noticeboard image communitycentre.svg */
@@ -115,6 +132,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 60px;
 }
 
 /* Logo section */
