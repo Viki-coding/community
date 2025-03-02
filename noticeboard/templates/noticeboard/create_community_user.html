@@ -16,24 +16,6 @@
                         {% endfor %}
                     {% endif %}
 
-                    {% if user_form.errors or community_user_form.errors %}
-                    <div class="alert alert-danger">
-                        <strong>Oops! There were some errors:</strong>
-                        <ul>
-                            {% for field, errors in user_form.errors.items %}
-                                {% for error in errors %}
-                                    <li><strong>{{ field|title }}:</strong> {{ error }}</li>
-                                {% endfor %}
-                            {% endfor %}
-                            {% for field, errors in community_user_form.errors.items %}
-                                {% for error in errors %}
-                                    <li><strong>{{ field|title }}:</strong> {{ error }}</li>
-                                {% endfor %}
-                            {% endfor %}
-                        </ul>
-                    </div>
-                {% endif %}
-
                     <form method="post" action="{% url 'create_community_user' %}">
                         {% csrf_token %}
                         <div class="mb-3">
