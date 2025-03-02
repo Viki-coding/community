@@ -65,6 +65,11 @@ body {
   min-height: 60px;
 }
 
+.navbar ul li a.nav-link.active,
+.navbar ul li button.nav-link.active {
+  border-bottom: 2px solid #fff8ed; 
+}
+
 .navbar ul li a.nav-link:hover,
 .navbar ul li button.nav-link:hover {
   background-color: #ffc100;
