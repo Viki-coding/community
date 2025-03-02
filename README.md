@@ -90,6 +90,10 @@ Feature Title / Screenshot / Value to the User
 <h2>Interaction Points</h2>
 
 <h2>Future Implementation Section</h2>
+I spoke with some of my non techie frieds about the site, who are involved in our community and are coaches of various teams and they got very excited about the potential of the site. They were suggesting a Games and Fixtures and Results page, so show all our local GAA matches, Home and Away of the juvenile club, ladies and seniors so that locals could review what matches are on and where to check the results. 
+
+Expiry Date, after a certain period to remove 'old' event posts from the site, so for example if there was a bootcamp on for 6 weeks it would stay up for the 6 weeks but would be removed after to keep the site clean and up to date. 
+
 
 <h2>Accessibility</h2>
 
