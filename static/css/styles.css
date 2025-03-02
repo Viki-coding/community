@@ -178,6 +178,68 @@ body {
   color: #3a322d;
 }
 
+/* Create Community User styles */
+.create-user-container {
+  margin-top: 50px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #878937; 
+  padding: 15px;
+}
+
+.card-header h4 {
+  margin-bottom: 0;
+  line-height: 1.5; 
+}
+
+.ccu-card-body {
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn.custom-btn {
+  background-color: #878937; 
+  border-color: #878937; 
+  color: #fff8ed; 
+}
+
+.btn.custom-btn:hover {
+  background-color: #ffc100; 
+  border-color: #ffc100;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.login-link-text {
+  color: black; 
+}
+
+.login-link-text a {
+  color: black; 
+  text-decoration: none; 
+}
+
+.login-link-text a:hover {
+  text-decoration: underline; 
+}
+
+
 /* Noticeboard section */
 .events-grid {
   display: grid;

@@ -52,14 +52,22 @@ body {
 .navbar ul li button.nav-link{
   color: #fff8ed!important;
   display: flex;
-  text-decoration: none;
   padding: 5px 10px;
-  line-height: 1.5;
+  text-decoration: none;
+  line-height: 1.6;
   background: none;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding-bottom: 8px;
+  vertical-align: middle;
+  min-height: 60px;
+}
+
+.navbar ul li a.nav-link.active,
+.navbar ul li button.nav-link.active {
+  border-bottom: 2px solid #fff8ed; 
 }
 
 .navbar ul li a.nav-link:hover,
@@ -169,6 +177,50 @@ body {
   font-size: larger;
   color: #3a322d;
 }
+
+/* Create Community User styles */
+.create-user-container {
+  margin-top: 50px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #878937; 
+  padding: 10px;
+}
+
+.card-header h4 {
+  margin-bottom: 0;
+  line-height: 1.5; 
+}
+
+.card-body {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn.custom-btn {
+  background-color: #878937; 
+  border-color: #878937; 
+  color: #fff8ed; 
+}
+
+.btn.custom-btn:hover {
+  background-color: #ffc100; 
+  border-color: #ffc100;
+}
+
 
 /* Noticeboard section */
 .events-grid {
