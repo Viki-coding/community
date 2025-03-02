@@ -103,10 +103,17 @@ def create_community_user(request):
             community_user.save()
             login(request, user)
             messages.success(request, "Thank you for registering as a user.")
-            event_id = request.session.get('event_id')
+            
+            # Redirect to the event booking page if an event_id is stored in the session
+            event_id = request.session.pop('event_id', None)
             if event_id:
                 return redirect("book_event", event_id=event_id)
+            
             return redirect("index")
+        
+        else:
+            messages.error(request, "Please correct the errors below.")
+            print(user_form.errors, community_user_form.errors)
     else:
         user_form = UserForm()
         community_user_form = CommunityUserForm()
