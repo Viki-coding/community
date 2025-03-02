@@ -53,7 +53,7 @@ def book_event(request, event_id):
 
     # Create a booking for the user
     Booking.objects.create(event=event, user=community_user)
-    messages.success(request, "Thank you! Event booked successfully.")
+    messages.success(request, "Thank you! Event booked successfully. Click on DASHBOARD to view or edit your bookings.")
     return redirect("event_detail", event_id=event_id)
 
 
