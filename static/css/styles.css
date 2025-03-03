@@ -314,14 +314,22 @@ body {
 
 }
 
-/* Dashboard Section */
-.dashboard-container {
+/* Facilitator Dashboard Section */
+.dashboard-container-facilitator {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
   background-color: #878937;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Community User Dashboard Section */
+.dashboard-container {
+  background-color: #fff8ed; /* Cream color from your palette */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Heading styling */

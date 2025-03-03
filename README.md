@@ -37,16 +37,95 @@ Live link: https://community-noticeboard-app-00b83bd93757.herokuapp.com/
 
 
 <h1> INTRODUCTION </h1>
-This website aims to keep everyone in the community informed of events, matches, social gatherings, meetings and sporting opportunities available in their area.  The community of Ballinameela based in West Waterford are a strongly knitted community who have worked very hard over the years fundraising and running events to create a community centre as the central point for families, individuals and sporting groups to have a meeting area to keep healthy, meet and gather in state of the art facilitiies.  To utilise the centre to its higest purpose it is important to highlight to the community themselves of what is going on on a weekly basis.  
+This website aims to keep everyone in the community informed of events, matches, social gatherings, meetings and sporting opportunities available in their area.  Ballinameela Community Centre is a large sports hall, with a meeting room, kitchen, mezzineine and outdoor facilities of a large GAA/Soccer pitch and an all weather flood lit astro-turf pitch.  The community of Ballinameela based in West Waterford are a strongly knitted community who have worked very hard over the years fundraising and running events to create a community centre as the central point for families, individuals and sporting groups to have a meeting area to keep healthy, meet and gather in state of the art facilitiies.  To utilise the centre to its higest purpose it is important to highlight to the community themselves of what is going on on a weekly basis.  
 
 <h2>Description - Project Purpose</h2>
-The website will show the latest events that are taking part in the centre, by event name, time, date, location and description.  The purpose is to allow anyone in the community the ability to look up the site to see what's on and feel welcome to join in taking part in that event.  The users of the site will be all age demographics living in the community who may want to check the time and location of a match, to a new parent to the area wondering if there is a parent and toddler group. 
+
+The website will show the latest events that are taking part in the centre, by event name, time, date, location and description.  The purpose is to allow anyone in the community the ability to see what's on and feel welcome to join in taking part in that event.  
+
+My husband and I moved to this community over 20 years ago, and at the time we had no idea what took place in the hall, sometimes it was highlighted in the local paper, sometimes on the local facbook page.  But unless you bought the local paper on a weekly basis, or if you are happy to scroll though facebook page on a regular basis it is difficut to pin point exactly what it happening and when. 
+
+The users of the site will who want to check the time and location of an event can easily check it here. 
+We increased the functionality of site by allowing community users to book events.  
+
+This site caters for 2 types of users, community users and faciliators.  The community users are regular people in the community who would like to view events, book events and delete booked events. The facilitators are the people who actually create the event itself. They can create, read and view, edit or delete the event. 
 
 We will have an number of facilitators who will be authorised to post events to the community notice board.  They may be coaches, community centre members, parent and toddler facilitator etc. 
 
 Please see attached some user personas. 
 
-	
+
+1. Active Annie (Community User)
+Demographics: 68 years old, retired teacher, lives alone, active in the community.
+
+Tech Saviness: Comfortable using a computer and smartphone, uses Facebook, checks email daily.
+
+Needs & Goals: Wants to stay active and social, looking for events to attend, easy access to information about local activities. She wants a simple, reliable way to find out what's happening at the Community Centre.
+
+Frustrations: Dislikes scrolling through Facebook, finds it hard to find specific event information, misses events because she doesn't hear about them in time.
+
+Website Use Case: Regularly checks the website to see what events are coming up, uses the search/filter functions to find activities that interest her (e.g., book clubs, exercise classes). Books events directly through the website.
+
+Quote: "I just want a simple way to see what's going on. I don't want to miss another interesting talk or activity!"
+
+2. Busy Brendan (Community User)
+
+Demographics: 42 years old, works full-time, married with two school-aged children.
+
+Tech Saviness: Very comfortable with technology, uses multiple devices daily, relies on online information.
+
+Needs & Goals: Finds activities for his children, wants to participate in community events as a family, needs information that's quick and easy to access. He's looking for events that fit into his family's schedule.
+
+Frustrations: Doesn't have a lot of free time, finds it difficult to find events that are suitable for his children, needs a quick overview of event details.
+
+Website Use Case: Checks the website on his phone to see weekend events, looks for family-friendly activities, books events for his kids online, quickly checks times and locations.
+
+Quote: "I need to know what's happening, when it's happening, and if my kids will enjoy it. I don't have time to waste."
+
+3. Newcomer Nicole 
+Demographics: 28 years old, recently moved to the community for work, single.
+
+Tech Saviness: Highly tech-savvy, relies on online resources for everything.
+
+Needs & Goals: Wants to meet new people and integrate into the community, looking for social events and activities, needs a welcoming and informative platform.
+
+Frustrations: Doesn't know anyone in the area, feels isolated, unsure of where to find information about local events.
+
+Website Use Case: Uses the website to discover social events and activities, signs up for email updates, explores different interest groups, relies on the website to feel more connected to the community.
+
+Quote: "I'm new here and want to get involved. I hope this website can help me find my place in the community."
+
+
+4. Facilitator Fiona (Event Faccilitator)
+
+Demographics: 35 years old, runs a local parent-and-toddler group, volunteer.
+
+Tech Saviness: Reasonably comfortable with technology, uses a computer for basic tasks.
+
+Needs & Goals: Promote her parent-and-toddler group, easily create and manage event listings, reach a wide audience in the community, needs a user-friendly platform for event management.
+
+Frustrations: Finds it time-consuming to promote her group through multiple channels, needs a central place to update event information, struggles with complicated website interfaces.
+
+Website Use Case: Creates new event listings with detailed information (date, time, location, age group), updates existing listings, checks the number of bookings, interacts with community members through the website (if possible).
+
+Quote: "I need a simple way to let people know about our group and manage our events without spending hours on it."
+
+5. Community Committee Member (Event Facilitator)
+
+Demographics: 55 years old, Community Centre Committee Member, manages various hall events.
+
+Tech Saviness: Moderate tech skills, delegate if possible.
+
+Needs & Goals: Effectively promote all events, delegate event creation, manage event schedules and bookings, needs a reliable platform for event organization.
+
+Frustrations: Coordinating multiple facilitators, ensuring all events are properly promoted, keeping track of bookings and schedules, managing user accounts and permissions.
+
+Website Use Case: Oversees all event listings, manages facilitator accounts, checks overall website traffic and engagement, ensures the website is up-to-date and informative.
+
+Quote: "I need a system that allows me to keep an overview of all the activities in the community center and to easily delegate tasks."
+
+
+
 -	The project aims to accomplish keeping all members informed of what's going on, by having a central platform to higlight and encourage people to events.  That could be the time of the U10's hurling match v's Ballygunner that their grandparents would love to attend and watch, or a new mother in the area wondering if there is a local yoga group she could take part in.  The community centre was built using the dedication and money over many years from people within the community, this website will highlight everything that is taking place so the communtiy members themselves can enjoy it.
 
 Decreases of women in sport, childhood obesity and lonliness are all major problems in our society today.  The community centre has faciliites such as basket ball, indoor soccer, after school children support, retirement film night, astroturf and flood lights, long jump, meeting rooms and a full size pitch.  If we can make it easy for people to view whats on in their local community they may make a postitive health or life decision that can help them get healthier, meet others, get support etc that is a very positive experience and result. This will benefit all members of the community. 
