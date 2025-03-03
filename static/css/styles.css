@@ -221,16 +221,24 @@ body {
 }
 
 .table-responsive {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6;
 }
 
 /* Align cancel and view buttons */
 .table td {
   padding: 0.75rem;
-  vertical-align: middle; 
+  /* vertical-align: middle;  */
   border-top: 1px solid #dee2e6;
   text-align: left; 
 }
@@ -243,7 +251,8 @@ body {
   display: flex;
   justify-content: center; 
   align-items: center;
-  gap: 5px;            
+  gap: 5px; 
+  height: 100%;           
 }
 
 .btn-info {
@@ -504,13 +513,6 @@ body {
   color: #333;
 } */
 
-.events-list {
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .event-item {
   padding: 15px;
   background-color: #f9f9f9;
@@ -592,6 +594,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+  margin-top: 80px;
 }
 
 .event-detail {
@@ -855,4 +858,5 @@ p {
   .btn-primary {
     padding: 5px 10px;
   }
+
 }
