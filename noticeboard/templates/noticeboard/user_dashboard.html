@@ -8,7 +8,41 @@
       Congratulations, {{ user.username }}! You are now logged in.
   </div>
 
-  <div class="bookings-list">
+  {% for booking in bookings %}
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Location</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for booking in bookings %}
+        <tr>
+          <td>{{ booking.event.title }}</td>
+          <td>{{ booking.event.start_date|date:"j, F , Y" }}</td>
+          <td>{{ booking.event.start_time }} - {{ booking.event.end_time }}</td>
+          <td>{{ booking.event.location }}</td>
+          <td>
+            <a href="{% url 'event_detail' booking.event.id %}" class="btn btn-info btn-sm">View</a>
+            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#cancelModal" data-booking-id="{{ booking.id }}">Cancel</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p>You have not booked any events yet.</p>
+  {% endif %}
+</div>
+
+
+  <!-- <div class="bookings-list">
     {% for booking in bookings %}
     <div class="booking-item">
         <strong>{{ booking.event.title }}</strong><br>
@@ -25,12 +59,12 @@
         <a href="{% url 'event_detail' booking.event.id %}" class="btn btn-info">View Event Detail</a>
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal" data-booking-id="{{ booking.id }}">Cancel Booking</button>
       </div>
-  </div>
-  {% empty %}
+  </div> -->
+  <!-- {% empty %}
     <p>You have not booked any events yet.</p>
   {% endfor %}
   </div>
-</div>
+</div> -->
 
 <!-- Cancel Booking Modal -->
 <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
