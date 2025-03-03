@@ -45,4 +45,32 @@
             <p>Already have an account? <a href="{% url 'login' %}" class="btn btn-secondary">Login here</a></p>
         </div>
     </div>
+</div>
+
+<!-- Congratulations Modal -->
+<div class="modal fade" id="congratsModal" tabindex="-1" aria-labelledby="congratsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="congratsModalLabel">Congratulations!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Your account has been created successfully! You are now logged in.
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'index' %}" class="btn btn-primary">Events</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if request.GET.created %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var congratsModal = new bootstrap.Modal(document.getElementById('congratsModal'));
+        congratsModal.show();
+    });
+</script>
+{% endif %}
 {% endblock %}

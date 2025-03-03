@@ -6,7 +6,7 @@ from .forms import EventForm, UserForm, CommunityUserForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.text import slugify
-from django.urls import reverse_lazy
+from django.urls import reverse
 from django.contrib.auth.forms import UserCreationForm
 from datetime import datetime
 from django.utils import timezone
@@ -102,7 +102,8 @@ def create_community_user(request):
             community_user.user = user
             community_user.save()
             login(request, user)
-            messages.success(request, "Thank you for registering as a user.")
+            messages.success(request, "Thank you for registering as a user. You are now logged in.")
+            return redirect(reverse('create_community_user') + '?created=true')
             
             # Redirect to the event booking page if an event_id is stored in the session
             event_id = request.session.pop('event_id', None)
