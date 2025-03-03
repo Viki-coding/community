@@ -433,6 +433,13 @@ body {
 
 }
 
+.login-container {
+ margin-top: 110px;
+ flex: auto;
+ padding-block: 20px;
+ align-items: center;
+}
+
 /* Facilitator Dashboard Section */
 .dashboard-container-facilitator {
   max-width: 800px;
