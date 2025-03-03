@@ -259,7 +259,8 @@ Log Out as Facilitator Error
 I added the feature that once the facilitator was logged in, the button would change to log out. But when I clicked on log out it would bring me to the django admin log out panel rather than my own customised one. 
 Stack Overflow, credid/link below in credits. helped me anmend the customised django view and urls.py to my home page. 
 
-
+Facilitator Bookings Table 
+I created a tabel on the facilitator dashboard so that the names, emails and phone numbers of the people who were booked were clearly displayed.  On smaller screens the table half disappeared horizonally. I made many changes but stackoverflow advice helped to display it most clearly. (https://stackoverflow.com/questions/4237110/how-can-i-make-a-css-table-fit-the-screen-width)
 
 <h2>User Experience Assurance</h2>
 <h2>Deployment Steps</h2>

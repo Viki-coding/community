@@ -8,7 +8,7 @@
     <h2>My Events</h2>
     {% if user.is_authenticated %}
     <div class="alert alert-success">
-        {{ user.username }} - You are now logged in.
+        {{ user.username }} - You Are Logged In.
     </div>
     {% endif %}
     <a href="{% url 'create_event' %}" class="btn btn-primary mb-3">Create New Event</a>
@@ -22,16 +22,34 @@
             <p><strong>Category:</strong> {{ event.category }}</p>
             <p><strong>Excerpt:</strong> {{ event.excerpt|slice:":50" }}{% if event.excerpt|length > 100 %}...{% endif %}</p>
             <p>{{ event.description }}</p>
-            <p><strong>Bookings:</strong></p>
-            <ul>
-                {% for booking in event.booking_set.all %}
-                    <li>{{ booking.user.user.username }} - {{ booking.user.user.email }} - {{ booking.user.telephone }}    </li>
-                {% empty %}
-                    <li>No bookings yet.</li>
-                {% endfor %}
             <a href="{% url 'edit_event' event.id %}" class="btn btn-secondary">Edit</a>
             <a href="{% url 'delete_event' event.id %}" class="btn btn-danger">Delete</a>
-            </ul>
+
+            <p><strong>Bookings:</strong></p>
+            <div class="table-responsive">
+                <table class="bookings-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Telephone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for booking in event.booking_set.all %}
+                        <tr>
+                            <td>{{ booking.user.user.username }}</td>
+                            <td>{{ booking.user.user.email }}</td>
+                            <td>{{ booking.user.telephone }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="3">No bookings yet.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
         {% empty %}
             <p>No events created yet.</p>

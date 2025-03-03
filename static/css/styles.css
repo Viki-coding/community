@@ -222,6 +222,7 @@ body {
 
 .table-responsive {
   overflow-x: auto;
+  table-layout: fixed;
 }
 
 .table {
@@ -534,6 +535,34 @@ body {
   color: #555;
 } 
 
+/* Facilitator Booking Table Styles */
+.bookings-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  color: #212529;
+  table-layout: fixed;
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border: 1px solid #dee2e6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.bookings-table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.bookings-table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
 /* Buttons section */
 .btn {
   display: inline-block;
@@ -546,6 +575,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -855,8 +885,48 @@ p {
     font-size: 1.2em;
   }
 
+  .btn {
+    font-size: 0.9em;
+    padding: 8px 12px; 
+  }
+
   .btn-primary {
     padding: 5px 10px;
+  }
+
+  .bookings-table th,
+  .bookings-table td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .bookings-table th {
+    display: none; /* Hide table headers on small screens */
+  }
+
+  .bookings-table td {
+    display: block;
+    width: 100%;
+    text-align: right;
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .bookings-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 0.75rem;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .bookings-table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #dee2e6;
   }
 
 }
