@@ -186,6 +186,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
   max-width: 90%; 
+  margin-top: 110px;
 }
 
 .dashboard-container h2 {
@@ -226,10 +227,30 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+/* Align cancel and view buttons */
+.table td {
+  padding: 0.75rem;
+  vertical-align: middle; 
+  border-top: 1px solid #dee2e6;
+  text-align: left; 
+}
+
+.table th:last-child {
+  text-align: center; /* Align the text to the right */
+}
+
+.table td:last-child { /* Target the "Actions" column */
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 5px;            
+}
+
 .btn-info {
     background-color: #17a2b8;
     border-color: #17a2b8;
     color: #fff;
+    margin-bottom: 10px;
 }
 
 .btn-info:hover {
@@ -423,19 +444,19 @@ body {
 }
 
 /* Community User Dashboard Section */
-.dashboard-container {
+/* .dashboard-container {
   background-color: #fff8ed; /* Cream color from your palette */
-  padding: 20px;
+  /* padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Heading styling */
-.dashboard-container h2 {
+/* .dashboard-container h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
-}
+} */
 
 .events-list {
   padding-top: 20px;
@@ -452,18 +473,18 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .event-item h3 {
   margin-top: 0;
   color: black; 
-}
+} 
 
 .event-item p {
   margin: 5px 0;
   color: #555;
-}
+} 
 
 /* Buttons section */
 .btn {
