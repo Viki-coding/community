@@ -232,19 +232,25 @@ body {
   padding: 0.75rem;
   vertical-align: middle; 
   border-top: 1px solid #dee2e6;
-  text-align: center; 
+  text-align: left; 
+}
+
+.table th:last-child {
+  text-align: center; /* Align the text to the right */
 }
 
 .table td:last-child { /* Target the "Actions" column */
   display: flex;
   justify-content: center; 
-  gap: 5px;                
+  align-items: center;
+  gap: 5px;            
 }
 
 .btn-info {
     background-color: #17a2b8;
     border-color: #17a2b8;
     color: #fff;
+    margin-bottom: 10px;
 }
 
 .btn-info:hover {
@@ -427,6 +433,51 @@ body {
 
 }
 
+.login-container {
+ margin-top: 120px;
+ display: flex:
+ align-items: center;
+ min-height: calc(100vh - 60px); 
+ padding: 20px;
+}
+
+.login-card {
+  background-color: #fff8ed;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h4 {
+  margin-bottom: 20px;
+  color: #878937; 
+  text-align: center;
+}
+
+.login-card .form-group {
+  margin-bottom: 15px;
+}
+
+.login-card .btn {
+  width: 100%;
+  background-color: #878937;
+  color: #fff8ed; 
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.login-card .btn:hover {
+  background-color: #ffc100; /* Use your existing hover color */
+}
+
 /* Facilitator Dashboard Section */
 .dashboard-container-facilitator {
   max-width: 800px;
@@ -435,22 +486,23 @@ body {
   background-color: #878937;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 110px;
 }
 
 /* Community User Dashboard Section */
-.dashboard-container {
+/* .dashboard-container {
   background-color: #fff8ed; /* Cream color from your palette */
-  padding: 20px;
+  /* padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Heading styling */
-.dashboard-container h2 {
+/* .dashboard-container h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
-}
+} */
 
 .events-list {
   padding-top: 20px;
@@ -467,18 +519,18 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .event-item h3 {
   margin-top: 0;
   color: black; 
-}
+} 
 
 .event-item p {
   margin: 5px 0;
   color: #555;
-}
+} 
 
 /* Buttons section */
 .btn {
@@ -603,7 +655,7 @@ p {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #2ad495;
+  color: #878937;
   ;
 }
 
@@ -653,18 +705,38 @@ p {
   /* Hide the navigation links */
   .navbar ul {
     display: none;
+    flex-direction: column;
+    background:#878937;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1001;
+  }
+
+  .navbar ul.show {
+    display: flex;
   }
 
   /* Show the burger menu */
   .burger-menu {
     display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff8ed;
   }
 
   .show {
     display: flex !important;
-    /* Ensure the navigation links are displayed */
+    Ensure the navigation links are displayed */
     flex-direction: column;
     width: 100%;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
   }
 
   .navbar ul li a {
