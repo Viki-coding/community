@@ -441,6 +441,7 @@ body {
   background-color: #878937;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 110px;
 }
 
 /* Community User Dashboard Section */
@@ -659,18 +660,38 @@ p {
   /* Hide the navigation links */
   .navbar ul {
     display: none;
+    flex-direction: column;
+    background:#878937;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1001;
+  }
+
+  .navbar ul.show {
+    display: flex;
   }
 
   /* Show the burger menu */
   .burger-menu {
     display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff8ed;
   }
 
   .show {
     display: flex !important;
-    /* Ensure the navigation links are displayed */
+    Ensure the navigation links are displayed */
     flex-direction: column;
     width: 100%;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
   }
 
   .navbar ul li a {
