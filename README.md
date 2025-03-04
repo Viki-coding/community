@@ -358,6 +358,9 @@ I wanted to creat a select events by category function, so for example if you ju
 
 (https://simpleisbetterthancomplex.com/tutorial/2016/11/28/how-to-filter-querysets-dynamically.html)
 
+
+Bootstrap is fanatasic and frustrating at the same time, I found this aritcle on stackoverflow good. How can I override Bootstrap CSS styles. (https://stackoverflow.com/questions/20721248/how-can-i-override-bootstrap-css-styles)
+
 Bug: Time no longer displaying on event. I had made some changes to the time imput fields as I wanted the facilitator to be understand to put in the 24hr clock.  When I amended my model to facilitate the bookings functionality I unfortunetly made the error of changing the names of my start_time to starttime and end_time to endtime, I changed it in some files and not in others, so I had to make sure the forms.py file was the same as my model.  
 
 Dates & Times in Python
