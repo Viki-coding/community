@@ -524,21 +524,6 @@ body {
   margin-top: 110px;
 }
 
-/* Community User Dashboard Section */
-/* .dashboard-container {
-  background-color: #fff8ed; /* Cream color from your palette */
-  /* padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Heading styling */
-/* .dashboard-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-} */
-
 .events-list {
   display: flex;
   flex-direction: column;
@@ -553,7 +538,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-center;
 }
 
 .event-item h3 {
@@ -565,6 +550,15 @@ body {
   margin: 5px 0;
   color: #555;
 } 
+
+.edit-delete-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
 /* ==========================================================================
    Facilitator Booking Table Styles
    ========================================================================== */
@@ -717,9 +711,12 @@ p {
   margin: 20px auto;
   padding: 10px 20px; 
   border-radius: 4px; 
+  color: #f9f9f9;
+  background-color: #878937;
+  border-color: darkgrey;
 }
 
-.form-group {
+.form-group { 
   margin-bottom: 15px;
 }
 

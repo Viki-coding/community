@@ -22,10 +22,12 @@
             <p><strong>Category:</strong> {{ event.category }}</p>
             <p><strong>Excerpt:</strong> {{ event.excerpt|slice:":50" }}{% if event.excerpt|length > 100 %}...{% endif %}</p>
             <p>{{ event.description }}</p>
-            <a href="{% url 'edit_event' event.id %}" class="btn btn-secondary">Edit</a>
-            <a href="{% url 'delete_event' event.id %}" class="btn btn-danger">Delete</a>
+            <div class="edit-delete-buttons">
+                <a href="{% url 'edit_event' event.id %}" class="btn btn-secondary">Edit</a>
+                <a href="{% url 'delete_event' event.id %}" class="btn btn-danger">Delete</a>
+            </div>
 
-            <p><strong>Bookings:</strong></p>
+            <h5><strong>Bookings:</strong></h5>
             <div class="table-responsive">
                 <table class="bookings-table">
                     <thead>
