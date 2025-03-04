@@ -28,6 +28,10 @@ body {
    ========================================================================== */
 .main-container {
   flex: 1;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding: 20px;
 }
 
 /* ==========================================================================
@@ -467,11 +471,13 @@ body {
    Login Style Section
    ========================================================================== */
 .login-container {
- margin-top: 120px;
- display: flex:
- align-items: center;
- min-height: calc(100vh - 60px); 
- padding: 20px;
+  margin-top: 120px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding: 20px;
 }
 
 .login-card {
