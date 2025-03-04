@@ -1,7 +1,11 @@
-/* Google fonts import */
+/* ==========================================================================
+   Google Fonts Import
+   ========================================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Asterisk wildcard selector to override default styles */
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
 * {
   padding: 0;
   margin: 0;
@@ -19,12 +23,16 @@ body {
   flex-direction: column;
 }
 
-/* Main container to hold the content */
+/* ==========================================================================
+   Main Container
+   ========================================================================== */
 .main-container {
   flex: 1;
 }
 
-/* Navbar Section */
+/* ==========================================================================
+   Navbar Section
+   ========================================================================== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -81,7 +89,9 @@ body {
   height: auto;
 }
 
-/* Navbar Login Section*/
+/* ==========================================================================
+   Navbar Login Section
+   ========================================================================== */
 .navbar .login-form {
   display: flex;
   align-items: center;
@@ -117,7 +127,9 @@ body {
   background-color: #ff042f;
 }
 
-/* Hero Section */
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
 .hero-container {
   display: flex;
   justify-content: center;
@@ -141,7 +153,9 @@ body {
   margin-top: 60px;
 }
 
-/* Logo section */
+/* ==========================================================================
+   Logo Section
+   ========================================================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -157,7 +171,9 @@ body {
   max-width: 150px;
 }
 
-/* Filter / Sort Section */
+/* ==========================================================================
+   Filter / Sort Section
+   ========================================================================== */
 .filter-container {
   display: flex;
   justify-content: center;
@@ -178,7 +194,9 @@ body {
   color: #3a322d;
 }
 
-/* User Dashboard Styles */
+/* ==========================================================================
+   User Dashboard Styles with Table to display bookings
+   ========================================================================== */
 .dashboard-container {
   background-color: #fff8ed;
   padding: 20px;
@@ -369,7 +387,9 @@ body {
 }
 
 
-/* Noticeboard section */
+/* ==========================================================================
+   Noticeboard Index style section displaying events
+   ========================================================================== */
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -443,6 +463,9 @@ body {
 
 }
 
+/* ==========================================================================
+   Login Style Section
+   ========================================================================== */
 .login-container {
  margin-top: 120px;
  display: flex:
@@ -488,7 +511,9 @@ body {
   background-color: #ffc100; /* Use your existing hover color */
 }
 
-/* Facilitator Dashboard Section */
+/* ==========================================================================
+  Facilitator Dashboard Section
+   ========================================================================== */
 .dashboard-container-facilitator {
   max-width: 800px;
   margin: 20px auto;
@@ -534,8 +559,9 @@ body {
   margin: 5px 0;
   color: #555;
 } 
-
-/* Facilitator Booking Table Styles */
+/* ==========================================================================
+   Facilitator Booking Table Styles
+   ========================================================================== */
 .bookings-table {
   width: 80%;
   border-collapse: collapse;
@@ -563,7 +589,9 @@ body {
   border-top: 2px solid #dee2e6;
 }
 
-/* Buttons section */
+/* ==========================================================================
+   Buttons section
+   ========================================================================== */
 .btn {
   display: inline-block;
   padding: 10px 15px;
@@ -617,7 +645,9 @@ body {
   width: 120px;
 }
 
-/* Full description section when you click on read more */
+/* ==========================================================================
+   Full description section when you click on READ MORE styles
+   ========================================================================== */
 
 .description-container {
   width: 80%;
@@ -670,7 +700,9 @@ p {
   color: #2ad495;
 }
 
-/* Login and Create Event section */
+/* ==========================================================================
+   Create Event section
+   ========================================================================== */
 .alert-success {
   display: flex;
   justify-content: center;
@@ -702,6 +734,9 @@ p {
     box-sizing: border-box;
 }
 
+/* ==========================================================================
+   Footer Style section
+   ========================================================================== */
 /* Socials section */
 .social-icons {
   text-align: center;
@@ -725,7 +760,9 @@ p {
   padding: 20px;
 }
 
-/* Media Queries for responsiveness */
+/* ==========================================================================
+   Media Queries For Responsiveness Styles Section
+   ========================================================================== */
 @media (max-width: 1200px) {
   .events-grid {
     display: grid;
