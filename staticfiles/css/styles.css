@@ -22,6 +22,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 /* ==========================================================================
    Main Container
    ========================================================================== */
@@ -88,7 +89,9 @@ body {
   height: auto;
 }
 
-/* Navbar Login Section*/
+/* ==========================================================================
+   Navbar Login Section
+   ========================================================================== */
 .navbar .login-form {
   display: flex;
   align-items: center;
@@ -102,10 +105,6 @@ body {
   cursor: pointer;
   color: #fff8ed;
 }
-
-/* ==========================================================================
-   Navbar Login Section
-   ========================================================================== */
 
 .navbar .login-form input {
   margin-right: 10px;
@@ -387,6 +386,7 @@ body {
   text-decoration: underline; 
 }
 
+
 /* ==========================================================================
    Noticeboard Index style section displaying events
    ========================================================================== */
@@ -559,7 +559,6 @@ body {
   margin: 5px 0;
   color: #555;
 } 
-
 /* ==========================================================================
    Facilitator Booking Table Styles
    ========================================================================== */
@@ -646,10 +645,10 @@ body {
   width: 120px;
 }
 
-
 /* ==========================================================================
    Full description section when you click on READ MORE styles
    ========================================================================== */
+
 .description-container {
   width: 80%;
   max-width: 600px;
@@ -702,7 +701,7 @@ p {
 }
 
 /* ==========================================================================
-   Login and Create Event section
+   Create Event section
    ========================================================================== */
 .alert-success {
   display: flex;
@@ -712,18 +711,17 @@ p {
   margin: 20px auto;
   padding: 10px 20px; 
   border-radius: 4px; 
-  color
 }
 
 .form-group {
   margin-bottom: 15px;
 }
+
 .form-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #878937;
-  ;
+  color: #333;
 }
 
 .form-group input,
@@ -736,11 +734,16 @@ p {
     box-sizing: border-box;
 }
 
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+  color: #6c757d;
+}
+
 /* ==========================================================================
    Footer Style section
    ========================================================================== */
-
-   /* Socials section */
+/* Socials section */
 .social-icons {
   text-align: center;
   margin: 20px 0;
@@ -764,10 +767,8 @@ p {
 }
 
 /* ==========================================================================
-   Media Queries Styles Section
+   Media Queries For Responsiveness Styles Section
    ========================================================================== */
-
-   /* Media Queries for responsiveness */
 @media (max-width: 1200px) {
   .events-grid {
     display: grid;

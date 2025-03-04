@@ -539,6 +539,12 @@ body {
   color: #333;
 } */
 
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add gap between event items */
+}
+
 .event-item {
   padding: 15px;
   background-color: #f9f9f9;
@@ -716,12 +722,12 @@ p {
 .form-group {
   margin-bottom: 15px;
 }
+
 .form-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #878937;
-  ;
+  color: #333;
 }
 
 .form-group input,
@@ -732,6 +738,12 @@ p {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+  color: #6c757d;
 }
 
 /* ==========================================================================
