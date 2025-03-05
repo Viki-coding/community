@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="dashboard-container-facilitator">
+<div class="dashboard-container">
     <h2>My Events</h2>
     {% if user.is_authenticated %}
     <div class="alert alert-success">
@@ -40,9 +40,9 @@
                     <tbody>
                         {% for booking in event.booking_set.all %}
                         <tr>
-                            <td>{{ booking.user.user.username }}</td>
-                            <td>{{ booking.user.user.email }}</td>
-                            <td>{{ booking.user.telephone }}</td>
+                            <td data-label="Name">{{ booking.user.user.username }}</td>
+                            <td data-label="Email"><a href="mailto:{{ booking.user.user.email }}">{{ booking.user.user.email }}</a></td>
+                            <td data-label="Telephone"><a href="tel:{{ booking.user.telephone }}">{{ booking.user.telephone }}</a></td>
                         </tr>
                         {% empty %}
                         <tr>

@@ -241,7 +241,7 @@ body {
 
 .table-responsive {
   overflow-x: auto;
-  table-layout: fixed;
+  width: 100%;
 }
 
 .table {
@@ -988,5 +988,4 @@ p {
     margin-bottom: 1rem;
     border-bottom: 2px solid #dee2e6;
   }
-
 }
