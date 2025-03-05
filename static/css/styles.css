@@ -275,38 +275,6 @@ body {
   height: 100%;           
 }
 
-.btn-info {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.btn-info:hover {
-  background-color: #138496;
-  border-color: #117a8b;
-  color: #fff;
-}
-
-.btn-danger {
-  background-color: #dc3545;
-  border-color: #dc3545;
-  color: #fff;
-}
-
-.btn-danger:hover {
-  background-color: #c82333;
-  border-color: #bd2130;
-  color: #fff;
-}
-
-.btn-sm {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  border-radius: 0.2rem;
-}
-
 .bookings-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -357,17 +325,6 @@ body {
 
 .form-label {
   font-weight: bold;
-}
-
-.btn.custom-btn {
-  background-color: #878937; 
-  border-color: #878937; 
-  color: #fff8ed; 
-}
-
-.btn.custom-btn:hover {
-  background-color: #ffc100; 
-  border-color: #ffc100;
 }
 
 .text-center {
@@ -459,7 +416,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 25h;
 }
 
 .warning-card .btn-danger {
@@ -544,7 +500,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: flex-center;
+  align-items: center;
 }
 
 .event-item h3 {
@@ -650,6 +606,49 @@ body {
 .btn-danger:hover {
   background-color: #c82333; 
   width: 120px;
+}
+
+.btn.custom-btn {
+  background-color: #878937; 
+  border-color: #878937; 
+  color: #fff8ed; 
+}
+
+.btn.custom-btn:hover {
+  background-color: #ffc100; 
+  border-color: #ffc100;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.btn-info:hover {
+background-color: #138496;
+border-color: #117a8b;
+color: #fff;
+}
+
+.btn-danger {
+background-color: #dc3545;
+border-color: #dc3545;
+color: #fff;
+}
+
+.btn-danger:hover {
+background-color: #c82333;
+border-color: #bd2130;
+color: #fff;
+}
+
+.btn-sm {
+padding: 0.25rem 0.5rem;
+font-size: 0.875rem;
+line-height: 1.5;
+border-radius: 0.2rem;
 }
 
 /* ==========================================================================
@@ -928,7 +927,6 @@ p {
 
   .show {
     display: flex !important;
-    Ensure the navigation links are displayed */
     flex-direction: column;
     width: 100%;
   }

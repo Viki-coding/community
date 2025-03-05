@@ -3,6 +3,7 @@
 
 Live link: https://community-noticeboard-app-00b83bd93757.herokuapp.com/
 
+Link to Kanban Board [Viki-coding/Projects/Community Notice Board Project] (https://github.com/users/Viki-coding/projects/8/views/1)
 
 ## Table of Contents
 - [Introduction](#introduction)
