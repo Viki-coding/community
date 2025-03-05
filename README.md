@@ -373,6 +373,8 @@ Django does not allow exists method in the template, I was trying to have the fa
 Bug: Logged in as a community user. Booked an event. Went to Dashboard, but no booked events displayed. 
 Resolved by looking at code and realising I had for booking in booking rather than booking in bookings to match what I had in my views. 
 
+[Pagination For Django - Django Wednesdays #18 - Codeemy.com] (https://www.youtube.com/watch?v=N-PB-HMFmdo) Good video about creating pagination. 
+
 <b>General good videos and links to teaching of Python:<b>
 
 

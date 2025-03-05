@@ -614,7 +614,7 @@ body {
 
 .btn-primary {
   background-color: #ffc100;
-  border: solid 1px #333;
+  border: solid 1px #878937;
   color: black;
   padding: 10px 20px;
   text-decoration: none;
@@ -624,8 +624,9 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #2ad495;
-  color: #fff8ed;
+  background-color: #e0a800;
+  color: white;
+  border: solid 1px #878937;
 }
 
 .btn-secondary {
@@ -782,10 +783,41 @@ p {
 .footer-text {
   margin: 0;
 }
-
 /* ==========================================================================
-   Media Queries For Responsiveness Styles Section
+   Paginatation Styles Section
    ========================================================================== */
+   .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination .step-links {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: #f8f9fa;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+  }
+  
+  .pagination a:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .pagination .current {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #f8f9fa;
+    background-color: #878937;
+  }
+
 @media (max-width: 1200px) {
   .events-grid {
     display: grid;
@@ -812,17 +844,6 @@ p {
   
   .card-text {
     margin-bottom: 10px;
-  }
-
-  .btn-primary {
-    background-color: #878937;
-    border-color: #878937;
-    color: #fff8ed;
-  }
-  
-  .btn-primary:hover {
-    background-color: #ffc100;
-    border-color: #ffc100;
   }
 }  
 

@@ -28,9 +28,9 @@
 <!-- Main Content -->
 <div class="container">
     <div class="events-grid">
-        {% if events %}
+        {% if page_obj %}
         <!-- Events Column -->
-            {% for event in events %}
+            {% for event in page_obj %}
             <div class="card">
                 <div class="card-body">
                     <h2 class="card-title">{{ event.title }}</h2>
@@ -48,5 +48,24 @@
             <p>Sorry! No events listed under this category at the moment.</p>
         {% endif %}
     </div>
+
+     <!-- Pagination Controls -->
+     <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>   
 </div>
 {% endblock %}

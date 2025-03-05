@@ -10,6 +10,7 @@ from django.urls import reverse
 from django.contrib.auth.forms import UserCreationForm
 from datetime import datetime
 from django.utils import timezone
+from django.core.paginator import Paginator
 
 
 # Check if the user is in the facilitator group
@@ -160,9 +161,14 @@ def index(request):
         events = Event.objects.filter(category=category)
     else:
         events = Event.objects.all()
+
+    paginator = Paginator(events, 9) 
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
     categories = Event.CATEGORY_CHOICES
     return render(
-        request, "noticeboard/index.html", {"events": events, "categories": categories}
+        request, "noticeboard/index.html", {"page_obj": page_obj, "categories": categories}
     )
 
 
