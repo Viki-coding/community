@@ -162,7 +162,7 @@ def index(request):
     else:
         events = Event.objects.all()
 
-    paginator = Paginator(events, 9) 
+    paginator = Paginator(events, 6) 
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
 

@@ -21,6 +21,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 /* ==========================================================================
@@ -29,10 +30,9 @@ body {
 .main-container {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: calc(100vh - 60px);
-  padding: 20px;
 }
 
 /* ==========================================================================
@@ -156,17 +156,8 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 60px;
-  border: none;
 }
 
-.hero img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border: none; /* Ensure no border */
-  margin: 0; /* Ensure no margin */
-  padding: 0; /* Ensure no padding */
-}
 /* ==========================================================================
    Logo Section
    ========================================================================== */
@@ -218,7 +209,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
   max-width: 90%; 
-  margin-top: 110px;
+  margin-top: 130px;
 }
 
 .dashboard-container h2 {
@@ -254,7 +245,7 @@ body {
 
 .table-responsive {
   overflow-x: auto;
-  table-layout: fixed;
+  width: 100%;
 }
 
 .table {
@@ -288,38 +279,6 @@ body {
   height: 100%;           
 }
 
-.btn-info {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.btn-info:hover {
-  background-color: #138496;
-  border-color: #117a8b;
-  color: #fff;
-}
-
-.btn-danger {
-  background-color: #dc3545;
-  border-color: #dc3545;
-  color: #fff;
-}
-
-.btn-danger:hover {
-  background-color: #c82333;
-  border-color: #bd2130;
-  color: #fff;
-}
-
-.btn-sm {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  border-radius: 0.2rem;
-}
-
 .bookings-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -345,11 +304,9 @@ body {
 }
 
 .card {
-  min-height: 200px;
-  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: visable;
+  overflow: hidden;
 }
 
 .card-header {
@@ -372,17 +329,6 @@ body {
 
 .form-label {
   font-weight: bold;
-}
-
-.btn.custom-btn {
-  background-color: #878937; 
-  border-color: #878937; 
-  color: #fff8ed; 
-}
-
-.btn.custom-btn:hover {
-  background-color: #ffc100; 
-  border-color: #ffc100;
 }
 
 .text-center {
@@ -410,7 +356,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -425,7 +370,7 @@ body {
 }
 
 .card-body {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -442,6 +387,9 @@ body {
   color: black;
   display: flex;
   align-items: center;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
 }
 
 .card-title i {
@@ -451,7 +399,7 @@ body {
 .card-text {
   margin-bottom: 10px;
   color: black;
-  overflow: hidden; 
+  max-height: 100px;
   text-overflow: ellipsis; 
   white-space: nowrap; 
 }
@@ -471,7 +419,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 25h;
 }
 
 .warning-card .btn-danger {
@@ -556,7 +503,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: flex-center;
+  align-items: center;
 }
 
 .event-item h3 {
@@ -626,7 +573,7 @@ body {
 
 .btn-primary {
   background-color: #ffc100;
-  border: solid 1px #333;
+  border: solid 1px #878937;
   color: black;
   padding: 10px 20px;
   text-decoration: none;
@@ -636,8 +583,9 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #2ad495;
-  color: #fff8ed;
+  background-color: #e0a800;
+  color: white;
+  border: solid 1px #878937;
 }
 
 .btn-secondary {
@@ -661,6 +609,49 @@ body {
 .btn-danger:hover {
   background-color: #c82333; 
   width: 120px;
+}
+
+.btn.custom-btn {
+  background-color: #878937; 
+  border-color: #878937; 
+  color: #fff8ed; 
+}
+
+.btn.custom-btn:hover {
+  background-color: #ffc100; 
+  border-color: #ffc100;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.btn-info:hover {
+background-color: #138496;
+border-color: #117a8b;
+color: #fff;
+}
+
+.btn-danger {
+background-color: #dc3545;
+border-color: #dc3545;
+color: #fff;
+}
+
+.btn-danger:hover {
+background-color: #c82333;
+border-color: #bd2130;
+color: #fff;
+}
+
+.btn-sm {
+padding: 0.25rem 0.5rem;
+font-size: 0.875rem;
+line-height: 1.5;
+border-radius: 0.2rem;
 }
 
 /* ==========================================================================
@@ -764,21 +755,6 @@ p {
 /* ==========================================================================
    Footer Style section
    ========================================================================== */
-
-.footer{
-  background-color: #878937;
-  color: #fff8ed;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer-text{
-  margin: 0;
-}
-
 /* Socials section */
 .social-icons {
   text-align: center;
@@ -796,15 +772,58 @@ p {
   color: whitesmoke;
 }
 
-/* Footer section */
-.footer-text {
+.footer {
+  background-color: #878937;
+  color:#fff8ed;
   text-align: center;
   padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
+.footer-text {
+  margin: 0;
+}
 /* ==========================================================================
-   Media Queries For Responsiveness Styles Section
+   Paginatation Styles Section
    ========================================================================== */
+   .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination .step-links {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: #f8f9fa;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+  }
+  
+  .pagination a:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .pagination .current {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #f8f9fa;
+    background-color: #878937;
+  }
+
+  /* ==========================================================================
+  Media Queries for responsiveness
+   ========================================================================== */
+
 @media (max-width: 1200px) {
   .events-grid {
     display: grid;
@@ -831,17 +850,6 @@ p {
   
   .card-text {
     margin-bottom: 10px;
-  }
-
-  .btn-primary {
-    background-color: #878937;
-    border-color: #878937;
-    color: #fff8ed;
-  }
-  
-  .btn-primary:hover {
-    background-color: #ffc100;
-    border-color: #ffc100;
   }
 }  
 
@@ -922,7 +930,6 @@ p {
 
   .show {
     display: flex !important;
-    Ensure the navigation links are displayed */
     flex-direction: column;
     width: 100%;
   }
@@ -1007,5 +1014,4 @@ p {
     margin-bottom: 1rem;
     border-bottom: 2px solid #dee2e6;
   }
-
 }
