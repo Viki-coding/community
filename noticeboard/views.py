@@ -38,23 +38,23 @@ def book_event(request, event_id):
 
     # Check if the date deadline has passed
     if event.booking_deadline and event.booking_deadline < timezone.now():
-        messages.error(request, "Sorry! Booking deadline has passed.")
+        messages.error(request, "SORRY! BOOKING DEADLINE HAS PASSED.")
         return redirect("event_detail", event_id=event_id)
 
     # Check if the event capacity has been reached
     if Booking.objects.filter(event=event).count() >= event.capacity:
-        messages.error(request, "Sorry! Event capacity has been reached.")
+        messages.error(request, "SORRY! EVENT CAPACITY HAS BEEN REACHED.")
 
         return redirect("event_detail", event_id=event_id)
 
     # Check if the user has already booked the event
     if Booking.objects.filter(event=event, user=community_user).exists():
-        messages.error(request, "You have already booked this event.")
+        messages.error(request, "YOU HAVE ALREADY BOOKED THIS EVENT.")
         return redirect("event_detail", event_id=event_id)
 
     # Create a booking for the user
     Booking.objects.create(event=event, user=community_user)
-    messages.success(request, "Thank you! Event booked successfully. Click on DASHBOARD to view or edit your bookings.")
+    messages.success(request, "THANK YOU - EVENT BOOKED SUCCESSFULLY. CLICK ON DASHBOARD TO VIEW / DELETE YOUR BOOKING.")
     return redirect("event_detail", event_id=event_id)
 
 
