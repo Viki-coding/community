@@ -38,7 +38,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* min-height: calc(100vh - 60px); */
 }
 
 /* ==========================================================================
@@ -413,6 +412,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .warning-card {
