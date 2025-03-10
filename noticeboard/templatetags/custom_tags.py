@@ -1,4 +1,5 @@
-# filepath: /Users/vikimulhall/Documents/community/noticeboard/templatetags/custom_tags.py
+# filepath: /Users/vikimulhall/Documents/community/noticeboard/
+# templatetags/custom_tags.py
 from django import template
 
 register = template.Library()

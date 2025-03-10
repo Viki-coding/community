@@ -2,7 +2,8 @@ from django.contrib import admin
 from .models import Location, Event
 from django_summernote.admin import SummernoteModelAdmin
 
-admin.site.register(Location) 
+admin.site.register(Location)
+
 
 @admin.register(Event)
 class EventAdmin(SummernoteModelAdmin):
@@ -11,5 +12,5 @@ class EventAdmin(SummernoteModelAdmin):
     list_filter = ('category',)
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('description',)
-    
+
 # Register your models here.
