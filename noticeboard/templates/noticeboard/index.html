@@ -34,12 +34,12 @@
             {% for event in page_obj %}
             <article class="card" aria-labelledby="card-title-{{ event.id }}">
                 <div class="card-body">
-                    <h2 class="card-title">{{ event.title }}</h2>
+                    <h2 id="card-title-{{ event.id }}" class="card-title">{{ event.title }}</h2>
                     <p class="card-text"><strong>Date:</strong> {{ event.date }}</p>
                     <p class="card-text"><strong>Time:</strong> {{ event.start_time }} - {{ event.end_time }}</p>
                     <p class="card-text"><strong>Location:</strong> {{ event.location.name }}</p>
                     <p class="card-text"><strong>Category:</strong> {{ event.category }}</p>
-                    <a href="{% url 'event_detail' event.id %}" class="btn btn-primary" aria-label="Read more about">Read More</a>
+                    <a href="{% url 'event_detail' event.id %}" class="btn btn-primary" aria-label="Read more about {{ event.title }}">Read More</a>
                 </div>
             </article>
             {% endfor %}
