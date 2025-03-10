@@ -6,11 +6,12 @@
 {% block content %}
 <!-- Hero Section -->
 <div class="hero-container">
-    <div class="hero" style="background-image: url('{% static "images/communitycentre.svg" %}');"></div>
+    <div class="hero" style="background-image: url('{% static "images/communitycentre.svg" %}');" role="img" aria-label="Community Centre"></div>
 </div>
 
 <!-- Filter by Category Section -->
-<div class="filter-container">
+<section class="filter-container" aria-labelledby="filter-heading">
+    <h2 id="filter-heading" class="visually-hidden">Filter by Category</h2>
     <div class="category-filter">
         <form method="GET" action="{% url 'index' %}">
             <label class="filter-label" for="category">Sort by Category:</label>
@@ -22,15 +23,16 @@
             </select>
         </form>
     </div>
-</div>
+</section>
 
 <!-- Main Content -->
-<div class="container main-container">
-    <div class="events-grid">
+<main class="container main-container">
+    <section class="events-grid" aria-labelledby="events-heading">
+        <h2 id="events-heading" class="visually-hidden">Community Events</h2>
         {% if page_obj %}
         <!-- Events Column -->
             {% for event in page_obj %}
-            <div class="card">
+            <article class="card" role="article" aria-labelledby="card-title-{{ event.id }}">
                 <div class="card-body">
                     <h2 class="card-title">{{ event.title }}</h2>
                     <p class="card-text"><strong>Date:</strong> {{ event.date }}</p>
@@ -39,32 +41,32 @@
                     <p class="card-text"><strong>Category:</strong> {{ event.category }}</p>
                     <!-- <p class="card-text">{{ event.excerpt|slice:":50" }}{% if event.excerpt|length > 100 %}...{% endif %} -->
                     </p>
-                    <a href="{% url 'event_detail' event.id %}" class="btn btn-primary">Read More</a>
+                    <a href="{% url 'event_detail' event.id %}" class="btn btn-primary" aria-label="Read more about">Read More</a>
                 </div>
-            </div>
+            </article>
             {% endfor %}
         {% else %}
             <p>Sorry! No events listed under this category at the moment.</p>
         {% endif %}
-    </div>
+    </section>
 
     <!-- Pagination Controls -->
-    <div class="pagination">
+    <nav class="pagination" aria-label="Pagination">
         <span class="step-links">
             {% if page_obj.has_previous %}
-                <a href="?page=1">&laquo; first</a>
-                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                <a href="?page=1" aria-label="First page>&laquo; First</a>
+                <a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous page>previous</a>
             {% endif %}
 
             <span class="current">
-                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
             </span>
 
             {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">next</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                <a href="?page={{ page_obj.next_page_number }}" aria-label="Next page>next"</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last page">Last &raquo;</a>
             {% endif %}
         </span>
-    </div>   
-</div>
+    </nav>   
+</main>
 {% endblock %}

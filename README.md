@@ -176,6 +176,7 @@ Expiry Date, after a certain period to remove 'old' event posts from the site, s
 
 
 <h2>Accessibility</h2>
+This is a community website for everyone in the community to use.  Accessibility of the site was very important. Semantic HTML elements were used.  Aria labels were used to improve accessibility for screen readers.  The color pallet chosen has sufficent constrast against the background to be readable by users with visual impairments.  All forms were accessible with associated lables and are navigable using keyboard. Alt attributes were used to describe any image content such as the logo and notice board image. 
 
 <h2>Technologies Used</h2>
 HTML -  CSS -  JS
