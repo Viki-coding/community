@@ -19,16 +19,21 @@ class UserForm(UserCreationForm):
             user.save()
         return user
 
+
 # CommunityUser Form
 class CommunityUserForm(forms.ModelForm):
     class Meta:
         model = CommunityUser
         fields = ['telephone']
 
+
 class EventForm(forms.ModelForm):
     date = forms.DateField(
         label='Date (dd/mm/yy)',
-        widget=forms.DateInput(format='%d/%m/%y', attrs={'placeholder': 'dd/mm/yyyy'}),
+        widget=forms.DateInput(
+            format='%d/%m/%y',
+            attrs={'placeholder': 'dd/mm/yyyy'}
+        ),
         input_formats=['%d/%m/%y']
     )
 
@@ -47,18 +52,35 @@ class EventForm(forms.ModelForm):
         widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}),
         input_formats=['%d/%m/%y %H:%M']
     )
-    
+
     class Meta:
         model = Event
-        fields = ['title', 'date', 'start_time', 'end_time', 'location', 'category', 'excerpt', 'description', 'capacity', 'booking_deadline']
+        fields = [
+            'title', 'date', 'start_time', 'end_time', 'location',
+            'category', 'excerpt', 'description', 'capacity',
+            'booking_deadline'
+        ]
         widgets = {
             'title': forms.TextInput(attrs={'placeholder': 'Event Title'}),
-            'start_time': forms.TimeInput(attrs={'placeholder': 'Start Time (24hr format)'}),
-            'end_time': forms.TimeInput(attrs={'placeholder': 'End Time (24hr format)'}),
-            'location': forms.Select(attrs={'placeholder': 'Select Location'}),
+            'start_time': forms.TimeInput(
+                attrs={'placeholder': 'Start Time (24hr format)'}
+            ),
+            'end_time': forms.TimeInput(
+                attrs={'placeholder': 'End Time (24hr format)'}
+            ),
+            'location': forms.Select(
+                attrs={'placeholder': 'Select Location'}
+            ),
             'category': forms.Select(attrs={'placeholder': 'Select Category'}),
-            'excerpt': forms.Textarea(attrs={'placeholder': 'Short Event Summary'}),
-            'description': forms.Textarea(attrs={'placeholder': 'Description'}),
-            'capacity': forms.NumberInput(attrs={'placeholder': 'Maximum Participants'}),
-            'booking_deadline': forms.DateTimeInput(attrs={'placeholder': 'Booking Deadline (dd/mm/yyyy hh:mm)'})
+            'excerpt': forms.Textarea(
+                attrs={'placeholder': 'Short Event Summary'}
+            ),
+            'description': forms.Textarea(
+                attrs={'placeholder': 'Description'}),
+            'capacity': forms.NumberInput(
+                attrs={'placeholder': 'Maximum Participants'}
+            ),
+            'booking_deadline': forms.DateTimeInput(
+                attrs={'placeholder': 'Booking Deadline (dd/mm/yyyy hh:mm)'}
+            )
         }
