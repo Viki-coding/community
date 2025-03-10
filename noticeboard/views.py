@@ -132,17 +132,15 @@ def create_community_user(request):
                 request,
                 "Thank you for registering as a user. You are now logged in.",
             )
-            return redirect(
-                reverse("create_community_user") + "?created=true"
-            )
-
             # Redirect to the event booking page if an event_id is stored in
             # session
             event_id = request.session.pop("event_id", None)
             if event_id:
                 return redirect("book_event", event_id=event_id)
 
-            return redirect("index")
+            return redirect(
+                reverse("create_community_user") + "?created=true"
+            )
 
         else:
             messages.error(request, "Please correct the errors below.")
@@ -168,8 +166,7 @@ def user_dashboard(request):
         messages.error(request, "Create a User profile to book events.")
         return redirect("create_community_user")
 
-    bookings = Booking.objects.filter
-    (user=community_user).select_related("event")
+    bookings = Booking.objects.filter(user=community_user).select_related("event")
     return render(
         request, "noticeboard/user_dashboard.html", {"bookings": bookings}
     )
