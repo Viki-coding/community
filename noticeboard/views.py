@@ -12,9 +12,10 @@ from datetime import datetime
 from django.utils import timezone
 from django.core.paginator import Paginator
 
-
-# Check if the user is in the facilitator group
 def is_facilitator(user):
+    """
+    Check if the user is in the facilitator group
+    """
     return user.groups.filter(name="Facilitators").exists()
 
 @login_required
@@ -25,7 +26,9 @@ def facilitator_dashboard(request):
 
 @login_required
 def book_event(request, event_id):
-    """Community user can book event if conditions are met."""
+    """
+    Community user can book event if conditions are met.
+    """
     print("book_event view called")  # Debugging message
     event = get_object_or_404(Event, id=event_id)
 
@@ -59,7 +62,11 @@ def book_event(request, event_id):
 
 
 def login_view(request):
-    """Manage user login and redirection based on user group (facilitator/user)"""
+    """
+    Manage user login and redirection based on user(facilitator/user)
+     :return: Facilitator dashboard if logged in and is in facilitator group 
+     :return: User Dashbord if logged in as a community user 
+    """
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
@@ -94,6 +101,9 @@ def login_view(request):
 
 
 def create_community_user(request):
+    """
+    Create a view to handle the creation of a community user.
+    """
     if request.method == "POST":
         user_form = UserForm(request.POST)
         community_user_form = CommunityUserForm(request.POST)
@@ -128,7 +138,9 @@ def create_community_user(request):
 
 @login_required
 def user_dashboard(request):
-    """Community Users can view their booked events."""
+    """
+    Community Users can view their booked events.
+    """
     community_user = getattr(request.user, "communityuser", None)
     if not community_user:
         messages.error(request, "Create a User profile to book events.")
@@ -140,7 +152,9 @@ def user_dashboard(request):
 
 @login_required
 def cancel_booking(request, booking_id):
-    """ Cancellation of a booking by a community user."""
+    """ 
+    Cancellation of a booking by a community user.
+    """
     community_user = getattr(request.user, "communityuser", None)
     if not community_user:
         messages.error(request, "Create a User profile to manage bookings.")
@@ -153,15 +167,18 @@ def cancel_booking(request, booking_id):
         return redirect("user_dashboard")
     return render(request, "noticeboard/user_dashboard.html")
 
-# Create your views to display on notice.
-# Create a view to display if a filter is applied to the events
+
 def index(request):
+    """
+    Create a view to display the events on the noticeboard.
+    Create a view to display when a filter is applied to the events
+    """
     category = request.GET.get("category")
     if category:
         events = Event.objects.filter(category=category)
     else:
         events = Event.objects.all()
-
+    # Pagination with next and preivous buttons
     paginator = Paginator(events, 6) 
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
@@ -182,7 +199,9 @@ class EventList(generic.ListView):
 
 
 def event_detail(request, event_id):
-    """Create a view to display the event details and description in full"""
+    """
+    Create a view to display the event details and description in full
+    """
     event = get_object_or_404(Event, id=event_id)
     user_is_facilitator = is_facilitator(request.user)
     user_has_booked = False
@@ -203,7 +222,6 @@ def event_detail(request, event_id):
     )
 
 
-# Create a view to handle event creation, on dashboard page
 @login_required
 @user_passes_test(is_facilitator)
 def create_event(request):
@@ -224,10 +242,13 @@ def create_event(request):
     return render(request, "noticeboard/create_event.html", {"form": form})
 
 
-# Create a view to handle editing of events by facilitators
 @login_required
 @user_passes_test(is_facilitator)
 def edit_event(request, event_id):
+    """
+    View to handle event editing by facilitators.
+    Only logged-in users who are facilitators can access this view.
+    """
     event = get_object_or_404(Event, id=event_id, facilitator=request.user)
     if request.method == "POST":
         form = EventForm(request.POST, instance=event)
@@ -242,10 +263,13 @@ def edit_event(request, event_id):
     )
 
 
-# Create a view to handle event deletion by facilitators
 @login_required
 @user_passes_test(is_facilitator)
 def delete_event(request, event_id):
+    """
+    View to handle event deletion by facilitators.
+    Only logged-in users who are facilitators can access this view.
+    """
     event = get_object_or_404(Event, id=event_id, facilitator=request.user)
     if request.method == "POST":
         event.delete()
@@ -254,17 +278,22 @@ def delete_event(request, event_id):
     return render(request, "noticeboard/delete_event.html", {"event": event})
 
 
-# Create a view to for the facilitator dashboard
 @login_required
 @user_passes_test(is_facilitator)
 def facilitator_dashboard(request):
+    """
+    Create a view to display the events created by the facilitator.
+    """
     events = Event.objects.filter(facilitator=request.user)
     return render(request, "noticeboard/facilitator_dashboard.html", {"events": events})
 
 
-# Create a view to handle logout and confirm the facilitator or user wants to logout
 @login_required
 def logout_view(request):
+    """
+    Create a view to handle logout and confirm the facilitator or user wants to
+    logout
+    """
     if request.method == "POST":
         logout(request)
         return redirect("index")

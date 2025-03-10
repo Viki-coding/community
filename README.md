@@ -377,6 +377,8 @@ Resolved by looking at code and realising I had for booking in booking rather th
 
 [Pagination For Django - Django Wednesdays #18 - Codeemy.com] (https://www.youtube.com/watch?v=N-PB-HMFmdo) Good video about creating pagination. 
 
+[PEP 8 - Style Guide for Python Code] (https://peps.python.org/pep-0008/)
+
 <b>General good videos and links to teaching of Python:<b>
 
 
