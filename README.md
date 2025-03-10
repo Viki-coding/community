@@ -179,7 +179,7 @@ Expiry Date, after a certain period to remove 'old' event posts from the site, s
 This is a community website for everyone in the community to use.  Accessibility of the site was very important. Semantic HTML elements were used.  Aria labels were used to improve accessibility for screen readers.  The color pallet chosen has sufficent constrast against the background to be readable by users with visual impairments.  All forms were accessible with associated lables and are navigable using keyboard. Alt attributes were used to describe any image content such as the logo and notice board image. 
 
 <h2>Technologies Used</h2>
-HTML -  CSS -  JS
+HTML -  CSS -  JS - Python - Django
 
 
 <h2>Frameworks, Libraries and Programs Used: </h2>
@@ -196,10 +196,12 @@ HTML -  CSS -  JS
 * Canva - to create logo image
 * Am I Responsive - quick tool to check how responsiveness on various devices and creates display
 * Responsive tool - https://responsivetesttool.com/
+* (https://techsini.com/multi-mockup/)
 * JSHint to check JS code
 * Spell Check
 * Heroku
 * Django 
+* Pylint 
 
 <h2>TESTING</h2>
 A sepearate testing documentation has been created. Please find link here:
@@ -385,6 +387,8 @@ Resolved by looking at code and realising I had for booking in booking rather th
 I signed up to a phone app called MIMO which I found great for teaching me python and to help me do something productive rather than doom scrolling when I'm in the car waiting on my kids or having breakfast in the morning. Would highly recommend. 
 
 Lucimeri Andretta - PP4 - MVP & Community Walkthrough.pdf was great or refer to for the entire projects including common errors, testing, readme. 
+
+[Code Validation with Joanna Gorska](https://www.youtube.com/watch?v=6j9dZTW4owI&list=PL_7334VduOHvzZYlgy_0kZLcic2NINCUt&index=37)
 
 <b>Videos & Websites that we gained visual clues of how to create the community centre website:</b>
 
