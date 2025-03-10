@@ -26,8 +26,8 @@
 </section>
 
 <!-- Main Content -->
-<main class="container main-container">
-    <section class="events-grid" aria-labelledby="events-heading">
+<section class="container main-container">
+    <div class="events-grid" aria-labelledby="events-heading">
         <h2 id="events-heading" class="visually-hidden">Community Events</h2>
         {% if page_obj %}
         <!-- Events Column -->
@@ -46,7 +46,7 @@
         {% else %}
             <p>Sorry! No events listed under this category at the moment.</p>
         {% endif %}
-    </section>
+    </div>
 
     <!-- Pagination Controls -->
     <nav class="pagination" aria-label="Pagination">
@@ -66,5 +66,5 @@
             {% endif %}
         </span>
     </nav>   
-</main>
+</section>
 {% endblock %}
