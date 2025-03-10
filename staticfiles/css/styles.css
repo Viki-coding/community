@@ -832,11 +832,12 @@ p {
     margin: 0 5px;
     padding: 5px 10px;
     border: 1px solid #dee2e6;
-    border-radius: 4px;
+    border-radius: 8px;
   }
   
   .pagination a:hover {
     background-color: #f8f9fa;
+    color: #878937;
   }
   
   .pagination .current {
