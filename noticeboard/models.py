@@ -28,7 +28,11 @@ class Location(models.Model):
         ('Mezzanine', 'Mezzanine'),
     ]
 
-    name = models.CharField(max_length=50, choices=LOCATION_CHOICES, unique=True)
+    name = models.CharField(
+        max_length=50,
+        choices=LOCATION_CHOICES,
+        unique=True
+    )
 
     def __str__(self):
         return self.name
@@ -54,7 +58,11 @@ class Event(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, default='Other')
+    category = models.CharField(
+        max_length=100,
+        choices=CATEGORY_CHOICES,
+        default='Other'
+    )
     excerpt = models.TextField(blank=True)
     description = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
@@ -87,7 +95,10 @@ class Booking(models.Model):
     """Model for booking events by community users."""
 
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
-    user = models.ForeignKey(CommunityUser, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        CommunityUser,
+        on_delete=models.CASCADE
+    )
     booked_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -95,9 +106,13 @@ class Booking(models.Model):
 
     def clean(self):
         """Ensure booking is within deadline and capacity limits."""
-        if self.event.booking_deadline and self.event.booking_deadline < datetime.now():
-            raise ValidationError("Booking deadline has passed.")
-        if self.event.capacity <= Booking.objects.filter(event=self.event).count():
+        if (self.event.booking_deadline and
+                self.event.booking_deadline < datetime.now()):
+            raise ValidationError(
+                "Booking deadline has passed."
+            )
+        if self.event.capacity <= Booking.objects.filter(
+                event=self.event).count():
             raise ValidationError("Event capacity reached.")
 
     def __str__(self):
