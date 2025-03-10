@@ -4,6 +4,7 @@ from django import template
 
 register = template.Library()
 
+
 @register.filter(name='is_facilitator')
 def is_facilitator(user):
     return user.groups.filter(name="Facilitators").exists()
