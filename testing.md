@@ -2,12 +2,20 @@
 
 Link to Readme.md (https://github.com/Viki-coding/community/blob/main/README.md)
 
+- [User Experience Quality Assurance](#user-experience-assurance)
+- [Testing Evaluation Sheet](#Test-Evaluation-Sheet)
+- [Manual Testing](#manual-testing)
+- [Lighthouse Testing](#lighthouse-testing)
+- [Bugs](#bugs)
+
+
+
 <h2>Quality Assurance</h2>
 User Experience Assurance - 
 
 We took a systematic and structural approach to manually test each page to ensure it functions correctly and to help identify potential bugs. We created a specific testing template to ensure and re-check all aspects of the site were working correctly as specified with expected and actual outcomes using a methodical approach. We did final testing on the deployed site. 
 
-<h3>Test Evaluation Sheet:</h3>
+#Test Evaluation Sheet:
 In the table below we performed methodical testing on the deployed site. 
 
 
@@ -112,10 +120,12 @@ We used the following external sites to validate the code, some screen shots of 
 
 
 <h2>BUGS</h2>
+
 <u>UnSolved Bugs</u>
+
 No unsolved bugs
 
-<u>Solved Bugs</u>
+<h3>Solved Bugs</h3>
 I came across many bugs while creating the site, from missing semi-colons, bootstrap conflicting css, not collecting static, not doing a hard-refresh - all learning curves!  I put the HTML and CSS code and python through validators and fixed all warnings that were shown.  Having chrome development tool open while creating code and inspect console log was very helping with some aspects of the bug finding.  It was also helpful breaking down the problem and  thinking logically - what’s working, what’s not to be able to focus in on the issue. 
 
 After following the step by step guide to migrating from gitpod to visual studio code, I found it difficult, lost my project kanban board, so I decided to start again rather than make the migration. Deploying to heroku also took 1 full day to sort of, with many errors and google, stack overflow and slack to assist.  It was very frustrating at the time, loosing valuable coding hours trying to fix errors but each is a learning curve where you learn something new and get braver at writing commands to see if things get fixed.  In the end I had to resort to Oisin in student support who finally got me sorted! 
