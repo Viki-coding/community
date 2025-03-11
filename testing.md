@@ -15,7 +15,7 @@ User Experience Assurance -
 
 We took a systematic and structural approach to manually test each page to ensure it functions correctly and to help identify potential bugs. We created a specific testing template to ensure and re-check all aspects of the site were working correctly as specified with expected and actual outcomes using a methodical approach. We did final testing on the deployed site. 
 
-#Test Evaluation Sheet:
+<h2>Test Evaluation Sheet:</h2>
 In the table below we performed methodical testing on the deployed site. 
 
 
