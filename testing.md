@@ -30,10 +30,38 @@ BUGS RESOLVED AND NOTE SOLUTIONS AND UNRESOLVED
 https://wave.webaim.org/
 	
 We performed manual testing on the deployed site and also ran our html, css and js codes through validators.
+
 <h3>W3C Validator</h3>
+
+![HTML Validator](https://github.com/user-attachments/assets/1880ebf6-afbc-4ce9-99c0-2ce68d3b0a69)
+
+
 <h3> CSS (Jigsaw) validator</h3>
+![CSS Validator](https://github.com/user-attachments/assets/6b08933b-f3a1-4b4f-9774-2d0f5e20b903)
+
+CI Python Linter:
+Models:
+
+![Python Linter Models2](https://github.com/user-attachments/assets/42232345-87a3-4c0b-b636-11ad2e21ad10)
+
+Views:
+![python linter views](https://github.com/user-attachments/assets/6710d78d-6092-4d17-8bf7-8aadce55663d)
+
+
+Custom Tags:
+![Python Linter Custom Tags](https://github.com/user-attachments/assets/41f978a2-fb7a-4138-89b6-4b1d4f66449b)
+
+Forms: 
+![python linter urls](https://github.com/user-attachments/assets/656c3372-642c-4857-a783-7ec21994d271)
+
+Automated Testing: 
+![Python Linter Automated Testing](https://github.com/user-attachments/assets/b3358283-7a84-45ab-9da7-7ae6a6802d8b)
+
 <h2>JavaScript Code Validator</h2>
+
 <h2> JSON formatter and Validator</h2>
+
+
 <h2>(https://pep8ci.herokuapp.com/)</h2>
 
 <h2>Quality Assurance</h2>
