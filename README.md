@@ -290,6 +290,9 @@ Lighthouse Testing
 
 ![Lighthouse test results](https://github.com/user-attachments/assets/53a061ea-edb5-4d32-b60e-a9ab34756838)
 
+Color Blindness Simulator Tool:
+
+![Color Blindness simulator](https://github.com/user-attachments/assets/60aef587-2546-443e-ac02-e5a994452509)
 
 <h2>Technologies Used</h2>
 HTML -  CSS -  JS - Python - Django - Bootstrap 
