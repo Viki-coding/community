@@ -1,9 +1,13 @@
 <h1> Community Centre</h1> 
 
 
-Live link: https://community-noticeboard-app-00b83bd93757.herokuapp.com/
+![multiscreen_view_BCC](https://github.com/user-attachments/assets/8f58f17a-b47c-44b1-b4e9-d3faa10eb97e)
 
-Link to Kanban Board [Viki-coding/Projects/Community Notice Board Project] (https://github.com/users/Viki-coding/projects/8/views/1)
+Live link: (https://community-noticeboard-app-00b83bd93757.herokuapp.com/)
+
+Link to Kanban Board:
+[Viki-coding/Projects/Community Notice Board Project] 
+(https://github.com/users/Viki-coding/projects/8/views/1)
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -37,7 +41,7 @@ Link to Kanban Board [Viki-coding/Projects/Community Notice Board Project] (http
 - [Legal & Ethical Compliance](#legal--ethical-compliance)
 
 
-<h1> INTRODUCTION </h1>
+<h1> Introduction </h1>
 This website aims to keep everyone in the community informed of events, matches, social gatherings, meetings and sporting opportunities available in their area.  Ballinameela Community Centre is a large sports hall, with a meeting room, kitchen, mezzineine and outdoor facilities of a large GAA/Soccer pitch and an all weather flood lit astro-turf pitch.  The community of Ballinameela based in West Waterford are a strongly knitted community who have worked very hard over the years fundraising and running events to create a community centre as the central point for families, individuals and sporting groups to have a meeting area to keep healthy, meet and gather in state of the art facilitiies.  To utilise the centre to its higest purpose it is important to highlight to the community themselves of what is going on on a weekly basis.  
 
 <h2>Description - Project Purpose</h2>
@@ -168,50 +172,68 @@ As a community User, I can click on a post so that I can read the full event det
 
 <h2>Design Choices</h2>
 Colour Scheme
+Ballinameela Community Centre is based in the beautiful country side of West Waterford.  We wanted to use a nice green color to represent healthy country living.  As this was a comunity noticeboard to highlight the events of the area we used a bright yellow 'post-it color' to make it look like events were posted up aginst board.  We used a black text font to help stand out to all users especially those with accessible issues.  We used a contrasting cream color against the green which makes the scheme look solf, friendly while also accessible.  
 Using a colour contrast checked we checked which font colours stood out best against our base colours.  All receiving good ratings. Graphic illustrated below:
 
+![Color-contrast-good](https://github.com/user-attachments/assets/cbd1c72f-4e2e-42f8-b20c-94e6a307f087)
+
 <h2>Typography</h2>
+Font used is Roboto from Google Fonts. It is in the sans serif family, is clean and modern appearance.  It is dyslexic friendly helping with readability. 
 
 <h2>Wireframes</h2>
 
-<h2>Flow Chart</h2>
+![Wireframes1-BCC](https://github.com/user-attachments/assets/39b1ce9b-1024-4e79-97f0-4a219019833f)
+
+![Wireframes2-BCC](https://github.com/user-attachments/assets/db6cf6aa-c986-410c-8981-f68ca2331ef5)
+
+![Wireframes3-BCC](https://github.com/user-attachments/assets/a7c92c87-70cb-48bc-8c97-a32f14961c48)
+
+
+<h2>ER Diagram</h2>
+
+<img width="1037" alt="ERD Community Centre V3" src="https://github.com/user-attachments/assets/5660257a-5d2e-4f5d-bf3f-38c0cdc3cf44" />
+
 
 <h3>FEATURES</h3>
-	(example: nav bars, footer, contact forms, social media icons. )
-	Functional Overview 
--	Core functionalities
--	Elements of the project
--	Sets expectations
-Navigation and Interaction Points 
--	Offers preview of key elements which are crucial for user interaction.
-Assessor wants to see:
 Feature Title / Screenshot / Value to the User
 
 Naviagtion Bar:
 Login Feature
 If you already have a username and password you can log in easily to view your events. Once logged in the button changes to Log Out. When you go to log out an alert modul asks if you are sure you want to log out. 
 
+![Nav-bar with logout modul](https://github.com/user-attachments/assets/2ec3479e-569e-4dcc-ae35-ad9f83995dd9)
+
 Sign Up Feature:
 If you are a new user, it is easy to navigate to the Sign Up form, enter your details and password and are set up within minutes, the login button changes to Log Out and you have access to book events. 
+
+![Nav Bar](https://github.com/user-attachments/assets/da4620e3-8fc8-48cc-9605-acbdc1a6cf25)
 
 Dashboard Feature:
 As a Community User the dashboard is personalised to the user and their booked events only.  If no events are booked it will display no events booked. If events are booked they are clearly diplayed in the dasboard, a user can view, or delete their events in the dashboard. Before a user deletes an event there is an alert modul asking them if they are sure. 
 
 As a Facilitator the dashboard is personalised to your created events only.  Here the faciltiator can view, create, edit and delete their events.  They can also see the users signed up to each of their events. 
 
+
+![My Events Facilitatator Dashboard](https://github.com/user-attachments/assets/d59824d4-bc0b-4b01-8bad-1e730608e1fb)
+
+
 Notice Board Feature:
 Community users can log on and immeaditlatey view the latest events in their area, keeping them up to date with events.  When an event such as an exercise class is advertised a community user may be motivated to attend due to its ease of access. This has the value to making our community a healhier community. 
 
-The user is fully informed, the date, time, location. The facilitator can expand more in the description, such as duration/cost of a class, what to bring. The value of fully informing the community to events with the flexibility of expanding the details in the Read more section. 
+![Noticeboard Feature](https://github.com/user-attachments/assets/35d45c40-419e-4f9c-acb2-67c63477b80d)
 
-Pagination Feature:
-The latest events are posted first, to view older posted events the user can user the pagination links at the bottom of the page to easilty naviage though the pages. 
+The user is fully informed, the date, time, location. The facilitator can expand more in the description, such as duration/cost of a class, what to bring. The value of fully informing the community to events with the flexibility of expanding the details in the Read more section. 
 
 Search by Category Feature: 
 Users who want to narrow down the search to certain events, such as a new parent in the area may want to only see events in the 'Parent & Toddler' section.  When a facilitator creates a new event, they have the opportunity of associating it with a certain category.  By clicking on the drop down arrow, a list of categories is displayed and when 1 is selected only events listed under those categories are displayed. 
 
+![Sort-by-category](https://github.com/user-attachments/assets/4f4765a0-9bfe-4a71-b54e-718c3b12c5aa)
+
 Booking Feature as a Community User
 A community user can view all events and book their place to ensure they have a place at the class or event.  When an event is publised it is often only bookable with a phone number and within a certain timeframe which is not always convient for those making the booking, this feature allows users to book when ever a new event is posted in an easy to use booking method. They can share the site with friends and encouage them to book also. 
+
+![Book Event](https://github.com/user-attachments/assets/b26de344-ce75-4c91-9e13-03eb34bd8e2f)
+
 
 Booking Feature as a Facilitator 
 The value of the booking feature as a faciltiator allows facilators to be able to put a capcity limit on an event to ensure the event is managable, such as a boot camp having a capacity of 40 to ensure their is enough exercise stations, a cookery course having a capacity limit of 10 to ensure their is enough equipment.  
@@ -220,11 +242,20 @@ The faciltitator also applies a booking by date/time, so an event cannot be book
 
 The booking feature also has the value added of showing the community users have booked their event. This allows faciliators to see the number of people who have booked their event, with their names, active email and an active phone number. Users can be easilty contacted if required. 
 
+![Dashboard with list of users booked](https://github.com/user-attachments/assets/b29feb77-32bd-44bf-9e71-93d7683e5c57)
+
+FOOTER FEATURES:
+
+![Footer Features](https://github.com/user-attachments/assets/a03fb0fa-dd92-463e-83e8-deb04b3407d2)
+
 Footer Features:
 The Eircode of centre is already linked to google maps the user can easilty navigate to the centre by clicking on the eircode, which opens in a new page. 
 
 Facebook and Instagram Features:
 This allows the user to access the Ballinameela Community Centre socials in a new page. 
+
+Pagination Feature:
+The latest events are posted first, to view older posted events the user can user the pagination links at the bottom of the page to easilty naviage though the pages. 
 
 
 <h2>Interaction Points</h2>
