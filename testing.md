@@ -1,5 +1,7 @@
 <h1> TESTING DOCUMENTATION - COMMUNITY CENTRE APP</h1> 
 
+Link to Readme.md (https://github.com/Viki-coding/community/blob/main/README.md)
+
 <h2>Quality Assurance</h2>
 User Experience Assurance - 
 
