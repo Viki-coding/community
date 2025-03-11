@@ -68,7 +68,8 @@ body {
 
 .navbar ul li a.nav-link, 
 .navbar ul li button.nav-link{
-  color: #fff8ed!important;
+  color: black;
+  font-weight: 700;
   display: flex;
   padding: 5px 10px;
   text-decoration: none;
@@ -85,7 +86,7 @@ body {
 
 .navbar ul li a.nav-link.active,
 .navbar ul li button.nav-link.active {
-  border-bottom: 2px solid #fff8ed; 
+  border-bottom: 4px solid #ffc100; 
 }
 
 .navbar ul li a.nav-link:hover,
@@ -113,9 +114,12 @@ body {
   display: none;
   font-size: 24px;
   cursor: pointer;
-  color: #fff8ed;
 }
 
+.burger-menu i {
+  color: black;
+}
+  
 .navbar .login-form input {
   margin-right: 10px;
   display: flex;
@@ -130,7 +134,7 @@ body {
   border: none;
   border-radius: 4px;
   background-color: #2ad495;
-  color: white;
+  color: black;
 }
 
 .navbar .login-form button:hover {
@@ -201,7 +205,7 @@ body {
   margin-right: 10px;
   font-weight: bold;
   font-size: larger;
-  color: #3a322d;
+  color: black;
 }
 
 /* ==========================================================================
@@ -715,29 +719,6 @@ p {
 /* ==========================================================================
    Message alerts section
    ========================================================================== */
-/* .message-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.alert-danger {
-  color:red;
-  background-color: #d4edda;
-  border-color: #c3e6cb;
-}
-
-.alert-warning {
-  color: #856404;
-  background-color: #fff3cd;
-  border-color: #ffeeba;
-}
-
-.alert-info {
-  color: #0c5460;
-  background-color: #d1ecf1;
-  border-color: #bee5eb;
-} */
-
 .alert-success {
   display: flex;
   justify-content: center;
@@ -803,7 +784,7 @@ p {
 
 .footer {
   background-color: #878937;
-  color:#fff8ed;
+  color: black;
   text-align: center;
   padding: 20px;
   bottom: 0;
@@ -813,6 +794,16 @@ p {
 .footer-text {
   margin: 0;
 }
+
+.footer-text a {
+  color: #ffc100;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  color: #e0a800; 
+}
+
 /* ==========================================================================
    Paginatation Styles Section
    ========================================================================== */
@@ -827,7 +818,7 @@ p {
   }
   
   .pagination a {
-    color: #f8f9fa;
+    color: black;
     text-decoration: none;
     margin: 0 5px;
     padding: 5px 10px;
@@ -837,7 +828,7 @@ p {
   
   .pagination a:hover {
     background-color: #f8f9fa;
-    color: #878937;
+    color: #black;
   }
   
   .pagination .current {
@@ -845,7 +836,7 @@ p {
     padding: 5px 10px;
     border: 1px solid #dee2e6;
     border-radius: 4px;
-    color: #f8f9fa;
+    color: black;
     background-color: #878937;
   }
 
