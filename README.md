@@ -140,6 +140,10 @@ Website Use Case: Oversees all event listings, manages facilitator accounts, che
 
 Quote: "I need a system that allows me to keep an overview of all the activities in the community center and to easily delegate tasks."
 
+<h2>Kanban Board</h2>
+I found the Kanban very helpful, it did take time to set up, it was well planned and structured.  I sometimes have a tendancy to go from one area and then get distracted to start fixing another area, having the Kanban board with the user stories and the tasks that I needed to perform helped me to keep a strcutured approach to coding.  I learnt that at the end of a commit if I put "relates to #1"  etc it would be documented with the task # in my project. 
+
+![Kanban Board Progress](https://github.com/user-attachments/assets/d7a67b47-e80a-4194-bd36-a6bc16a8cf70)
 
 <h2>UX</h2>
 When you land on our site it is immeadiatley obvious what the site is and conveys the message of a notice board straight away.  There are 6 events posted per page, the most recents event posts are posted first, with navigation links to older events. 
