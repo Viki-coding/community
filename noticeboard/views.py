@@ -6,9 +6,6 @@ from .forms import EventForm, UserForm, CommunityUserForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.text import slugify
-# from django.urls import reverse
-# from django.contrib.auth.forms import UserCreationForm
-# from datetime import datetime
 from django.utils import timezone
 from django.core.paginator import Paginator
 
@@ -317,18 +314,6 @@ def delete_event(request, event_id):
         messages.success(request, "Event has been deleted.")
         return redirect("facilitator_dashboard")
     return render(request, "noticeboard/delete_event.html", {"event": event})
-
-
-# @login_required
-# @user_passes_test(is_facilitator)
-# def facilitator_dashboard(request):
-#     """
-#     Display the events created by the facilitator.
-#     """
-#     events = Event.objects.filter(facilitator=request.user)
-#     return render(
-#         request, "noticeboard/facilitator_dashboard.html", {"events": events}
-#     )
 
 
 @login_required
