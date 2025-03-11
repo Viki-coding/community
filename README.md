@@ -333,9 +333,10 @@ HTML -  CSS -  JS - Python - Django - Bootstrap
 * Heroku
 * Django 
 * Pylint 
+* FigJam - to create ER diagram 
+* Figma - to crate wireframes
 
 
-<h2>User Experience Assurance</h2>
 <h2>Deployment Steps</h2>
 
 * The site is Deployed using GitHub Pages
@@ -362,40 +363,40 @@ HTML -  CSS -  JS - Python - Django - Bootstrap
 * Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory
 * Copy 'git clone' into the terminal and paste the link you copied in step 3. Press enter.
 
-Heruko Deployment
+<h2>Heruko Deployment</h2>
 
 Log on to Heruko
 https://dashboard.heroku.com/apps
  
-Select “Create new app”
-Name the app something unique
-Choose Europe from the dropdown
-Click ‘Create App’
-Go to the SETTINGS  tab first
-In the ‘Config Vars’ section aka environment variables 
-In the KEY section type in PORT and the value section type in 8000 – add
+* Select “Create new app”
+* Name the app something unique
+* Choose Europe from the dropdown
+* Click ‘Create App’
+* Go to the SETTINGS  tab first
+* In the ‘Config Vars’ section aka environment variables 
+* In the KEY section type in PORT and the value section type in 8000 – add
 
 IF you build a landmark project that doesn’t use a cred.json file you don’t need to set up config vars otherwise: 
-In the KEY section type CREDS (all capital letters) – 
-Go to workspace and copy the entire creds.json file and paste it into the value field and add.
+* In the KEY section type CREDS (all capital letters) – 
+* Go to workspace and copy the entire creds.json file and paste it into the value field and add.
 
  To add other dependencies:
-ADD BUILDPACK
-Select Python – choose add
-Select Node.js – choose add 
-(Should be in this order, python first then node.js)
+* ADD BUILDPACK
+* Select Python – choose add
+* Select Node.js – choose add 
+* NOTE: (Should be in this order, python first then node.js)
  
 DEPLOY SECTION
-Click on the DEPLOY Tab
-Choose the Githb deployment method
-Confirm that you want to connect to GitHub, gitbub will request your password to connect. 
-Click in repo name  and Search for your repository name and select connect. 
-Select Enable Automatic Deploys 
-Check Choose a branch to deploy is defaulted is MAIN
-Click on Display Branch 
+* Click on the DEPLOY Tab
+* Choose the Githb deployment method
+* Confirm that you want to connect to GitHub, gitbub will request your password to connect. 
+* Click in repo name  and Search for your repository name and select connect. 
+* Select Enable Automatic Deploys 
+* Check Choose a branch to deploy is defaulted is MAIN
+* Click on Display Branch 
  
 App will build
-Wait until the message ‘App was successfully deployed’ is displayed, click on the view button
+* Wait until the message ‘App was successfully deployed’ is displayed, click on the view button
 
 
 <h2>Acknowledging Contributions & Credits</h2>

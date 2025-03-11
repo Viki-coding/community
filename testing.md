@@ -122,8 +122,9 @@ We used the following external sites to validate the code, some screen shots of 
 <h2>BUGS</h2>
 
 <u>UnSolved Bugs</u>
+Bug: New User Creation redirect to Book Event session
 
-No unsolved bugs
+A new user views an event, decides they want to book the event, they click on book which redirects them to 'Create a User Profile', they create a user profile and get logged in but are returned to the user dashboard, I would prefer from a UX view for them to be re-directed back to the event they wanted to book. I checked the event_id in the session in the book_event view, I checked the redirect after create_community_user, I checked the login redirection in login_view.  Its a bug that I would have preferred to fix but was unable to due to time constraints. 
 
 <h3>Solved Bugs</h3>
 I came across many bugs while creating the site, from missing semi-colons, bootstrap conflicting css, not collecting static, not doing a hard-refresh - all learning curves!  I put the HTML and CSS code and python through validators and fixed all warnings that were shown.  Having chrome development tool open while creating code and inspect console log was very helping with some aspects of the bug finding.  It was also helpful breaking down the problem and  thinking logically - what’s working, what’s not to be able to focus in on the issue. 
