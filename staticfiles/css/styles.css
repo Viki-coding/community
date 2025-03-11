@@ -796,7 +796,8 @@ p {
 }
 
 .footer-text a {
-  color: #ffc100;
+  color: black;
+  font-weight: bolder;
   text-decoration: none;
 }
 
@@ -819,16 +820,17 @@ p {
   
   .pagination a {
     color: black;
+    font-weight: 300;
     text-decoration: none;
     margin: 0 5px;
     padding: 5px 10px;
-    border: 1px solid #dee2e6;
+    border: 2px solid #ffc100;
     border-radius: 8px;
   }
   
   .pagination a:hover {
     background-color: #f8f9fa;
-    color: #black;
+    color: black;
   }
   
   .pagination .current {
