@@ -276,6 +276,10 @@ I spoke with some of my non techie frieds about the site, who are involved in ou
 
 Expiry Date, after a certain period to remove 'old' event posts from the site, so for example if there was a bootcamp on for 6 weeks it would stay up for the 6 weeks but would be removed after to keep the site clean and up to date. 
 
+As part of the model I have included a Bookable Event boolean, but have not utilsed it. Plan for future development to create events (such as matches) which don't need to be bookable. 
+
+I would also like to include a payment method for events, users could pay for their class or event when they book it. 
+
 
 <h2>Accessibility</h2>
 This is a community website for everyone in the community to use.  Accessibility of the site is very important. 
