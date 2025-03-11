@@ -6,9 +6,9 @@ from .forms import EventForm, UserForm, CommunityUserForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.text import slugify
-from django.urls import reverse
-from django.contrib.auth.forms import UserCreationForm
-from datetime import datetime
+# from django.urls import reverse
+# from django.contrib.auth.forms import UserCreationForm
+# from datetime import datetime
 from django.utils import timezone
 from django.core.paginator import Paginator
 
@@ -25,6 +25,7 @@ def is_facilitator(user):
 def facilitator_dashboard(request):
     """
     Display the facilitator dashboard with events they manage.
+    Use prefetch_related to reduce the number of queries.
     """
     events = Event.objects.filter(facilitator=request.user).prefetch_related(
         "booking_set__user"
@@ -40,6 +41,14 @@ def book_event(request, event_id):
     Allow a community user to book an event if conditions are met.
     """
     event = get_object_or_404(Event, id=event_id)
+    # Check if the user is a facilitator
+    if is_facilitator(request.user):
+        messages.error(
+            request,
+            "Facilitators cannot book events. "
+            "Create a separate user account to book events."
+        )
+        return redirect("event_detail", event_id=event_id)
 
     # Check if the user is a community user
     community_user = getattr(request.user, "communityuser", None)
@@ -137,11 +146,7 @@ def create_community_user(request):
             event_id = request.session.pop("event_id", None)
             if event_id:
                 return redirect("book_event", event_id=event_id)
-
-            return redirect(
-                reverse("create_community_user") + "?created=true"
-            )
-
+            return redirect("user_dashboard")
         else:
             messages.error(request, "Please correct the errors below.")
             print(user_form.errors, community_user_form.errors)
@@ -166,7 +171,9 @@ def user_dashboard(request):
         messages.error(request, "Create a User profile to book events.")
         return redirect("create_community_user")
 
-    bookings = Booking.objects.filter(user=community_user).select_related("event")
+    bookings = Booking.objects.filter(user=community_user).select_related(
+        "event"
+    )
     return render(
         request, "noticeboard/user_dashboard.html", {"bookings": bookings}
     )
@@ -312,16 +319,16 @@ def delete_event(request, event_id):
     return render(request, "noticeboard/delete_event.html", {"event": event})
 
 
-@login_required
-@user_passes_test(is_facilitator)
-def facilitator_dashboard(request):
-    """
-    Display the events created by the facilitator.
-    """
-    events = Event.objects.filter(facilitator=request.user)
-    return render(
-        request, "noticeboard/facilitator_dashboard.html", {"events": events}
-    )
+# @login_required
+# @user_passes_test(is_facilitator)
+# def facilitator_dashboard(request):
+#     """
+#     Display the events created by the facilitator.
+#     """
+#     events = Event.objects.filter(facilitator=request.user)
+#     return render(
+#         request, "noticeboard/facilitator_dashboard.html", {"events": events}
+#     )
 
 
 @login_required
