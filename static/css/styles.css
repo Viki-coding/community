@@ -836,8 +836,7 @@ p {
   .pagination .current {
     margin: 0 5px;
     padding: 5px 10px;
-    border: 1px solid #dee2e6;
-    border-radius: 4px;
+    border: none;
     color: black;
     background-color: #878937;
   }
