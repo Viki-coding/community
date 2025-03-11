@@ -158,17 +158,18 @@ When the facilitator is logged in the Log in changes to Log Out.
 
 
 <h2>USER STORIES</h2>
-As a facilitator, I want to log in to the app so that I can manage my events.
-As a Facilitator, I want to create a new event so that I can inform the community about upcoming activities.
-As a Facilitator, I want to edit an existing event so that I can update the event details.
-As a Facilitator, I want to delete an event so that I can remove outdated or canceled events from the notice board.
-As a Facilitator, I want to view the community users who have booked 
 
-As a Community Member, I want to view the notice board so that I can see the upcoming events.
-As a Community Member, I want to search for events by category so that I can find events happening in specific category.
-As a community user, I can view a paginated list of posts so that I can select which post I want to view.
-As a community User, I can click on a post so that I can read the full event details.
-
+#1		As a facilitator, I want to log in to the app so that I can manage my events
+#2		As a Facilitator, I want to create a new event so that I can inform the community about upcoming activities.
+#3		As a Facilitator, I want to edit an existing event so that I can update the event details.
+#4		As a Facilitator, I want to delete an event so that I can remove outdated or canceled events from the notice board.
+#5		As a Community Member, I want to view the notice board so that I can see the upcoming events.
+#6		As a Community Member, I want to search for events by category so that I can find events happening in specific category.
+#7		As a community user, I can view a paginated list of posts so that I can select which post I want to view.
+#9		As a developer I can test all aspects of the application are working correctly so the end users stories are compliant.
+#10		As a facilitator and user I want good UX with clear and well displayed information so that I can navigate the site easily and intuitively.
+#11		As a community user I want to be able to book events easily online.
+#12		As a facilitator I want to be able to view what users have made an online booking.
 
 <h2>Design Choices</h2>
 Colour Scheme
@@ -257,8 +258,20 @@ This allows the user to access the Ballinameela Community Centre socials in a ne
 Pagination Feature:
 The latest events are posted first, to view older posted events the user can user the pagination links at the bottom of the page to easilty naviage though the pages. 
 
+<h2>Interaction</h2>
 
-<h2>Interaction Points</h2>
+![Event Booked Successfully](https://github.com/user-attachments/assets/4d2cbb5c-9d75-4c9a-9659-df20bb3d431f)
+
+
+<h2>Error Handling</h2>
+
+<img width="1401" alt="404 page " src="https://github.com/user-attachments/assets/450a1b88-a075-426e-898e-256eb430b693" />
+
+![Event Capacity Reached](https://github.com/user-attachments/assets/4c85e035-ad98-4f19-b31a-1ba780f4ff3b)
+
+<img width="569" alt="Booking deadline passed" src="https://github.com/user-attachments/assets/fbdba410-0503-4fdb-b49c-0eac7c8ce952" />
+
+
 
 <h2>Future Implementation Section</h2>
 I spoke with some of my non techie frieds about the site, who are involved in our community and are coaches of various teams and they got very excited about the potential of the site. They were suggesting a Games and Fixtures and Results page, so show all our local GAA matches, Home and Away of the juvenile club, ladies and seniors so that locals could review what matches are on and where to check the results. 
