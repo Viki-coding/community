@@ -268,12 +268,19 @@ Expiry Date, after a certain period to remove 'old' event posts from the site, s
 
 <h2>Accessibility</h2>
 This is a community website for everyone in the community to use.  Accessibility of the site is very important. 
+
 (a) Semantic HTML elements were used to provide meaningful structure to the content.
+
 (b) Keyboard Navigation ensures alll interactive elements like the form fields and buttons are accessible via the keyboard. 
+
 (c) Using Text Alternatives using Aria labels to describe content were used to improve accessibility for screen readers.  
-(d) Color Contrast: The color pallet chosen has sufficent constrast against the background to be readable by users with visual impairments.  
+
+(d) Color Contrast: The color pallet chosen has sufficent constrast against the background to be readable by users with visual impairments. 
+
 (e) All forms were accessible with associated lables to provide clear instruction and are navigable using keyboard. 
+
 (d) Alt attributes were used to describe any image content such as the logo and notice board image. 
+
 (e) Testing, we used WAVE a Web Accessible Evaluation Tool to ananlyse the page and made adjustments to the site to try to improve it. It passed the Wave Evaluation without errors. 
 
 
