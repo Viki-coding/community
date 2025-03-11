@@ -53,7 +53,18 @@ This site caters for 2 types of users, community users and faciliators.  The com
 
 We will have an number of facilitators who will be authorised to post events to the community notice board.  They may be coaches, community centre members, parent and toddler facilitator etc. 
 
-Please see attached some user personas. 
+Facilitators - can create a username and password. The django admin can then grant access to be part of the Facilitator Group within the django Group functionality.  The Facilitor Group set up in Django allows facilitators to be able to create, edit and delete events. Facilitators, when logged in can view their Dashboard, view the events they have created, edit events they have created and delete events they have created. The events are bookable.  The facilitator has to put the capacity of people allowed at the event and the date and time they should be booked by when creating an event. A facilitator can only view, create, edit and delete events. If they want to book events created by another facilitator they should have their own community user name and password. 
+
+Community Users - can navigate to the site to view all events that are posted without being logged in.   A community user can create their own username and password, when they are logged in they can book a place on an event if it is within a time and date that has been stipulated and if there is still capacity, both of which are stipulated by the faciltiator.  When logged in, they can navigate to the dashboard to view the events they have booked and can delete the booking if rquired. 
+
+<h2>User Demographics - Target audience</h2>
+The project aims to accomplish keeping all members informed of what's going on, by having a central platform to higlight and encourage people to events.  That could be the time of the U10's hurling match v's Ballygunner that their grandparents would love to attend and watch, or a new mother in the area wondering if there is a local yoga group she could take part in.  The community centre was built using the dedication and money over many years from people within the community, this website will highlight everything that is taking place so the communtiy members themselves can enjoy it.
+
+Decreases of women in sport, childhood obesity and lonliness are all major problems in our society today.  The community centre has faciliites such as basket ball, indoor soccer, after school children support, retirement film night, astroturf and flood lights, long jump, meeting rooms and a full size pitch.  If we can make it easy for people to view whats on in their local community they may make a postitive health or life decision that can help them get healthier, meet others, get support etc that is a very positive experience and result. This will benefit all members of the community. 
+
+<h2>User Personas</h2>
+
+The following is some user personas of indivduals in the community who are our target audience and who will utilise our site with great benefit:
 
 
 1. Active Annie (Community User)
@@ -126,27 +137,34 @@ Website Use Case: Oversees all event listings, manages facilitator accounts, che
 Quote: "I need a system that allows me to keep an overview of all the activities in the community center and to easily delegate tasks."
 
 
-
--	The project aims to accomplish keeping all members informed of what's going on, by having a central platform to higlight and encourage people to events.  That could be the time of the U10's hurling match v's Ballygunner that their grandparents would love to attend and watch, or a new mother in the area wondering if there is a local yoga group she could take part in.  The community centre was built using the dedication and money over many years from people within the community, this website will highlight everything that is taking place so the communtiy members themselves can enjoy it.
-
-Decreases of women in sport, childhood obesity and lonliness are all major problems in our society today.  The community centre has faciliites such as basket ball, indoor soccer, after school children support, retirement film night, astroturf and flood lights, long jump, meeting rooms and a full size pitch.  If we can make it easy for people to view whats on in their local community they may make a postitive health or life decision that can help them get healthier, meet others, get support etc that is a very positive experience and result. This will benefit all members of the community. 
-
-
-
-<h2>User Demographics - Target audience</h2>
-
 <h2>UX</h2>
+When you land on our site it is immeadiatley obvious what the site is and conveys the message of a notice board straight away.  There are 6 events posted per page, the most recents event posts are posted first, with navigation links to older events. 
+
+Each event post shows enough detail to entice the user, if they are interested they can read more and book the event.  If they are not a user and would like to book an event they are easily navigated to the signup form.  Once they have a logded in, it is clear in the navigation bar, the log in button has changed to Log out and they can navigate to their personal dashboard to view and delete any events that they have booked. Prior to cancelling an event an alert modal confirms if they are sure they want to cancel the booking. They can naviage easily back to events to book or view another event as required. 
+
+As a Facilitator once logged in you can navigate to the dashboard to create, view, edit or delete any events you have created. The event create form is clear and well labelled. Each field is required and the format of the field input is displayed in the label.
+
+When the event is created, a nice clear edit and delete button is situtated under the event itself. 
+
+Under each event is listed the names, emails and phone numbers of any community user who has booked their event.  The phone numbers and emails are active links which can be clicked on to create a call or email to the community user who has booked the event, allowing the faciltiator the ease to contact them about the event, for example if a child booked into an event got sick and the facilitator wanted to contact the parent. 
+
+It is easy to edit and update any event. If the facilitator chooses to delele an event an alert modul is displayed to ensure they wish to continue to delete. 
+
+When the facilitator is logged in the Log in changes to Log Out. 
+
 
 <h2>USER STORIES</h2>
 As a facilitator, I want to log in to the app so that I can manage my events.
 As a Facilitator, I want to create a new event so that I can inform the community about upcoming activities.
 As a Facilitator, I want to edit an existing event so that I can update the event details.
 As a Facilitator, I want to delete an event so that I can remove outdated or canceled events from the notice board.
+As a Facilitator, I want to view the community users who have booked 
+
 As a Community Member, I want to view the notice board so that I can see the upcoming events.
 As a Community Member, I want to search for events by category so that I can find events happening in specific category.
 As a community user, I can view a paginated list of posts so that I can select which post I want to view.
 As a community User, I can click on a post so that I can read the full event details.
-As a facilitator I can create a login in with approval from the super user.
+
 
 <h2>Design Choices</h2>
 Colour Scheme
@@ -155,6 +173,7 @@ Using a colour contrast checked we checked which font colours stood out best aga
 <h2>Typography</h2>
 
 <h2>Wireframes</h2>
+
 <h2>Flow Chart</h2>
 
 <h3>FEATURES</h3>
@@ -167,6 +186,47 @@ Navigation and Interaction Points
 -	Offers preview of key elements which are crucial for user interaction.
 Assessor wants to see:
 Feature Title / Screenshot / Value to the User
+
+Naviagtion Bar:
+Login Feature
+If you already have a username and password you can log in easily to view your events. Once logged in the button changes to Log Out. When you go to log out an alert modul asks if you are sure you want to log out. 
+
+Sign Up Feature:
+If you are a new user, it is easy to navigate to the Sign Up form, enter your details and password and are set up within minutes, the login button changes to Log Out and you have access to book events. 
+
+Dashboard Feature:
+As a Community User the dashboard is personalised to the user and their booked events only.  If no events are booked it will display no events booked. If events are booked they are clearly diplayed in the dasboard, a user can view, or delete their events in the dashboard. Before a user deletes an event there is an alert modul asking them if they are sure. 
+
+As a Facilitator the dashboard is personalised to your created events only.  Here the faciltiator can view, create, edit and delete their events.  They can also see the users signed up to each of their events. 
+
+Notice Board Feature:
+Community users can log on and immeaditlatey view the latest events in their area, keeping them up to date with events.  When an event such as an exercise class is advertised a community user may be motivated to attend due to its ease of access. This has the value to making our community a healhier community. 
+
+The user is fully informed, the date, time, location. The facilitator can expand more in the description, such as duration/cost of a class, what to bring. The value of fully informing the community to events with the flexibility of expanding the details in the Read more section. 
+
+Pagination Feature:
+The latest events are posted first, to view older posted events the user can user the pagination links at the bottom of the page to easilty naviage though the pages. 
+
+Search by Category Feature: 
+Users who want to narrow down the search to certain events, such as a new parent in the area may want to only see events in the 'Parent & Toddler' section.  When a facilitator creates a new event, they have the opportunity of associating it with a certain category.  By clicking on the drop down arrow, a list of categories is displayed and when 1 is selected only events listed under those categories are displayed. 
+
+Booking Feature as a Community User
+A community user can view all events and book their place to ensure they have a place at the class or event.  When an event is publised it is often only bookable with a phone number and within a certain timeframe which is not always convient for those making the booking, this feature allows users to book when ever a new event is posted in an easy to use booking method. They can share the site with friends and encouage them to book also. 
+
+Booking Feature as a Facilitator 
+The value of the booking feature as a faciltiator allows facilators to be able to put a capcity limit on an event to ensure the event is managable, such as a boot camp having a capacity of 40 to ensure their is enough exercise stations, a cookery course having a capacity limit of 10 to ensure their is enough equipment.  
+
+The faciltitator also applies a booking by date/time, so an event cannot be booked after a certain time.  This allows the facilitator to be able to manage their event knowing the numbers of people intereted. For example a facilitator of a cookery course, the faciltiator would be able to see that 15 have booked by the booked by date/time and allow them to purchase 15 portions to prevent food waste. A bootcamp facilitator could see there are 40 signed up and understant the amount of exercise stations required. 
+
+The booking feature also has the value added of showing the community users have booked their event. This allows faciliators to see the number of people who have booked their event, with their names, active email and an active phone number. Users can be easilty contacted if required. 
+
+Footer Features:
+The Eircode of centre is already linked to google maps the user can easilty navigate to the centre by clicking on the eircode, which opens in a new page. 
+
+Facebook and Instagram Features:
+This allows the user to access the Ballinameela Community Centre socials in a new page. 
+
+
 <h2>Interaction Points</h2>
 
 <h2>Future Implementation Section</h2>
@@ -215,12 +275,15 @@ VALIDATOR TESTING
 BROWSER COMPATIBILITY
 SCREEN SIZE RESPONSIVENESS
 BUGS RESOLVED AND NOTE SOLUTIONS AND UNRESOLVED
+
+https://wave.webaim.org/
 	
 We performed manual testing on the deployed site and also ran our html, css and js codes through validators.
 <h3>W3C Validator</h3>
 <h3> CSS (Jigsaw) validator</h3>
 <h2>JavaScript Code Validator</h2>
 <h2> JSON formatter and Validator</h2>
+<h2>(https://pep8ci.herokuapp.com/)</h2>
 
 <h2>Quality Assurance</h2>
  (Steps taken to manually test the project
