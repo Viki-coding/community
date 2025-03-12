@@ -1,12 +1,27 @@
 <h1> TESTING DOCUMENTATION - COMMUNITY CENTRE APP</h1> 
 
-Link to Readme.md (https://github.com/Viki-coding/community/blob/main/README.md)
+# Table of Contents
 
-- [User Experience Quality Assurance](#user-experience-assurance)
-- [Testing Evaluation Sheet](#Test-Evaluation-Sheet)
-- [Manual Testing](#manual-testing)
-- [Lighthouse Testing](#lighthouse-testing)
-- [Bugs](#bugs)
+- [TESTING DOCUMENTATION - COMMUNITY CENTRE APP](#testing-documentation---community-centre-app)
+  - [Quality Assurance](#quality-assurance)
+  - [Test Evaluation Sheet](#test-evaluation-sheet)
+  - [Lighthouse Testing Outcome](#lighthouse-testing-outcome)
+  - [Code Validation](#code-validation)
+    - [W3C Validator](#w3c-validator)
+    - [CSS (Jigsaw) validator](#css-jigsaw-validator)
+    - [CI Python Linter - Python Pep8 Validator](#ci-python-linter---python-pep8-validator)
+      - [Models](#models)
+      - [Views](#views)
+      - [Custom Tags](#custom-tags)
+      - [Forms](#forms)
+      - [Automated Testing](#automated-testing)
+  - [BUGS](#bugs)
+    - [Unsolved Bugs](#unsolved-bugs)
+    - [Solved Bugs](#solved-bugs)
+
+
+
+[Link to Readme.md] (https://github.com/Viki-coding/community/blob/main/README.md)
 
 
 
