@@ -389,6 +389,7 @@ This is a community website for everyone in the community to use.  Accessibility
 * Pylint 
 * FigJam - to create ER diagram 
 * Figma - to crate wireframes
+* Converting tabel to markdown (https://tabletomarkdown.com/convert-spreadsheet-to-markdown/)
 
 <h2>Deployment Steps</h2>
 
@@ -512,6 +513,11 @@ To prevent users from booking events that were past the date we got inspiration 
 
 In my events detail page, once a user had booked an event, I didn't want the Book Event to display again when they went to view their booking. So I used the if no user_is_facilitator to check if the event had already been booked. These websites were helpful to explain the concept. (https://www.w3schools.com/python/gloss_python_check_if_dictionary_item_exists.asp)
 (https://www.geeksforgeeks.org/python-if-with-not-operator/)
+
+
+MARKDOWN: 
+
+Help with markdown, found this site usefule (https://www.markdownguide.org/basic-syntax/) and downloaded this extenstion to Visual Studio Code (https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one#table-of-contents)
 
 We gained inspiration with the READ.me by watching the video 'Creating your first README with Kera Cudmore' on CI Chanel Lead Library on YouTube and also the video with Lane-Sawyer Thompson on CI Channel on YouTube. Thanks to the on-line tutor, Oisin and Rebecca for their expertise and ability to explain some of the 'challenges' I encountered. Thanks to our very supportive and positive facilitator Kay and my Kiwi mentor Dick Vlaanderen. Also found the webinar 'Community Q&A: How to Troubleshoot with Lane-Sawyer Thompson' very helpful approach to how to view looking at the site for bugs and methodically identifying issues.
 
