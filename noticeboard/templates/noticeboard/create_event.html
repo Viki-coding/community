@@ -4,6 +4,7 @@
 {% block content %}
 <div class="dashboard-container">
   <h2>Create Event</h2>
+  <!-- Form to handle the create_event action -->
   <form method="post">
     {% csrf_token %}
     {% for field in form %}

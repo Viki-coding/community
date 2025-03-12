@@ -4,6 +4,7 @@
 
 {% block content %}
 <div class="warning-container">
+<!-- Container for the warning message -->
     <div class="card warning-card">
         <div class="card-body">
             <h2 class="card-title">
@@ -12,6 +13,7 @@
             <p class="card-text">
                 Are you sure you want to log out?
             </p>
+            <!-- Form to handle logout action -->
             <form method="post" action="{% url 'logout' %}">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger">Log Out</button>

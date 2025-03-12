@@ -6,12 +6,15 @@
 
 <div class="dashboard-container">
     <h2>My Events</h2>
+    <!-- Display a sucess messaage if user is authenticated -->
     {% if user.is_authenticated %}
     <div class="alert alert-success">
         {{ user.username }} - You Are Logged In.
     </div>
     {% endif %}
+    <!-- Button to create a new event -->
     <a href="{% url 'create_event' %}" class="btn btn-primary mb-3">Create New Event</a>
+    <!-- List of events created by the facilitator -->
     <div class="events-list">
         {% for event in events %}
         <div class="event-item">
@@ -27,6 +30,7 @@
                 <a href="{% url 'delete_event' event.id %}" class="btn btn-danger">Delete</a>
             </div>
 
+            <!-- Section for displaying bookings for the event -->
             <h5><strong>Bookings:</strong></h5>
             <div class="table-responsive">
                 <table class="bookings-table">
@@ -38,6 +42,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Loop through each booking for the event -->
                         {% for booking in event.booking_set.all %}
                         <tr>
                             <td data-label="Name">{{ booking.user.user.username }}</td>
@@ -46,6 +51,7 @@
                         </tr>
                         {% empty %}
                         <tr>
+                            <!-- Message if no bookings for the event -->
                             <td colspan="3">No bookings yet.</td>
                         </tr>
                         {% endfor %}

@@ -4,10 +4,11 @@
 {% block content %}
 <div class="dashboard-container">
   <h2>My Booked Events</h2>
+  <!-- Display a sucess messages if user authenticated -->
   <div class="alert alert-success">
       {{ user.username }} - You are now logged in.
   </div>
-
+  <!-- Responsive table for displaying booked events -->
   <div class="table-responsive">
     <table class="table table-striped">
       <thead>
@@ -20,6 +21,7 @@
         </tr>
       </thead>
       <tbody>
+          <!-- Loop through each booking and display event details -->
           {% for booking in bookings %}
           <tr>
             <td>{{ booking.event.title }}</td>
@@ -61,7 +63,7 @@
       </div>
   </div>
 </div>
-
+<!-- Script to handle dynamic action for cancelling booking -->
 <script>
   var cancelModal = document.getElementById('cancelModal');
   cancelModal.addEventListener('show.bs.modal', function (event) {

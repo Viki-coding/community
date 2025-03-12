@@ -2,6 +2,7 @@
 
 {% block title %}Cancel Booking{% endblock %} 
 {% block content %}
+<!-- Container for the warning message -->
 <div class="warning-container">
   <div class="card warning-card">
   <div class="card-body">
@@ -11,6 +12,7 @@
       <p class="card-text">
         <p>Are you sure you want to cancel your booking for <strong>{{ booking.event.title }}</strong>?</p>
     </p>
+    <!-- Form to handle the logout action -->
     <form method="post">
       {% csrf_token %}
       <div class="form-group">{{ form.as_p }}</div>
