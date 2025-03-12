@@ -321,8 +321,6 @@ I would like to improve my UX when a new user clicks on an event, they click on 
 
 When a community user goes on to the site, if they are not logged in, when they view an event and go to book, they are taken to the sign up as a new user OR if they have an account they can Log in.  Which is correct but I would prefer to change the 'Log in' to be positioned the top and the Sign up as a new user at the bottom for better UX. 
 
-When a user clicks on read more, the option is to book event, I would also like to put another button in the event card to be able to easily return to events rather than to naviate to dashboard. 
-
 I would also like to include a payment method for events, users could pay for their class or event when they book it. 
 
 Finally I would like to reduce the number of warnings to do with my internal links which I got when I was evaluating the site on the Web Accessible Evaluation Tool. 
