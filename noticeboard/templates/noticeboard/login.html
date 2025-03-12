@@ -3,11 +3,13 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
+<!-- Container for log in form -->
 <div class="login-container">
     <div class="login-card">
         <h4>Login</h4>
         <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
+            <!-- Display messages if any -->
             {% if messages %}
                 {% for message in messages %}
                 <div class="alert {{ message.tags }}" role="alert">
@@ -15,6 +17,7 @@
                 </div>
                 {% endfor %}
             {% endif %}
+            <!-- User name and passowrd input fields -->
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username" class="form-control" required>
