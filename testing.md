@@ -104,6 +104,9 @@ We used the following external sites to validate the code, some screen shots of 
 
 ![HTML Validator](https://github.com/user-attachments/assets/1880ebf6-afbc-4ce9-99c0-2ce68d3b0a69)
 
+**HTML Validator Re-test after amending code**
+
+![HTML Validator - retest after changes](<HTML re-checked after html changes.png>)
 
 <h3> CSS (Jigsaw) validator</h3>
 
