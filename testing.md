@@ -85,6 +85,8 @@ In the table below we performed methodical testing on the deployed site.
 
 <h2> Code Validation</h2>
 
+Disclaimer: We did not validate code already generated when using the Django framework, only code that we created. 
+
 We used the following external sites to validate the code, some screen shots of validated codes presented below. 
 
 * [Accessibility - Web Accessibility Evaluation Tool] (https://wave.webaim.org/)

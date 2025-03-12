@@ -54,6 +54,8 @@ Facilitators - can create a user profile with username and password. The Django 
 
 Community Users - can navigate to the site to view all events that are posted without being logged in.   A community user can create their own user profile, username and password, when they are logged in they can book a place on an event if it is within a time and date that has been stipulated and if there is still capacity, both of which are stipulated by the facilitator.  When logged in, they can navigate to the dashboard to view the events they have booked and can delete the booking if required. 
 
+This application would work very well in many different real world communitites around the country.  It is intuative and easy to navigate with many benefits to local community people. 
+
 <h2>CRUD</h2>
 
 **Create**
@@ -218,7 +220,7 @@ Font used is Roboto from Google Fonts. It is in the sans serif family, is clean 
 
 ![Wireframes](https://github.com/user-attachments/assets/89481b10-5d80-41ac-9882-272d63fbc016)
 
-<h2>ER Diagram</h2>
+<h2>ER Diagram & Data Schema</h2>
 
 <img width="1037" alt="ERD Community Centre V3" src="https://github.com/user-attachments/assets/5660257a-5d2e-4f5d-bf3f-38c0cdc3cf44" />
 
@@ -281,6 +283,8 @@ The booking feature also has the added value of showing the facilitators which c
 
 ![Footer Features](https://github.com/user-attachments/assets/a03fb0fa-dd92-463e-83e8-deb04b3407d2)
 
+We use the attribute rel="noopener noreferrer" in the anchor tages to enhance security and protect against security vulnerabilities. 
+
 The Eircode of centre is already linked to google maps the user can easily navigate to the centre by clicking on the Eircode, which opens in a new page. 
 
 **Facebook and Instagram Features:**
@@ -291,7 +295,22 @@ This allows the user to access the Ballinameela Community Centre socials in a ne
 
 The latest events are posted first, to view older posted events the user can user the pagination links at the bottom of the page to easily navigate though the pages. 
 
+<h2>Security</h2>
+In a world where cyber security threats are on the increase, inlcuding the awful affect the HSE hack had on our health care system, it is important to be mindful of security when creating an application. 
+
+As well as the rel="noopener noreferrer" in the anchor tags of our external links other security meausures in our app include: 
+
+* Authentication and authorization of our users using django framework
+* Using the CSRF protection tokens in our forms
+* Error handling such as creating our 404 page
+* Using djangos password validators 
+* Using djangos security middleware settings.
+* Only authenticated users can edit delete their booked events
+* Only authenticated facilicators can create, view, edit, delete their own events.
+
 <h2>Interaction</h2>
+
+Whenever a user interacts with our site, they get immeadiate feedback messages and confirmations. 
 
 When a user clicks on Book Event - a message is displayed to let them know their booking is successful:
 
@@ -367,6 +386,7 @@ This is a community website for everyone in the community to use.  Accessibility
  - Django  
  - Bootstrap 
  - Heroku
+ - Postgres Database
 
 <h2>Frameworks, Libraries and Programs Used: </h2>
 
@@ -391,6 +411,7 @@ This is a community website for everyone in the community to use.  Accessibility
 * FigJam - to create ER diagram 
 * Figma - to crate wireframes
 * Converting tabel to markdown (https://tabletomarkdown.com/convert-spreadsheet-to-markdown/)
+* Whitenoise 
 
 <h2>Deployment Steps</h2>
 
