@@ -325,7 +325,11 @@ I spoke with some of my non techie frieds about the site, who are involved in ou
 
 Expiry Date, after a certain period to remove 'old' event posts from the site, so for example if there was a bootcamp on for 6 weeks it would stay up for the 6 weeks but would be removed after to keep the site clean and up to date. 
 
-As part of the model I have included a Bookable Event boolean, but have not utilsed it. Plan for future development to create events (such as matches) which don't need to be bookable. 
+As part of the model I have included a Bookable Event boolean, but have not utilsed it. Plan for future development to create events (such as matches) which don't need to be bookable but could still be posted as an event. 
+
+I would like to improve my UX when a new user clicks on an event, they click on book and are redirected correctly to the sign up form, when they signin and log in they are redirected to their dashboard but it would be better if they were redirected back to the event they wanted to book. 
+
+When a community user goes on to the site, if they are not logged in, when they view an event and go to book, they are taken to the sign up as a new user OR if they have an account they can Log in.  Which is correct but I would prefer to change the 'Log in' to be positioned the top and the Sign up as a new user at the bottom for better UX. 
 
 I would also like to include a payment method for events, users could pay for their class or event when they book it. 
 
@@ -361,7 +365,14 @@ Color Blindness Simulator Tool:
 ![Color Blindness simulator](https://github.com/user-attachments/assets/60aef587-2546-443e-ac02-e5a994452509)
 
 <h2>Technologies Used</h2>
-HTML -  CSS -  JS - Python - Django - Bootstrap 
+
+ - HTML 
+ - CSS -  
+ - JS - 
+ - Python  
+ - Django  
+ - Bootstrap 
+ - Heroku
 
 
 <h2>Frameworks, Libraries and Programs Used: </h2>
@@ -416,9 +427,7 @@ HTML -  CSS -  JS - Python - Django - Bootstrap
 
 <h2>Heruko Deployment</h2>
 
-Log on to Heruko
-https://dashboard.heroku.com/apps
- 
+* Log on to Heruko (https://dashboard.heroku.com/apps)
 * Select “Create new app”
 * Name the app something unique
 * Choose Europe from the dropdown
@@ -428,16 +437,19 @@ https://dashboard.heroku.com/apps
 * In the KEY section type in PORT and the value section type in 8000 – add
 
 IF you build a landmark project that doesn’t use a cred.json file you don’t need to set up config vars otherwise: 
+
 * In the KEY section type CREDS (all capital letters) – 
 * Go to workspace and copy the entire creds.json file and paste it into the value field and add.
 
  To add other dependencies:
+
 * ADD BUILDPACK
 * Select Python – choose add
 * Select Node.js – choose add 
 * NOTE: (Should be in this order, python first then node.js)
  
-DEPLOY SECTION
+DEPLOY SECTION:
+
 * Click on the DEPLOY Tab
 * Choose the Githb deployment method
 * Confirm that you want to connect to GitHub, gitbub will request your password to connect. 
@@ -446,35 +458,32 @@ DEPLOY SECTION
 * Check Choose a branch to deploy is defaulted is MAIN
 * Click on Display Branch 
  
-App will build
-* Wait until the message ‘App was successfully deployed’ is displayed, click on the view button
+App will build:
+
+* Wait until the message ‘App was successfully deployed’ is displayed, 
+* Click on the view button
 
 
 <h2>Acknowledging Contributions & Credits</h2>
+
 TITLE OR DESCRIPTION
 SOURCE OF LINK
 CONTEXT
+
 [Django Tutorial #24 - Requiring Login - Net Ninja @6.15](https://www.youtube.com/watch?v=fqDTZA5P1EE)
 Improving the look of my hero image and using css and flex
 (https://cloudinary.com/guides/front-end-development)
 
+
 Creating view to handle djangos login form: ([Django Documentatin](https://docs.djangoproject.com/en/5.1/topics/auth/default/#:~:text=groups.%20set%28%5Bgroup_list%5D%29))
-
-![Slugify](https://www.w3schools.com/django/ref_filters_slugify.php) to help fix IntegrityError with a duplicate key value for the slug field. 
-![blogizem - How to Fix UNIQUE Constraint Error in Django Model for Slug Field?] (https://www.youtube.com/watch?v=D0K51GneU3g)
-
-[Facilitator Logout View](https://stackoverflow.com/questions/15467831/django-logout-redirects-me-to-administration-page#:~:text=If%20you%20are%20seeing%20the,admin%20comes%20after%20your_application%20.)
-Helped to fix when a facilitator logs out, rather than seeing the django admin panel log out I wanted the facilitator to see the customised page. 
 
 [Expand button on hover for Delete](https://www.shecodes.io/athena/3020-how-to-use-hover-to-expand-a-button-in-css)
 
-My notice board excerpts were various lenths and then that was having an affect on my styling and pushing the text out of my notice board display cards.  I had to come up with a way of reducing down the amount of text in my excerpt. This website showed me some good filter techniques available. I used the slice method. (https://earthly.dev/blog/django-template-filters/)
-
 To help prevent overflow of the text I also made some changes to my css to prevent it.  Found this video really helpful to explain the concepts of overflow/text wrapping. (https://www.youtube.com/watch?v=6m3ZmlgfZlA)
 
-When facilitator was logged it, they could view, edit and delete their own event, but when they left their dashboard and clicked on an event they did create, it was just showing the event without allowing them to edit. to fix this I amended by event_detail.html page to include {% if is_facilitator%} and included the hrefs to edit and delete. I also had to change the event_detail view to include is_facilitator. 
-
 I wanted to creat a select events by category function, so for example if you just wanted to see what gaa matches were on you would select GAA. I found this video helpful to explain the query ge GET parameters using djangos filter. [Django QueryDict | GET parameters | django-filter] (https://www.youtube.com/watch?v=nBrkUxa5X0E)
+
+Understanding Query Sets: 
 
 [W3 Schools] (https://www.w3schools.com/django/django_queryset_get.php)
 [W3 Schools onchange Event] (https://www.w3schools.com/jsref/event_onchange.asp)  Submitting the form automatically submits the forms with the new attribute. 
@@ -483,31 +492,21 @@ I wanted to creat a select events by category function, so for example if you ju
 
 (https://simpleisbetterthancomplex.com/tutorial/2016/11/28/how-to-filter-querysets-dynamically.html)
 
-
 Bootstrap is fanatasic and frustrating at the same time, I found this aritcle on stackoverflow good. How can I override Bootstrap CSS styles. (https://stackoverflow.com/questions/20721248/how-can-i-override-bootstrap-css-styles)
-
-Bug: Time no longer displaying on event. I had made some changes to the time imput fields as I wanted the facilitator to be understand to put in the 24hr clock.  When I amended my model to facilitate the bookings functionality I unfortunetly made the error of changing the names of my start_time to starttime and end_time to endtime, I changed it in some files and not in others, so I had to make sure the forms.py file was the same as my model.  
 
 Dates & Times in Python
 Understanding date and time to work with my bookings I found this video helpful. 
 [Learn Python DATES & TIMES in 6 minutes! - Bro Code](https://www.youtube.com/watch?v=DwBDHsdX6XQ)
 
-Django does not allow exists method in the template, I was trying to have the facilitator and user dashboard to appear in the navigation bar depending on who was logged in. When I did this it created a templateSyntaxError. To solve it I used a custom template filter and restarted my server. 
-(https://stackoverflow.com/questions/40686201/django-1-10-1-my-templatetag-is-not-a-registered-tag-library-must-be-one-of)
-
-Bug: Logged in as a community user. Booked an event. Went to Dashboard, but no booked events displayed. 
-Resolved by looking at code and realising I had for booking in booking rather than booking in bookings to match what I had in my views. 
-
 [Pagination For Django - Django Wednesdays #18 - Codeemy.com] (https://www.youtube.com/watch?v=N-PB-HMFmdo) Good video about creating pagination. 
 
 [PEP 8 - Style Guide for Python Code] (https://peps.python.org/pep-0008/)
 
-<b>General good videos and links to teaching of Python:<b>
-
+MIMO: 
 
 I signed up to a phone app called MIMO which I found great for teaching me python and to help me do something productive rather than doom scrolling when I'm in the car waiting on my kids or having breakfast in the morning. Would highly recommend. 
 
-Lucimeri Andretta - PP4 - MVP & Community Walkthrough.pdf was great or refer to for the entire projects including common errors, testing, readme. 
+Lucimeri Andretta - PP4 - MVP & Community Walkthrough.pdf was great to refer to for the entire projects including common errors, testing, readme. 
 
 [Code Validation with Joanna Gorska](https://www.youtube.com/watch?v=6j9dZTW4owI&list=PL_7334VduOHvzZYlgy_0kZLcic2NINCUt&index=37)
 
@@ -517,16 +516,15 @@ Modifying forms and using widgets. This guy had some great videos about Django, 
 [Try DJANGO Tutorial - 26 - Form Widgets] (https://www.youtube.com/watch?v=-oWIyFYyNQw) I wanted to change myt date format to dd/mm/yy rather than the american format of yyyy/mm/dd. 
 Also Dajngo documentation helped out again: (https://docs.djangoproject.com/en/5.1/ref/settings/#std-setting-DATE_INPUT_FORMATS)
 
-To prevent users from booking events that were past the date we got inspiration for the code from (https://stackoverflow.com/questions/70671189/avoid-booking-past-dates-with-django)
-
-We gained inspiration with the READ.me by watching the video 'Creating your first README with Kera Cudmore' on CI Chanel Lead Library on YouTube and also the video with Lane-Sawyer Thompson on CI Channel on YouTube. Thanks to the on-line tutor, Oisin and Rebecca for their expertise and ability to explain some of the 'challenges' I encountered. Thanks to our very supportive and positive facilitator Kay and my Kiwi mentor Dick Vlaanderen. Also found the webinar 'Community Q&A: How to Troubleshoot with Lane-Sawyer Thompson' very helpful approach to how to view looking at the site for bugs and methodically identifying issues.
+To prevent users from booking events that were past the date we got inspiration for the code from [Stack Overflow] (https://stackoverflow.com/questions/70671189/avoid-booking-past-dates-with-django)
 
 [CSS TRICKS - A Grid of Squares] (https://www.youtube.com/watch?v=8bhKjoowr4c&t=12s) Which helped me to fix my events grid to make it look better. 
 
 In my events detail page, once a user had booked an event, I didn't want the Book Event to display again when they went to view their booking. So I used the if no user_is_facilitator to check if the event had already been booked. These websites were helpful to explain the concept. (https://www.w3schools.com/python/gloss_python_check_if_dictionary_item_exists.asp)
 (https://www.geeksforgeeks.org/python-if-with-not-operator/)
 
-Bug: Bootstrap color over-riding the cream color I wanted in my nav bar. To fix it I first put !important beside it which failed to work, advice from stack overlflow was 'specificity', adding another class to the rule.  This worked. (https://stackoverflow.com/questions/46736264/overriding-bootstrap-default-important-color-codes)
+We gained inspiration with the READ.me by watching the video 'Creating your first README with Kera Cudmore' on CI Chanel Lead Library on YouTube and also the video with Lane-Sawyer Thompson on CI Channel on YouTube. Thanks to the on-line tutor, Oisin and Rebecca for their expertise and ability to explain some of the 'challenges' I encountered. Thanks to our very supportive and positive facilitator Kay and my Kiwi mentor Dick Vlaanderen. Also found the webinar 'Community Q&A: How to Troubleshoot with Lane-Sawyer Thompson' very helpful approach to how to view looking at the site for bugs and methodically identifying issues.
+
 
 <h2>Media/Images</h2>
 Images of logo and notice board both created in Canva by myself using canva template. No other imagery used. 
