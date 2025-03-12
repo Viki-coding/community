@@ -41,34 +41,34 @@ This website aims to keep everyone in the community informed of events, matches,
 
 The website will show the latest events that are taking part in the centre, by event name, time, date, location and description.  The purpose is to allow anyone in the community the ability to see what's on and feel welcome to join in taking part in that event.  
 
-My husband and I moved to this community over 20 years ago, and at the time we had no idea what took place in the hall, sometimes it was highlighted in the local paper, sometimes on the local Facebook page.  But unless you bought the local paper on a weekly basis, or if you are happy to scroll though Facebook page on a regular basis it is difficult to pin point exactly what it happening and when. 
+My husband and I moved to this community over 20 years ago, and at the time we had no idea what took place in the hall, sometimes it was highlighted in the local paper, sometimes on the local Facebook page.  But unless you bought the local paper on a weekly basis, or if you are happy to scroll though Facebook on a regular basis it is difficult to pin point exactly what it happening and when. 
 
-The users of the site will who want to check the time and location of an event can easily check it here. 
+Users of the site who want to check the time and location of an event can easily check it here. 
 We increased the functionality of site by allowing community users to book events.  
 
 This site caters for 2 types of users, community users and facilitators.  The community users are regular people in the community who would like to view events, book events and delete booked events. The facilitators are the people who actually create the event itself. They can create, read and view, edit or delete the event. 
 
 We will have an number of facilitators who will be authorised to post events to the community notice board.  They may be coaches, community centre members, parent and toddler facilitator etc. 
 
-Facilitators - can create a username and password. The Django admin can then grant access to be part of the Facilitator Group within the Django Group functionality.  The Facilitator Group set up in Django allows facilitators to be able to create, edit and delete events. Facilitators, when logged in can view their Dashboard, view the events they have created, edit events they have created and delete events they have created. The events are bookable.  The facilitator has to put the capacity of people allowed at the event and the date and time they should be booked by when creating an event. A facilitator can only view, create, edit and delete events. If they want to book events created by another facilitator they should have their own community user name and password. 
+Facilitators - can create a user profile with username and password. The Django admin can then grant access to be part of the 'Facilitator Group' within the Django Group functionality.  The Facilitator Group set up in Django allows facilitators to be able to create, edit and delete events. Facilitators, when logged in can view their Dashboard, view the events they have created, edit events they have created and delete events they have created. The events are bookable.  The facilitator has to put the capacity of people allowed at the event and the date and time they should be booked by when creating an event. A facilitator can only view, create, edit and delete events. If they want to book events created by another facilitator they should have their own community profile, user name and password. 
 
-Community Users - can navigate to the site to view all events that are posted without being logged in.   A community user can create their own username and password, when they are logged in they can book a place on an event if it is within a time and date that has been stipulated and if there is still capacity, both of which are stipulated by the facilitator.  When logged in, they can navigate to the dashboard to view the events they have booked and can delete the booking if required. 
+Community Users - can navigate to the site to view all events that are posted without being logged in.   A community user can create their own user profile, username and password, when they are logged in they can book a place on an event if it is within a time and date that has been stipulated and if there is still capacity, both of which are stipulated by the facilitator.  When logged in, they can navigate to the dashboard to view the events they have booked and can delete the booking if required. 
 
 <h2>CRUD</h2>
 
-Create 
+**Create**
 - Users can create a user profile 
 - Facilitators can create an event
 - Users can create a booking for an event
   
-Read 
+**Read**
 - Facilitators can read/view the events they have created
 - Users can read/view any booking they have made
 
-Update
+**Update**
 - Facilitators can update/edit the event they created
 
-Delete
+**Delete**
 - Facilitators can delete an event they have created
 - Users can delete booking they have made
   
@@ -94,7 +94,7 @@ The following is some user personas of individuals in the community who are our 
 
 **Frustrations:** Dislikes scrolling through Facebook, finds it hard to find specific event information, misses events because she doesn't hear about them in time.
 
-**Website Use Case:** Regularly checks the website to see what events are coming up, uses the search/filter functions to find activities that interest her (e.g., book clubs, exercise classes). Books events directly through the website.
+**Website Use Case:** Regularly checks the website to see what events are coming up, uses the search/filter functions, finds activities that interest her (e.g., book clubs, exercise classes). Books events directly through the website.
 
 **Quote:** "I just want a simple way to see what's going on. I don't want to miss another interesting talk or activity!"
 
@@ -126,7 +126,7 @@ The following is some user personas of individuals in the community who are our 
 
 **Frustrations:** Doesn't know anyone in the area, feels isolated, unsure of where to find information about local events.
 
-**Website Use Case:** Uses the website to discover social events and activities, signs up for email updates, explores different interest groups, relies on the website to feel more connected to the community.
+**Website Use Case:** Uses the website to discover social events and activities, explores different interest groups, relies on the website to feel more connected to the community.
 
 **Quote:** "I'm new here and want to get involved. I hope this website can help me find my place in the community."
 
@@ -142,7 +142,7 @@ The following is some user personas of individuals in the community who are our 
 
 **Frustrations:** Finds it time-consuming to promote her group through multiple channels, needs a central place to update event information, struggles with complicated website interfaces.
 
-**Website Use Case:** Creates new event listings with detailed information (date, time, location, age group), updates existing listings, checks the number of bookings, interacts with community members through the website (if possible).
+**Website Use Case:** Creates new event listings with detailed information (date, time, location, age group), updates existing listings, checks the number of bookings, interacts with community members through the website through email and phone.
 
 **Quote:** "I need a simple way to let people know about our group and manage our events without spending hours on it."
 
@@ -166,7 +166,7 @@ The following is some user personas of individuals in the community who are our 
 
 <h2>Kanban Board</h2>
 
-I found the Kanban very helpful, it did take time to set up, it was well planned and structured.  I sometimes have a tendency to go from one area and then get distracted to start fixing another area, having the Kanban board with the user stories and the tasks that I needed to perform helped me to keep a structured approach to coding.  I learnt that at the end of a commit if I put "relates to #1"  etc it would be documented with the task # in my project. 
+I found the Kanban very helpful, it did take time to set up, it was well planned and structured.  I sometimes have a tendency to go from one area and then get distracted to start fixing another area, having the Kanban board with the user stories and the tasks that I needed to perform helped me to keep a structured approach to coding.  I learnt that at the end of a commit if I put "relates to #1"  etc it would be documented with the task # in my project. Live link at top of readme and made public. 
 
 ![Kanban Board Progress](https://github.com/user-attachments/assets/d7a67b47-e80a-4194-bd36-a6bc16a8cf70)
 
@@ -174,7 +174,7 @@ I found the Kanban very helpful, it did take time to set up, it was well planned
 
 When you land on our site it is immediately obvious what the site is and conveys the message of a notice board straight away.  There are 6 events posted per page, the most recent event posts are posted first, with navigation links to older events. 
 
-Each event post shows enough detail to entice the user, if they are interested they can read more and book the event.  If they are not a user and would like to book an event they are easily navigated to the signup form.  Once they have a logged in, it is clear in the navigation bar, the log in button has changed to Log out and they can navigate to their personal dashboard to view and delete any events that they have booked. Prior to cancelling an event an alert modal confirms if they are sure they want to cancel the booking. They can navigate easily back to events to book or view another event as required. 
+Each event post shows enough detail to entice the user, if they are interested they can read more and book the event.  If they are not a user and would like to book an event they are easily navigated to the signup form.  Once they have a logged in, it is clear in the navigation bar, the log in button has changed to Log out and they can navigate to their personal dashboard to view and delete any events that they have booked. Prior to cancelling an event booking an alert modul confirms if they are sure they want to cancel the booking. They can navigate easily back to events to book or view another event as required. 
 
 As a Facilitator once logged in you can navigate to the dashboard to create, view, edit or delete any events you have created. The event create form is clear and well labelled. Each field is required and the format of the field input is displayed in the label.
 
@@ -204,14 +204,15 @@ When the facilitator is logged in the Log in changes to Log Out.
 
 **Colour Scheme**
 
-Ballinameela Community Centre is based in the beautiful country side of West Waterford.  We wanted to use a nice green colour to represent healthy country living.  As this was a community noticeboard to highlight the events of the area we used a bright yellow 'post it colour' to make it look like events were posted up against board.  We used a black text font to help stand out to all users especially those with accessible issues.  We used a contrasting cream colour against the green which makes the scheme look soft, easy on the eye, friendly while also accessible.  
+Ballinameela Community Centre is based in the beautiful country side of West Waterford.  We wanted to use a nice green colour to represent healthy country living.  As this was a community noticeboard to highlight the events of the area we used a bright yellow 'post it colour' to make it look like events were posted up against a notice board.  We used black text font to help stand out to all users especially those with accessibity issues.  We used a contrasting cream colour against the green which makes the scheme look soft, easy on the eye, friendly while also accessible.  
+
 Using a colour contrast checked we checked which font colours stood out best against our base colours.  All receiving good ratings. Graphic illustrated below:
 
 ![Color-contrast-good](https://github.com/user-attachments/assets/cbd1c72f-4e2e-42f8-b20c-94e6a307f087)
 
 <h2>Typography</h2>
 
-Font used is Roboto from Google Fonts. It is in the sans serif family, is clean and modern appearance.  It is dyslexic friendly helping with readability. 
+Font used is Roboto from Google Fonts. It is in the sans serif family, is clean with a modern appearance.  It is dyslexic friendly helping with readability. 
 
 <h2>Wireframes</h2>
 
@@ -227,14 +228,14 @@ Feature Title / Screenshot / Value to the User
 
 **Navigation Bar:**
 
-Login Feature
+**Login Feature**
 If you already have a username and password you can log in easily to view your events. Once logged in the button changes to Log Out. When you go to log out an alert modul asks if you are sure you want to log out. 
 
 ![Nav-bar with logout modul](https://github.com/user-attachments/assets/2ec3479e-569e-4dcc-ae35-ad9f83995dd9)
 
 **Sign Up Feature:**
 
-If you are a new user, it is easy to navigate to the Sign Up form, enter your details and password and are set up within minutes, the login button changes to Log Out and you have access to book events. 
+If you are a new user, it is easy to navigate to the Sign Up form, enter your details and password being set up within seconds, the 'Login' button changes to 'Log Out' and you have access to book events. 
 
 ![Nav Bar](https://github.com/user-attachments/assets/da4620e3-8fc8-48cc-9605-acbdc1a6cf25)
 
@@ -248,7 +249,7 @@ As a Facilitator the dashboard is personalised to your created events only.  Her
 
 **Notice Board Feature:**
 
-Community users can log on and immediately view the latest events in their area, keeping them up to date with events.  When an event such as an exercise class is advertised a community user may be motivated to attend due to its ease of access. This has the value to making our community a healthier community. 
+Community users can log on and immediately view the latest events in their area, keeping them up to date with events.  For example, when an event such as an exercise class is advertised a community user may be motivated to attend due to its ease of access. This has the value to making our community a healthier community.  Events become more well attended, creating a nice community buzz.  Local facilitators gain better numbers which helps promote business which is vital in small communitites like ourselves. 
 
 ![Noticeboard Feature](https://github.com/user-attachments/assets/35d45c40-419e-4f9c-acb2-67c63477b80d)
 
@@ -256,13 +257,13 @@ The user is fully informed, the date, time, location. The facilitator can expand
 
 **Search by Category Feature:**
 
-Users who want to narrow down the search to certain events, such as a new parent in the area may want to only see events in the 'Parent & Toddler' section.  When a facilitator creates a new event, they have the opportunity of associating it with a certain category.  By clicking on the drop down arrow, a list of categories is displayed and when 1 is selected only events listed under those categories are displayed. 
+Users who want to narrow down the search to certain events, such as a new parent in the area may want to only see events in the 'Parent & Toddler' section.  When a facilitator creates a new event, they have the opportunity of associating it with a certain category.  By clicking on the drop down arrow, a list of categories is displayed and when a category is selected only events listed under that category are displayed. Leaving the selection to 'All' displays all events, with the post recently created first.
 
 ![Sort-by-category](https://github.com/user-attachments/assets/4f4765a0-9bfe-4a71-b54e-718c3b12c5aa)
 
 **Booking Feature for the Community User:**
 
-A community user can view all events and book their place to ensure they have a place at the class or event.  When an event is published it is often only bookable with a phone number and within a certain timeframe which is not always convenient for those making the booking, this feature allows users to book whenever a new event is posted in an easy to use booking method. They can share the site with friends and encourage them to book also. 
+A community user can view all events and book their place to ensure they have a place at the class or event.  When an event is advertised in the paper or on Facebook it is often only bookable with a phone number and within a certain timeframe which is not always convenient for those making the booking, this feature allows users to book whenever a new event is posted in an easy to use booking method. They can share the site with friends and encourage them to book also. 
 
 ![Book Event](https://github.com/user-attachments/assets/b26de344-ce75-4c91-9e13-03eb34bd8e2f)
 
@@ -270,9 +271,9 @@ A community user can view all events and book their place to ensure they have a 
 
 The value of the booking feature as a facilitator allows facilitators to be able to put a capacity limit on an event to ensure the event is manageable, such as a boot camp having a capacity of 40 to ensure there is enough exercise stations, a cookery course having a capacity limit of 10 to ensure there is enough equipment.  
 
-The facilitator also applies a booking by date/time, so an event cannot be booked after a certain time.  This allows the facilitator to be able to manage their event knowing the numbers of people interested. For example a facilitator of a cookery course, the facilitator would be able to see that 15 have booked by the booked by date/time and allow them to purchase 15 portions to prevent food waste. A bootcamp facilitator could see there are 40 signed up and understand the amount of exercise stations required. 
+The facilitator also applies a 'booking by' date/time, so an event cannot be booked after a certain time.  This allows the facilitator to be able to manage their event knowing the numbers of people interested. For example a facilitator of a cookery course, the facilitator would be able to see that 15 have booked by the booked by specified date/time and allow them to purchase 15 portions, thus preventing food waste and reducing costs. A bootcamp facilitator could see there are 40 signed up and understand the amount of exercise stations required. 
 
-The booking feature also has the value added of showing the community users have booked their event. This allows facilitators to see the number of people who have booked their event, with their names, active email and an active phone number. Users can be easily contacted if required. 
+The booking feature also has the added value of showing the facilitators which community users have booked their event. This allows facilitators to see the number of people who have booked their event, with their names, active email and an active phone number. Users can be easily contacted if required. 
 
 ![Dashboard with list of users booked](https://github.com/user-attachments/assets/b29feb77-32bd-44bf-9e71-93d7683e5c57)
 
@@ -299,11 +300,11 @@ When a user clicks on Book Event - a message is displayed to let them know their
 <h2>Error Handling</h2>
 
 <h3>404 Page</h3>
-We have created a 404 page so that user of accidentally enters a typo in the address gets an opportunity to redirected back to the home page:
+We have created a 404 page so that user of accidentally enters a typo in the address they get an opportunity to be redirected back to the home page:
 
 <img width="1401" alt="404 page " src="https://github.com/user-attachments/assets/450a1b88-a075-426e-898e-256eb430b693" />
 
-When a user attempts to book an event who’s capacity has already been reached, i.e. the event is already booked out, a message is displayed to let them know event capacity has already been reached:
+When a user attempts to book an event who’s capacity has already been reached, i.e. the event is already booked out, a message is displayed to let them know event capacity has  been reached:
 
 ![Event Capacity Reached](https://github.com/user-attachments/assets/4c85e035-ad98-4f19-b31a-1ba780f4ff3b)
 
@@ -311,7 +312,7 @@ When a user attempts to book an event who’s capacity has already been reached,
 
 
 <h2>Future Implementation Section</h2>
-I spoke with some of my non techie friends about the site, who are involved in our community and are coaches of various teams and they got very excited about the potential of the site. They were suggesting a Games and Fixtures and Results page, so show all our local GAA matches, Home and Away of the juvenile club, ladies and seniors so that locals could review what matches are on and where to check the results. 
+I spoke with some of my non techie friends about the site, who are involved in our community and are coaches of various teams and they got very excited about the potential of the site. They were suggesting a 'Games and Fixtures and Results' page, to show all our local GAA matches, Home and Away of the juvenile club, ladies and seniors so that locals could review what/where matches are on and to check the results. 
 
 Expiry Date, after a certain period to remove 'old' event posts from the site, so for example if there was a bootcamp on for 6 weeks it would stay up for the 6 weeks but would be removed after to keep the site clean and up to date. 
 
@@ -319,11 +320,11 @@ As part of the model I have included a Bookable Event Boolean, but have not util
 
 I would like to improve my UX when a new user clicks on an event, they click on book and are redirected correctly to the sign up form, when they sign in and log in they are redirected to their dashboard but it would be better if they were redirected back to the event they wanted to book. 
 
-When a community user goes on to the site, if they are not logged in, when they view an event and go to book, they are taken to the sign up as a new user OR if they have an account they can Log in.  Which is correct but I would prefer to change the 'Log in' to be positioned the top and the Sign up as a new user at the bottom for better UX. 
+When a community user goes on to the site, if they are not logged in, when they view an event and go to book, they are taken to the sign up as a new user OR if they have an account they can Log in.  Which is correct but I would prefer to change the 'Log in' to be positioned at the top and the Sign up as a new user at the bottom for better UX. 
 
 I would also like to include a payment method for events, users could pay for their class or event when they book it. 
 
-Finally I would like to reduce the number of warnings to do with my internal links which I got when I was evaluating the site on the Web Accessible Evaluation Tool. 
+Finally I would like to reduce the number of warnings to do with my internal links which I got when I was evaluating the site on the Web Accessible Evaluation Tool. I just need some time to look into this further! 
 
 *********************************
 
