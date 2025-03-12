@@ -85,84 +85,87 @@ The following is some user personas of individuals in the community who are our 
 *********************
 
 1. Active Annie (Community User)
-Demographics: 68 years old, retired teacher, lives alone, active in the community.
+   
+**Demographics:** 68 years old, retired teacher, lives alone, active in the community.
 
-Tech Savviness: Comfortable using a computer and smartphone, uses Facebook, checks email daily.
+**Tech Savviness:** Comfortable using a computer and smartphone, uses Facebook, checks email daily.
 
-Needs & Goals: Wants to stay active and social, looking for events to attend, easy access to information about local activities. She wants a simple, reliable way to find out what's happening at the Community Centre.
+**Needs & Goals:** Wants to stay active and social, looking for events to attend, easy access to information about local activities. She wants a simple, reliable way to find out what's happening at the Community Centre.
 
-Frustrations: Dislikes scrolling through Facebook, finds it hard to find specific event information, misses events because she doesn't hear about them in time.
+**Frustrations:** Dislikes scrolling through Facebook, finds it hard to find specific event information, misses events because she doesn't hear about them in time.
 
-Website Use Case: Regularly checks the website to see what events are coming up, uses the search/filter functions to find activities that interest her (e.g., book clubs, exercise classes). Books events directly through the website.
+**Website Use Case:** Regularly checks the website to see what events are coming up, uses the search/filter functions to find activities that interest her (e.g., book clubs, exercise classes). Books events directly through the website.
 
-Quote: "I just want a simple way to see what's going on. I don't want to miss another interesting talk or activity!"
+**Quote:** "I just want a simple way to see what's going on. I don't want to miss another interesting talk or activity!"
 
 *********************
 
 2. Busy Brendan (Community User)
 
-Demographics: 42 years old, works full-time, married with two school-aged children.
+**Demographics:** 42 years old, works full-time, married with two school-aged children.
 
-Tech Savviness: Very comfortable with technology, uses multiple devices daily, relies on online information.
+**Tech Savviness:** Very comfortable with technology, uses multiple devices daily, relies on online information.
 
-Needs & Goals: Finds activities for his children, wants to participate in community events as a family, needs information that's quick and easy to access. He's looking for events that fit into his family's schedule.
+**Needs & Goals:** Finds activities for his children, wants to participate in community events as a family, needs information that's quick and easy to access. He's looking for events that fit into his family's schedule.
 
-Frustrations: Doesn't have a lot of free time, finds it difficult to find events that are suitable for his children, needs a quick overview of event details.
+**Frustrations:** Doesn't have a lot of free time, finds it difficult to find events that are suitable for his children, needs a quick overview of event details.
 
-Website Use Case: Checks the website on his phone to see weekend events, looks for family-friendly activities, books events for his kids online, quickly checks times and locations.
+**Website Use Case:** Checks the website on his phone to see weekend events, looks for family-friendly activities, books events for his kids online, quickly checks times and locations.
 
-Quote: "I need to know what's happening, when it's happening, and if my kids will enjoy it. I don't have time to waste."
+**Quote:** "I need to know what's happening, when it's happening, and if my kids will enjoy it. I don't have time to waste."
 
 *********************
 
 3. Newcomer Nicole 
-Demographics: 28 years old, recently moved to the community for work, single.
+   
+**Demographics:** 28 years old, recently moved to the community for work, single.
 
-Tech Savviness: Highly tech-savvy, relies on online resources for everything.
+**Tech Savviness:** Highly tech-savvy, relies on online resources for everything.
 
-Needs & Goals: Wants to meet new people and integrate into the community, looking for social events and activities, needs a welcoming and informative platform.
+**Needs & Goals:** Wants to meet new people and integrate into the community, looking for social events and activities, needs a welcoming and informative platform.
 
-Frustrations: Doesn't know anyone in the area, feels isolated, unsure of where to find information about local events.
+**Frustrations:** Doesn't know anyone in the area, feels isolated, unsure of where to find information about local events.
 
-Website Use Case: Uses the website to discover social events and activities, signs up for email updates, explores different interest groups, relies on the website to feel more connected to the community.
+**Website Use Case:** Uses the website to discover social events and activities, signs up for email updates, explores different interest groups, relies on the website to feel more connected to the community.
 
-Quote: "I'm new here and want to get involved. I hope this website can help me find my place in the community."
+**Quote:** "I'm new here and want to get involved. I hope this website can help me find my place in the community."
 
 *********************
 
 4. Facilitator Fiona (Event Facilitator)
 
-Demographics: 35 years old, runs a local parent-and-toddler group, volunteer.
+**Demographics:** 35 years old, runs a local parent-and-toddler group, volunteer.
 
-Tech Savviness: Reasonably comfortable with technology, uses a computer for basic tasks.
+**Tech Savviness:** Reasonably comfortable with technology, uses a computer for basic tasks.
 
-Needs & Goals: Promote her parent-and-toddler group, easily create and manage event listings, reach a wide audience in the community, needs a user-friendly platform for event management.
+**Needs & Goals:** Promote her parent-and-toddler group, easily create and manage event listings, reach a wide audience in the community, needs a user-friendly platform for event management.
 
-Frustrations: Finds it time-consuming to promote her group through multiple channels, needs a central place to update event information, struggles with complicated website interfaces.
+**Frustrations:** Finds it time-consuming to promote her group through multiple channels, needs a central place to update event information, struggles with complicated website interfaces.
 
-Website Use Case: Creates new event listings with detailed information (date, time, location, age group), updates existing listings, checks the number of bookings, interacts with community members through the website (if possible).
+**Website Use Case:** Creates new event listings with detailed information (date, time, location, age group), updates existing listings, checks the number of bookings, interacts with community members through the website (if possible).
 
-Quote: "I need a simple way to let people know about our group and manage our events without spending hours on it."
+**Quote:** "I need a simple way to let people know about our group and manage our events without spending hours on it."
 
 *********************
 
 5. Community Committee Member (Event Facilitator)
 
-Demographics: 55 years old, Community Centre Committee Member, manages various hall events.
+**Demographics:** 55 years old, Community Centre Committee Member, manages various hall events.
 
-Tech Savviness: Moderate tech skills, delegate if possible.
+**Tech Savviness:** Moderate tech skills, delegate if possible.
 
-Needs & Goals: Effectively promote all events, delegate event creation, manage event schedules and bookings, needs a reliable platform for event organization.
+**Needs & Goals:** Effectively promote all events, delegate event creation, manage event schedules and bookings, needs a reliable platform for event organization.
 
-Frustrations: Coordinating multiple facilitators, ensuring all events are properly promoted, keeping track of bookings and schedules, managing user accounts and permissions.
+**Frustrations:** Coordinating multiple facilitators, ensuring all events are properly promoted, keeping track of bookings and schedules, managing user accounts and permissions.
 
-Website Use Case: Oversees all event listings, manages facilitator accounts, checks overall website traffic and engagement, ensures the website is up-to-date and informative.
+**Website Use Case:** Oversees all event listings, manages facilitator accounts, checks overall website traffic and engagement, ensures the website is up-to-date and informative.
 
-Quote: "I need a system that allows me to keep an overview of all the activities in the community centre and to easily delegate tasks."
+**Quote:** "I need a system that allows me to keep an overview of all the activities in the community centre and to easily delegate tasks."
 
 *********************
 
 <h2>Kanban Board</h2>
+
 I found the Kanban very helpful, it did take time to set up, it was well planned and structured.  I sometimes have a tendency to go from one area and then get distracted to start fixing another area, having the Kanban board with the user stories and the tasks that I needed to perform helped me to keep a structured approach to coding.  I learnt that at the end of a commit if I put "relates to #1"  etc it would be documented with the task # in my project. 
 
 ![Kanban Board Progress](https://github.com/user-attachments/assets/d7a67b47-e80a-4194-bd36-a6bc16a8cf70)
@@ -199,7 +202,7 @@ When the facilitator is logged in the Log in changes to Log Out.
 
 <h2>Design Choices</h2>
 
-Colour Scheme
+**Colour Scheme**
 
 Ballinameela Community Centre is based in the beautiful country side of West Waterford.  We wanted to use a nice green colour to represent healthy country living.  As this was a community noticeboard to highlight the events of the area we used a bright yellow 'post it colour' to make it look like events were posted up against board.  We used a black text font to help stand out to all users especially those with accessible issues.  We used a contrasting cream colour against the green which makes the scheme look soft, easy on the eye, friendly while also accessible.  
 Using a colour contrast checked we checked which font colours stood out best against our base colours.  All receiving good ratings. Graphic illustrated below:
@@ -222,20 +225,20 @@ Font used is Roboto from Google Fonts. It is in the sans serif family, is clean 
 
 Feature Title / Screenshot / Value to the User
 
-Navigation Bar:
+**Navigation Bar:**
 
 Login Feature
 If you already have a username and password you can log in easily to view your events. Once logged in the button changes to Log Out. When you go to log out an alert modul asks if you are sure you want to log out. 
 
 ![Nav-bar with logout modul](https://github.com/user-attachments/assets/2ec3479e-569e-4dcc-ae35-ad9f83995dd9)
 
-Sign Up Feature:
+**Sign Up Feature:**
 
 If you are a new user, it is easy to navigate to the Sign Up form, enter your details and password and are set up within minutes, the login button changes to Log Out and you have access to book events. 
 
 ![Nav Bar](https://github.com/user-attachments/assets/da4620e3-8fc8-48cc-9605-acbdc1a6cf25)
 
-Dashboard Feature:
+**Dashboard Feature:**
 
 As a Community User the dashboard is personalised to the user and their booked events only.  If no events are booked it will display no events booked. If events are booked they are clearly displayed in the dashboard, a user can view, or delete their events in the dashboard. Before a user deletes an event there is an alert modul asking them if they are sure. 
 
@@ -243,7 +246,7 @@ As a Facilitator the dashboard is personalised to your created events only.  Her
 
 ![My Events Facilitator Dashboard](https://github.com/user-attachments/assets/d59824d4-bc0b-4b01-8bad-1e730608e1fb)
 
-Notice Board Feature:
+**Notice Board Feature:**
 
 Community users can log on and immediately view the latest events in their area, keeping them up to date with events.  When an event such as an exercise class is advertised a community user may be motivated to attend due to its ease of access. This has the value to making our community a healthier community. 
 
@@ -251,19 +254,19 @@ Community users can log on and immediately view the latest events in their area,
 
 The user is fully informed, the date, time, location. The facilitator can expand more in the description, such as duration/cost of a class, what to bring. The value of fully informing the community to events with the flexibility of expanding the details in the Read more section. 
 
-Search by Category Feature: 
+**Search by Category Feature:**
 
 Users who want to narrow down the search to certain events, such as a new parent in the area may want to only see events in the 'Parent & Toddler' section.  When a facilitator creates a new event, they have the opportunity of associating it with a certain category.  By clicking on the drop down arrow, a list of categories is displayed and when 1 is selected only events listed under those categories are displayed. 
 
 ![Sort-by-category](https://github.com/user-attachments/assets/4f4765a0-9bfe-4a71-b54e-718c3b12c5aa)
 
-Booking Feature for the Community User:
+**Booking Feature for the Community User:**
 
 A community user can view all events and book their place to ensure they have a place at the class or event.  When an event is published it is often only bookable with a phone number and within a certain timeframe which is not always convenient for those making the booking, this feature allows users to book whenever a new event is posted in an easy to use booking method. They can share the site with friends and encourage them to book also. 
 
 ![Book Event](https://github.com/user-attachments/assets/b26de344-ce75-4c91-9e13-03eb34bd8e2f)
 
-Booking Feature for a Facilitator:
+**Booking Feature for a Facilitator:**
 
 The value of the booking feature as a facilitator allows facilitators to be able to put a capacity limit on an event to ensure the event is manageable, such as a boot camp having a capacity of 40 to ensure there is enough exercise stations, a cookery course having a capacity limit of 10 to ensure there is enough equipment.  
 
@@ -273,19 +276,17 @@ The booking feature also has the value added of showing the community users have
 
 ![Dashboard with list of users booked](https://github.com/user-attachments/assets/b29feb77-32bd-44bf-9e71-93d7683e5c57)
 
-FOOTER FEATURES:
+**FOOTER FEATURES:**
 
 ![Footer Features](https://github.com/user-attachments/assets/a03fb0fa-dd92-463e-83e8-deb04b3407d2)
 
-Footer Features:
-
 The Eircode of centre is already linked to google maps the user can easily navigate to the centre by clicking on the Eircode, which opens in a new page. 
 
-Facebook and Instagram Features:
+**Facebook and Instagram Features:**
 
 This allows the user to access the Ballinameela Community Centre socials in a new page. 
 
-Pagination Feature:
+**Pagination Feature:**
 
 The latest events are posted first, to view older posted events the user can user the pagination links at the bottom of the page to easily navigate though the pages. 
 
@@ -322,6 +323,8 @@ When a community user goes on to the site, if they are not logged in, when they 
 
 I would also like to include a payment method for events, users could pay for their class or event when they book it. 
 
+Finally I would like to reduce the number of warnings to do with my internal links which I got when I was evaluating the site on the Web Accessible Evaluation Tool. 
+
 *********************************
 
 <h2>Accessibility</h2>
@@ -342,13 +345,15 @@ This is a community website for everyone in the community to use.  Accessibility
 
 (e) Testing, we used WAVE a Web Accessible Evaluation Tool to analyse the page and made adjustments to the site to try to improve it. It passed the Wave Evaluation without errors. 
 
+**WAVE:**
+
 ![WAVE evaluation results](https://github.com/user-attachments/assets/1b635a48-a1fb-451e-8757-64eda867a761)
 
-Lighthouse Testing 
+**Lighthouse Testing**
 
 ![Lighthouse test results](https://github.com/user-attachments/assets/53a061ea-edb5-4d32-b60e-a9ab34756838)
 
-Color Blindness Simulator Tool:
+**Color Blindness Simulator Tool:**
 
 ![Color Blindness simulator](https://github.com/user-attachments/assets/60aef587-2546-443e-ac02-e5a994452509)
 
@@ -427,14 +432,14 @@ IF you build a landmark project that doesn’t use a cred.json file you don’t 
 * In the KEY section type CREDS (all capital letters) – 
 * Go to workspace and copy the entire creds.json file and paste it into the value field and add.
 
- To add other dependencies:
+ **To add other dependencies:**
 
 * ADD BUILDPACK
 * Select Python – choose add
 * Select Node.js – choose add 
 * NOTE: (Should be in this order, python first then node.js)
  
-DEPLOY SECTION:
+**DEPLOY SECTION:**
 
 * Click on the DEPLOY Tab
 * Choose the Githb deployment method
