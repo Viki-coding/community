@@ -110,6 +110,8 @@ We used the following external sites to validate the code, some screen shots of 
 
 ![HTML Validator - retest after changes](<HTML re-checked after html changes.png>)
 
+![HTML VALIDATOR - RE-TEST POST EDITING DESCRIPTIVE COMMENTS](<html recheck post comments.png>)
+
 <h3> CSS (Jigsaw) validator</h3>
 
 ![CSS Validator](https://github.com/user-attachments/assets/6b08933b-f3a1-4b4f-9774-2d0f5e20b903)
