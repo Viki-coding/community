@@ -8,6 +8,9 @@ Link to Kanban Board:
 [Viki-coding/Projects/Community Notice Board Project] 
 (https://github.com/users/Viki-coding/projects/8/views/1)
 
+Link to Testing.md: 
+(https://github.com/Viki-coding/community/blob/main/testing.md)
+
 
 ## Table of Contents
 - [Introduction](#introduction)
